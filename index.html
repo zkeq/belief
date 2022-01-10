@@ -2902,10 +2902,10 @@ const ap = new APlayer({
   system.mac = p.indexOf("Mac") == 0; 
   system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
   if(system.win||system.mac||system.xll){//如果是电脑
-    console.log("pc")
+    console.log("当前使用的设备是电脑,所以这里的樱花按电脑端的配置载入!~")
     $.getScript("/yinghua/yinghua.js");
   }else{ //如果是手机
-    console.log("phone")
+    console.log("当前使用的设备是手机,所以这里的樱花按手机端的配置载入(比电脑小一号!~")
     $.getScript("/yinghua/yinghua-phone.js");
   }
 </script>
