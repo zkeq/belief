@@ -14,7 +14,7 @@
 
 			Sakura.prototype.draw = function(cxt) {
 				cxt.save();
-				var xc = 20 * this.s / 8;
+				var xc = 40 * this.s / 4;
 				cxt.translate(this.x, this.y);
 				cxt.rotate(this.r);
 				cxt.drawImage(img, 0, 0, 20 * this.s, 20 * this.s)
@@ -31,7 +31,7 @@
 					this.y < 0
 				) {
 					this.r = getRandom('fnr');
-					if(Math.random() > 0.8) {
+					if(Math.random() > 0.4) {
 						this.x = getRandom('x');
 						this.y = 0;
 						this.s = getRandom('s');
@@ -169,3 +169,4 @@
 			}
 		
 		
+
