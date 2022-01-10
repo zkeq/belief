@@ -8,33 +8,6 @@
 <script src="/Aplayer/APlayer.min.js"></script>
 <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
 <script src="https://staticfile.qnssl.com/webfont/1.6.16/webfontloader.js"></script>
-<script>
-  WebFont.load({
-    custom: {
-      families: ['HYZhengYuan']
-    }
-  });
-
-var loading = false;
-$(window).scroll(function(){
- if((($(window).scrollTop()+$(window).height())+250)>=$(document).height()){
-  if(loading == false){
-   loading = true;
-   $('#loadingbar').css("display","block");
-   $.get("load.php?start="+$('#loaded_max').val(), function(loaded){
-    $('body').append(loaded);
-    $('#loaded_max').val(parseInt($('#loaded_max').val())+50);
-    $('#loadingbar').css("display","none");
-    loading = false;
-   });
-  }
- }
-});
-$(document).ready(function() {
- $('#loaded_max').val(50);
-});
-</script>
-
 <style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
