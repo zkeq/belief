@@ -8,7 +8,6 @@
 <script src="/Aplayer/APlayer.min.js"></script>
 <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
 <script src="https://staticfile.qnssl.com/webfont/1.6.16/webfontloader.js"></script>
-<script src="/yinghua/yinghua.js"></script>
 <script>
   WebFont.load({
     custom: {
@@ -2892,8 +2891,6 @@ table tr:hover {
     --font-footnote: 400 10.5pt/21pt var(--font-kai-cn);
   }
 }
-
-
 </style><title>追梦计划引导页</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
@@ -2924,5 +2921,21 @@ const ap = new APlayer({
         lrc: '/Aplayer/qnydyjdwhm.lrc'
     }
 });
-</script></body>
+</script>
+<script type="text/javascript">//樱花
+  var system ={}; 
+  var p = navigator.platform; 
+  system.win = p.indexOf("Win") == 0; 
+  system.mac = p.indexOf("Mac") == 0; 
+  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
+  if(system.win||system.mac||system.xll){//如果是电脑
+    console.log("pc")
+    $.getScript("/yinghua/yinghua.js");
+  }else{ //如果是手机
+    console.log("phone")
+    $.getScript("/yinghua/yinghua-phone.js");
+  }
+</script>
+
+</body>
 </html>
