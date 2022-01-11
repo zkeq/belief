@@ -115,8 +115,8 @@
 				var canvas = document.createElement('canvas'),
 					cxt;
 				staticx = true;
-				canvas.height = Math.max(window.screen.height,window.screen.width;
-				canvas.width = Math.max(window.screen.height,window.screen.width;
+				canvas.height = Math.max(window.screen.height,window.screen.width);
+				canvas.width = Math.max(window.screen.height,window.screen.width);
 				canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
 				canvas.setAttribute('id', 'canvas_sakura');
 				document.getElementsByTagName('body')[0].appendChild(canvas);
