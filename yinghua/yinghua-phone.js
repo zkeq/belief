@@ -148,12 +148,13 @@
 					stop = requestAnimationFrame(arguments.callee);
 				})
 			}
-
-			window.onresize = function() {
-				var canvasSnow = document.getElementById('canvas_snow');
-				canvasSnow.width = window.innerWidth;
-				canvasSnow.height = window.innerHeight;
-			}
+			
+			// 不知道这里的代码有啥用,而且报错....注释了好像也没影响.先注释...
+			// window.onresize = function() {
+			// 	var canvasSnow = document.getElementById('canvas_snow');
+			// 	canvasSnow.width = window.innerWidth;
+			// 	canvasSnow.height = window.innerHeight;
+			// }
 
 			img.onload = function() {
 				startSakura();
