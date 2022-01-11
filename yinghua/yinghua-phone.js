@@ -25,9 +25,9 @@
 				this.x = this.fn.x(this.x, this.y);
 				this.y = this.fn.y(this.y, this.y);
 				this.r = this.fn.r(this.r);
-				if(this.x > window.screen.width ||
+				if(this.x > window.innerWidth ||
 					this.x < 0 ||
-					this.y > window.screen.height ||
+					this.y > window.innerHeight ||
 					this.y < 0
 				) {
 					this.r = getRandom('fnr');
@@ -37,7 +37,7 @@
 						this.s = getRandom('s');
 						this.r = getRandom('r');
 					} else {
-						this.x = window.screen.width;
+						this.x = window.innerWidth;
 						this.y = getRandom('y');
 						this.s = getRandom('s');
 						this.r = getRandom('r');
@@ -72,10 +72,10 @@
 				var ret, random;
 				switch(option) {
 					case 'x':
-						ret = Math.random() * window.screen.width;
+						ret = Math.random() * window.innerWidth;
 						break;
 					case 'y':
-						ret = Math.random() * window.screen.height;
+						ret = Math.random() * window.innerHeight;
 						break;
 					case 's':
 						ret = Math.random();
@@ -117,8 +117,8 @@
 				var canvas = document.createElement('canvas'),
 					cxt;
 				staticx = true;
-				canvas.height = window.screen.height + window.screen.width;
-				canvas.width = window.screen.height + window.screen.width;
+				canvas.height = window.screen.width + window.screen.height + 100;
+				canvas.width = window.screen.height + window.screen.width + 100;
 				canvas.setAttribute('style', 'position: fixed;left: 0;top: 0;pointer-events: none;');
 				canvas.setAttribute('id', 'canvas_sakura');
 				document.getElementsByTagName('body')[0].appendChild(canvas);
@@ -151,8 +151,8 @@
 
 			window.onresize = function() {
 				var canvasSnow = document.getElementById('canvas_snow');
-				canvasSnow.width = window.screen.width + 100;
-				canvasSnow.height = window.screen.height + 100;
+				canvasSnow.width = window.innerWidth;
+				canvasSnow.height = window.innerHeight;
 			}
 
 			img.onload = function() {
