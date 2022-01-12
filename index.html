@@ -4,10 +4,11 @@
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="referrer" content="no-referrer">
-<!-- <link rel="stylesheet" href="/Aplayer/APlayer.min.css">
-<script src="/Aplayer/APlayer.min.js"></script> -->
+<link rel="stylesheet" href="/Aplayer/APlayer.min.css">
+<script src="/Aplayer/APlayer.min.js"></script>
 <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
 <script src="/yinghua/Ascii.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script> -->
 <!-- <script src="https://staticfile.qnssl.com/webfont/1.6.16/webfontloader.js"></script> -->
 <style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
@@ -2876,11 +2877,7 @@ table tr:hover {
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
 <div id='write'  class=''><h2 id='追梦计划'><span>追梦计划</span></h2><p><img src="https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg" referrerpolicy="no-referrer" alt="head"></p>
-<!-- <meting-js
-	server="netease"
-	type="artist"
-	id="1050282">
-</meting-js> -->
+<div id="aplayer"></div>
 <!-- <iframe
 name="web"
 width="100%" 
@@ -2918,9 +2915,22 @@ id= "web">
     $.getScript("/yinghua/yinghua-phone.js");
   }
 </script>
-<audio id="bgmMusic" preload="auto" autoplay loop>
+<!-- RainyMood -->
+<script type="text/javascript">
+const ap = new APlayer({
+  container: document.getElementById('aplayer'),
+  theme: "#f6f7fa",
+  audio: [{
+      name: 'RainyMood',
+      artist: 'RainyMood',
+      url: 'https://s-bj-2220-zkeq.oss.dogecdn.com/0.m4a',
+      cover: '/Aplayer/RainyMood.png'
+  }]
+});
+</script>
+<!-- <audio id="bgmMusic" preload="auto" autoplay loop>
   <source src="https://s-bj-2220-zkeq.oss.dogecdn.com/0.ogg" type="audio/ogg" />
   <source src="https://s-bj-2220-zkeq.oss.dogecdn.com/0.mp3" type="audio/mpeg" />
-</audio>
+</audio> -->
 </body>
 </html>
