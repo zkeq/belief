@@ -9,7 +9,9 @@
 <body>
     <link rel="stylesheet" href="/Aplayer/APlayer.min.css">
     <script src="/Aplayer/APlayer.min.js"></script>
-    <div id="aplayer"></div>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <!-- <div id="aplayer"></div>
     <script>
         const ap = new APlayer({
             container: document.getElementById('aplayer'),
@@ -30,7 +32,11 @@
             },
           ]
         });
-        </script>
-    
+        </script> -->
+  <meting-js
+	server="netease"
+	type="artist"
+	id="1050282">
+  </meting-js>
 </body>
 </html>
