@@ -1,0 +1,1856 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="referrer" content="no-referrer">
+<script src="/yinghua/Ascii.js"></script>
+<script src="/Aplayer/DPlayer.min.js"></script>
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+/*Chinese*/
+@font-face{
+    font-family: 'HYZhengYuan';
+    src: local('HYZhengYuan'),
+    url('https://unpkg.zhimg.com/zkeq-font@1.1.0/HYZhengYuan-75W.ttf') format('truetype');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}/*
+ * Copyright (C) 2018 Drake, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@import url();
+
+:root {
+    --monospace: "JetBrains Mono", HYZhengYuan, "Fira Code", Menlo, "Ubuntu Mono", Consolas; /*code font*/
+    --text-font: var(--monospace); /*default font*/
+    --title-font: var(--monospace); /*title font*/
+
+    --text-color: #202124;
+    --blur-text-color: #c8c8c8;
+    --bg-color: #ffffff;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #E5E5E596;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --blur-text-color: rgba(32, 33, 36, 0.5);
+    --drake-accent: #5784ec;
+    --drake-highlight: #3a474e;
+    --a-color: #1769e0;
+    --variable-color: #d01884;
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #f8f9fa;
+    --code-block-color: #3a474e;
+    --title-color: #202124;
+    --blockquote-border-color: #275796;
+    --blockquote-color: #275796;
+    --blockquote-bg-color: #e5f4fd;
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--text-color);
+    --height-light-border-color: var(--text-color);
+    --yaml-color: #777777;
+    --yaml-bg-color: #f7f7f7;
+    --footnotes-bg-color: #3c3d3e;
+    --footnotes-highlight: #FFD760;
+    --table-border-color: #dadce0;
+    --table-header-bg-color: #f1f3f4;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: var(--bg-color);
+    --input-bg-color: var(--item-hover-bg-color);
+    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+    line-height: 1.8rem;
+}
+
+/*code block*/
+.md-fences {
+    font-size: 1rem;
+    padding: 12px !important;
+    border-radius: 8px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: .1em solid #e8eaed;
+}
+
+/*mermaid*/
+.md-diagram-panel-preview text.actor > tspan { /*方块文字*/
+    fill: var(--code-block-color) !important;
+    stroke: none !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .actor { /*方块*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .actor-line { /*竖线*/
+    stroke: var(--text-color) !important;
+    stroke-width: 1px;
+}
+.md-diagram-panel-preview .messageLine0 { /*横线*/
+    stroke-width: 1.5;
+    stroke-dasharray: none;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageLine1 { /*虚线*/
+    stroke-width: 1.5 !important;
+    stroke-dasharray: 2, 2 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageText { /*描述文字*/
+    fill: var(--text-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .activation0 { /*长方形*/
+    fill: rgba(141, 141, 141, 0.22) !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .labelText, .md-diagram-panel-preview .labelText > tspan { /*循环标记*/
+    fill: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+    dominant-baseline: unset;
+    alignment-baseline: unset;
+}
+.md-diagram-panel-preview .labelBox { /*循环标记背景*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .loopLine { /*循环标记虚线*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
+    fill: var(--text-color) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .sequenceNumber { /*序号*/
+    fill: var(--bg-color) !important;
+}
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border: none;
+}
+.md-diagram-panel-preview .edgePath .path { /*箭头*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
+    fill: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel span { /*条件文字*/
+    color: var(--text-color);
+}
+.md-diagram-panel-preview .node rect,
+.md-diagram-panel-preview .node circle,
+.md-diagram-panel-preview .node ellipse,
+.md-diagram-panel-preview .node polygon,
+.md-diagram-panel-preview .node path { /*形状*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+#write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
+    color: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 4px;
+    color: var(--drake-highlight);
+    border: .1rem solid #e8eaed;
+    background: #f8f9fa;
+    border-radius: 4px;
+    padding: .1rem .4rem;
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote {
+    color: var(--blockquote-color) !important;
+    border-radius: 4px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+#write strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+.on-focus-mode #write a .md-plain:hover, .on-focus-mode .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--blur-text-color);
+}
+#write a .md-plain:hover, .md-htmlblock-container a:hover,
+.on-focus-mode #write .md-focus a .md-plain:hover, .on-focus-mode .md-focus .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+#write a code, a:any-link {
+    color: var(--a-color);
+}
+#write a code:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 0.1em;
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write p {
+    word-spacing: .05rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2.md-end-block.md-heading {
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+h2.md-end-block.md-heading:after {
+    display: block;
+    content: '';
+    height: 2px;
+    margin-top: 4px;
+    background-color: var(--h2-underline-color);
+    border-radius: 2px;
+}
+.on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
+    background-color: var(--blur-text-color) !important;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+p {
+    margin: 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: var(--table-header-bg-color);
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    vertical-align: top;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+#typora-sidebar {
+    font-size: 1.1rem;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: 1rem;
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA light theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner.CodeMirror {
+    background: none;
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-number {
+    color: #c5221f;
+}
+.cm-s-inner span.cm-atom {
+    color: #c5221f;
+}
+.cm-s-inner span.cm-def {
+    color: #00f;
+}
+.cm-s-inner span.cm-variable {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable-2 {
+    color: #00627A;
+}
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type {
+    color: #9334e6;
+}
+.cm-s-inner span.cm-property {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-keyword {
+    color: #1967d2;
+}
+.cm-s-inner span.cm-operator {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-comment {
+    color: #b80672;
+}
+.cm-s-inner span.cm-string {
+    color: #008000;
+}
+.cm-s-inner span.cm-string-2 {
+    color: #008000;
+}
+.cm-s-inner span.cm-qualifier {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-error {
+    color: red;
+}
+.cm-s-inner span.cm-attribute {
+    color: #9334e6;
+}
+.cm-s-inner span.cm-tag.cm-bracket {
+    color: #1967d2;
+}
+.cm-s-inner span.cm-link {
+    color: #4A86E8;
+}
+.cm-s-inner span.cm-builtin {
+    color: var(--code-block-color);
+}
+.cm-s-inner .cm-meta {
+    color: #c5221f;
+}
+.cm-s-inner .CodeMirror-gutters {
+    border-right: 1px solid rgba(120, 120, 120, 0.3);
+}
+.cm-s-inner .CodeMirror-linenumber {
+    color: #787878;
+}
+
+
+</style><title>追梦计划 [附录 分页4]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><blockquote><p><span>声明: 本站全部内容源自互联网,不进行任何盈利行为,如有侵权.联系邮箱: learnonly@learnony.xyz</span></p><p><span>全文链接: </span><a href='https://xue.youdao.com/sw/style/funsci?beginfrom=cidian'><span>有道词典·看天下 (youdao.com)</span></a></p><p><strong><span>本网站仅做 整合 / 美化 处理</span></strong></p><p><span>本站网址: </span><a href='https://belief.zkeq.xyz' target='_blank' class='url'>https://belief.zkeq.xyz</a><span>   </span></p><p><span>最后更新: 2022年1月13日</span></p></blockquote><h2 id='no151-ted怎样学外语才最有效果'><span>No.151 【TED】怎样学外语才最有效果？</span></h2><div id="play-151"></div>
+<script>
+const p151 = new DPlayer({
+    container: document.getElementById('play-151'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c96175ee1ffb004d41beba5d65cd0896.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no152-ted全职奶爸的育儿经验'><span>No.152 【TED】全职奶爸的育儿经验</span></h2><div id="play-152"></div>
+<script>
+const p152 = new DPlayer({
+    container: document.getElementById('play-152'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a81bfbd9214ce77cb37b678713605b18.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no153-ted如何超越自我观点并寻求真相'><span>No.153 【TED】如何超越自我观点并寻求真相</span></h2><div id="play-153"></div>
+<script>
+const p153 = new DPlayer({
+    container: document.getElementById('play-153'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1073d6a34e574985935669ecf563c8cb.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no154-ted为什么学校应该推迟上课'><span>No.154 【TED】为什么学校应该推迟上课？</span></h2><div id="play-154"></div>
+<script>
+const p154 = new DPlayer({
+    container: document.getElementById('play-154'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1c3682d7ff8fa3be8240452b34fd3e09.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no155-ted我们在健康的时候讨论死亡'><span>No.155 【TED】我们在健康的时候讨论死亡</span></h2><div id="play-155"></div>
+<script>
+const p155 = new DPlayer({
+    container: document.getElementById('play-155'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/dbf0b050cdd1fafb9025e52f17c5c448.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no156-ted了解自闭症别避而不见'><span>No.156 【TED】了解自闭症，别避而不见</span></h2><div id="play-156"></div>
+<script>
+const p156 = new DPlayer({
+    container: document.getElementById('play-156'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7147181cc45a41335c811c57e5ccd67c.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no157-ted将皮克斯电影融入生活的魔法元素'><span>No.157 【TED】将皮克斯电影融入生活的魔法元素</span></h2><div id="play-157"></div>
+<script>
+const p157 = new DPlayer({
+    container: document.getElementById('play-157'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7637913963d0c4f5f8b1157d8ebca59b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no158-ted记住你自己最重要'><span>No.158 【TED】记住，你自己最重要</span></h2><div id="play-158"></div>
+<script>
+const p158 = new DPlayer({
+    container: document.getElementById('play-158'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/aa946a7c79f6e692efa65082690530ed.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no159-ted纳米科技的未来将会是什么样子'><span>No.159 【TED】纳米科技的未来，将会是什么样子？</span></h2><div id="play-159"></div>
+<script>
+const p159 = new DPlayer({
+    container: document.getElementById('play-159'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c6f0adfea6d8c2259e0cf218464f6e6e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no160-ted网络犯罪到底来源何处'><span>No.160 【TED】网络犯罪到底来源何处？</span></h2><div id="play-160"></div>
+<script>
+const p160 = new DPlayer({
+    container: document.getElementById('play-160'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9db71dedbdf1fdc26ebd6e1677753a31.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no161-ted打破刻板印象给自闭症更多理解'><span>No.161 【TED】打破刻板印象，给自闭症更多理解</span></h2><div id="play-161"></div>
+<script>
+const p161 = new DPlayer({
+    container: document.getElementById('play-161'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/342cde60c5a3243d572a8fa3628f3bbc.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no162-ted究竟什么是存在'><span>No.162 【TED】究竟什么是“存在”？</span></h2><div id="play-162"></div>
+<script>
+const p162 = new DPlayer({
+    container: document.getElementById('play-162'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7ed4fb9d606583c89981f3feb27a744a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no163-ted我们不要一成不变的教育'><span>No.163 【TED】我们不要一成不变的教育！</span></h2><div id="play-163"></div>
+<script>
+const p163 = new DPlayer({
+    container: document.getElementById('play-163'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/990b5f8f8160eb49756be2db00aec882.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no164-ted如何从自己的故事中解脱出来'><span>No.164 【TED】如何从自己的故事中解脱出来</span></h2><div id="play-164"></div>
+<script>
+const p164 = new DPlayer({
+    container: document.getElementById('play-164'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/54363c5b1d7899009a6c91323a89ec21.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no165-ted获胜并不等同于成功'><span>No.165 【TED】获胜”并不等同于“成功”</span></h2><div id="play-165"></div>
+<script>
+const p165 = new DPlayer({
+    container: document.getElementById('play-165'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/4e609b9615010eec0ec657746a797718.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no166-ted窥探前激进圣战士的内心'><span>No.166 【TED】窥探前激进圣战士的内心</span></h2><div id="play-166"></div>
+<script>
+const p166 = new DPlayer({
+    container: document.getElementById('play-166'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/577ea94f1083f735862a7d1d5670cbe6.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no167-ted关于核武器我们应该问这3个问题'><span>No.167 【TED】关于核武器，我们应该问这3个问题</span></h2><div id="play-167"></div>
+<script>
+const p167 = new DPlayer({
+    container: document.getElementById('play-167'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/112e488f679fb84b9817909408027368.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no168-ted各样肤色有各样的美'><span>No.168 【TED】各样肤色，有各样的美。</span></h2><div id="play-168"></div>
+<script>
+const p168 = new DPlayer({
+    container: document.getElementById('play-168'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/80f6c09eec692a7c5dc1a218c6d10702.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no169-ted关注你的心理健康并不可耻'><span>No.169 【TED】关注你的心理健康并不可耻</span></h2><div id="play-169"></div>
+<script>
+const p169 = new DPlayer({
+    container: document.getElementById('play-169'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e1c0236b858b1ea80601189eae24f76b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no170-ted寻求帮助是一种优势不是弱点'><span>No.170 【TED】寻求帮助是一种优势，不是弱点</span></h2><div id="play-170"></div>
+<script>
+const p170 = new DPlayer({
+    container: document.getElementById('play-170'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d5d4d5f663dd3174da23c43a9f084652.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no171-ted当得了医生无法诊断的疾病怎么办'><span>No.171 【TED】当得了医生无法诊断的疾病怎么办？</span></h2><div id="play-171"></div>
+<script>
+const p171 = new DPlayer({
+    container: document.getElementById('play-171'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/932128afd0f4d0964d599ee51d7574f6.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no172-ted为了培育勇敢女孩鼓励她们冒险吧'><span>No.172 【TED】为了培育勇敢女孩，鼓励她们冒险吧</span></h2><div id="play-172"></div>
+<script>
+const p172 = new DPlayer({
+    container: document.getElementById('play-172'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/09581acaf047249a117445ff12564214.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no173-ted互联网中的秘密'><span>No.173 【TED】互联网中的秘密</span></h2><div id="play-173"></div>
+<script>
+const p173 = new DPlayer({
+    container: document.getElementById('play-173'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e6232e453d1f110b22817fa394e36d4e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no174-ted无意识偏见或许你也存在'><span>No.174 【TED】无意识偏见，或许你也存在</span></h2><div id="play-174"></div>
+<script>
+const p174 = new DPlayer({
+    container: document.getElementById('play-174'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e243a4fd2c9a860220e2c1b51edf6f70.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no175-ted如何在你重视的事情上做的更好'><span>No.175 【TED】如何在你重视的事情上做的更好</span></h2><div id="play-175"></div>
+<script>
+const p175 = new DPlayer({
+    container: document.getElementById('play-175'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ffe9ca9b1938bfd47aa19c9f3a0db0db.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no176-ted你是付出者还是获取者'><span>No.176 【TED】你是付出者，还是获取者？</span></h2><div id="play-176"></div>
+<script>
+const p176 = new DPlayer({
+    container: document.getElementById('play-176'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9c7843e340f52536c8188fde9c4cfc8e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no177-ted你周围的所有东西都可以变成电脑'><span>No.177 【TED】你周围的所有东西都可以变成电脑</span></h2><div id="play-177"></div>
+<script>
+const p177 = new DPlayer({
+    container: document.getElementById('play-177'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/2aae4000afce8c3a22d87e476b773eed.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no178-ted人造dna的可能性'><span>No.178 【TED】人造DNA的可能性</span></h2><div id="play-178"></div>
+<script>
+const p178 = new DPlayer({
+    container: document.getElementById('play-178'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bf5d9ec76c1f190143bd27c9b61ad91a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no179-ted移动机器人为你装箱快递'><span>No.179 【TED】移动机器人为你装箱快递</span></h2><div id="play-179"></div>
+<script>
+const p179 = new DPlayer({
+    container: document.getElementById('play-179'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/2a844a52f227a8c12dce190bf2d24468.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no180-ted鸿沟'><span>No.180 【TED】“鸿沟”</span></h2><div id="play-180"></div>
+<script>
+const p180 = new DPlayer({
+    container: document.getElementById('play-180'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b0954740d4657f3fc197040c6e849d7c.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no181-ted用照片记录瞬间会夺走体验感吗'><span>No.181 【TED】用照片记录瞬间会夺走体验感吗？</span></h2><div id="play-181"></div>
+<script>
+const p181 = new DPlayer({
+    container: document.getElementById('play-181'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/86e00cab6e10e6fd167f2bb8946753db.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no182-ted中国的属相'><span>No.182 【TED】中国的属相</span></h2><div id="play-182"></div>
+<script>
+const p182 = new DPlayer({
+    container: document.getElementById('play-182'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bf49d0ca0b27fe524ae04f7bda9954dc.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no183-ted决定梦想距离的是你的决心'><span>No.183 【TED】决定梦想距离的，是你的决心！</span></h2><div id="play-183"></div>
+<script>
+const p183 = new DPlayer({
+    container: document.getElementById('play-183'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/95109e439014c6d619baa2fe24113338.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no184-ted如何用幽默改变串联社会'><span>No.184 【TED】如何用幽默改变、串联社会</span></h2><div id="play-184"></div>
+<script>
+const p184 = new DPlayer({
+    container: document.getElementById('play-184'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e4e3907a0fb705eb197c084fed78be87.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no185-ted拔苗未必能助长'><span>No.185 【TED】拔苗未必能助长</span></h2><div id="play-185"></div>
+<script>
+const p185 = new DPlayer({
+    container: document.getElementById('play-185'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/694dff57da3c0e8f3f85296cd746476b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no186-ted救命的负面情绪'><span>No.186 【TED】救命的“负面情绪”</span></h2><div id="play-186"></div>
+<script>
+const p186 = new DPlayer({
+    container: document.getElementById('play-186'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/27577728c63587fe5cb3d9bd6ff88d6e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no187-ted数学是理解万物之源'><span>No.187 【TED】数学是理解万物之源</span></h2><div id="play-187"></div>
+<script>
+const p187 = new DPlayer({
+    container: document.getElementById('play-187'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b0c88bce335b7b4ac0ee9d9c43151b0b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no188-ted机器人可以通过大学考试吗'><span>No.188 【TED】机器人可以通过大学考试吗？</span></h2><div id="play-188"></div>
+<script>
+const p188 = new DPlayer({
+    container: document.getElementById('play-188'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/8f7028cc6dac448b344b92f23510d575.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no189-ted人工智能的危险比你想象中更奇怪'><span>No.189 【TED】人工智能的危险比你想象中更奇怪</span></h2><div id="play-189"></div>
+<script>
+const p189 = new DPlayer({
+    container: document.getElementById('play-189'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f4fb55376a0539ffc50815b19b5a6211.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no190-ted女性崛起的新趋势'><span>No.190 【TED】女性崛起的新趋势</span></h2><div id="play-190"></div>
+<script>
+const p190 = new DPlayer({
+    container: document.getElementById('play-190'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/46d50952dac64fe6871e06d8b7c3c6e4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no191-ted献给欺凌的受害者你们依然美丽'><span>No.191 【TED】献给欺凌的受害者，你们依然美丽</span></h2><div id="play-191"></div>
+<script>
+const p191 = new DPlayer({
+    container: document.getElementById('play-191'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/40081a81f55849947b0f8ef05abf93a9.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no192-ted解人类性格之谜------你究竟是谁'><span>No.192 【TED】解人类性格之谜——你究竟是谁</span></h2><div id="play-192"></div>
+<script>
+const p192 = new DPlayer({
+    container: document.getElementById('play-192'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/61bdc73698056b251bb8f3c07644a2a3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no193-ted为什么语言是人类最伟大的发明'><span>No.193 【TED】为什么语言是人类最伟大的发明</span></h2><div id="play-193"></div>
+<script>
+const p193 = new DPlayer({
+    container: document.getElementById('play-193'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/47a707e84ad0dcfdee6a095fba31443b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no194-ted请不要外貌焦虑外表不是一切'><span>No.194 【TED】请不要外貌焦虑，外表不是一切</span></h2><div id="play-194"></div>
+<script>
+const p194 = new DPlayer({
+    container: document.getElementById('play-194'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/60a2b3346ef06bc86809c695c1ff4083.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no195-ted全色盲患者自述听到的色彩'><span>No.195 【TED】全色盲患者自述“听到”的色彩</span></h2><div id="play-195"></div>
+<script>
+const p195 = new DPlayer({
+    container: document.getElementById('play-195'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/eafd541a5e5f6f05108335aed58a80d2.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no196-ted科技让我们患上了群体性孤独'><span>No.196 【TED】科技让我们患上了群体性孤独</span></h2><div id="play-196"></div>
+<script>
+const p196 = new DPlayer({
+    container: document.getElementById('play-196'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7bf90fc22385dc835ea66b551f5f0713.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no197-ted如何忘记七个束缚女性的观念'><span>No.197 【TED】如何忘记七个束缚女性的观念</span></h2><div id="play-197"></div>
+<script>
+const p197 = new DPlayer({
+    container: document.getElementById('play-197'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7d8581ee8db8defa959f49215f463009.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no198-ted你上当了吗揭露心理学的十个误解'><span>No.198 【TED】你上当了吗？揭露心理学的十个误解</span></h2><div id="play-198"></div>
+<script>
+const p198 = new DPlayer({
+    container: document.getElementById('play-198'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b9f6243cfb3051894b1a0d386fcbe26d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no199-ted激发学习兴趣的3条黄金法则'><span>No.199 【TED】激发学习兴趣的3条黄金法则</span></h2><div id="play-199"></div>
+<script>
+const p199 = new DPlayer({
+    container: document.getElementById('play-199'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/52b08fa616e5eb2477304b03840d74f1.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no200-ted中国好食物的未来'><span>No.200 【TED】中国好食物的未来</span></h2><div id="play-200"></div>
+<script>
+const p200 = new DPlayer({
+    container: document.getElementById('play-200'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d22e1f66ad43ce98d2e730423f3bd8b0.mp4',
+    },
+});
+</script><p>&nbsp;</p><center><a style="color: rgb(254,17,130)" href="https://icp.gov.moe/?keyword=20223985" target="_blank">萌ICP备20223985号</a></center></div></div>
+</body>
+</html>

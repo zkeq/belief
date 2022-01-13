@@ -1,0 +1,4243 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="referrer" content="no-referrer">
+<script src="/yinghua/Ascii.js"></script>
+<script src="/Aplayer/DPlayer.min.js"></script>
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+/*Chinese*/
+@font-face{
+    font-family: 'HYZhengYuan';
+    src: local('HYZhengYuan'),
+    url('https://unpkg.zhimg.com/zkeq-font@1.1.0/HYZhengYuan-75W.ttf') format('truetype');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}/*
+ * Copyright (C) 2018 Drake, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+@import url();
+
+:root {
+    --monospace: "JetBrains Mono", HYZhengYuan, "Fira Code", Menlo, "Ubuntu Mono", Consolas; /*code font*/
+    --text-font: var(--monospace); /*default font*/
+    --title-font: var(--monospace); /*title font*/
+
+    --text-color: #202124;
+    --blur-text-color: #c8c8c8;
+    --bg-color: #ffffff;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #E5E5E596;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --blur-text-color: rgba(32, 33, 36, 0.5);
+    --drake-accent: #5784ec;
+    --drake-highlight: #3a474e;
+    --a-color: #1769e0;
+    --variable-color: #d01884;
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #f8f9fa;
+    --code-block-color: #3a474e;
+    --title-color: #202124;
+    --blockquote-border-color: #275796;
+    --blockquote-color: #275796;
+    --blockquote-bg-color: #e5f4fd;
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--text-color);
+    --height-light-border-color: var(--text-color);
+    --yaml-color: #777777;
+    --yaml-bg-color: #f7f7f7;
+    --footnotes-bg-color: #3c3d3e;
+    --footnotes-highlight: #FFD760;
+    --table-border-color: #dadce0;
+    --table-header-bg-color: #f1f3f4;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: var(--bg-color);
+    --input-bg-color: var(--item-hover-bg-color);
+    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+    line-height: 1.8rem;
+}
+
+/*code block*/
+.md-fences {
+    font-size: 1rem;
+    padding: 12px !important;
+    border-radius: 8px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: .1em solid #e8eaed;
+}
+
+/*mermaid*/
+.md-diagram-panel-preview text.actor > tspan { /*方块文字*/
+    fill: var(--code-block-color) !important;
+    stroke: none !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .actor { /*方块*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .actor-line { /*竖线*/
+    stroke: var(--text-color) !important;
+    stroke-width: 1px;
+}
+.md-diagram-panel-preview .messageLine0 { /*横线*/
+    stroke-width: 1.5;
+    stroke-dasharray: none;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageLine1 { /*虚线*/
+    stroke-width: 1.5 !important;
+    stroke-dasharray: 2, 2 !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .messageText { /*描述文字*/
+    fill: var(--text-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .activation0 { /*长方形*/
+    fill: rgba(141, 141, 141, 0.22) !important;
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .labelText, .md-diagram-panel-preview .labelText > tspan { /*循环标记*/
+    fill: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+    dominant-baseline: unset;
+    alignment-baseline: unset;
+}
+.md-diagram-panel-preview .labelBox { /*循环标记背景*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+.md-diagram-panel-preview .loopLine { /*循环标记虚线*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
+    fill: var(--text-color) !important;
+    font-size: 1rem !important;
+}
+.md-diagram-panel-preview .sequenceNumber { /*序号*/
+    fill: var(--bg-color) !important;
+}
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border: none;
+}
+.md-diagram-panel-preview .edgePath .path { /*箭头*/
+    stroke: var(--text-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
+    fill: var(--bg-color) !important;
+}
+.md-diagram-panel-preview .edgeLabel span { /*条件文字*/
+    color: var(--text-color);
+}
+.md-diagram-panel-preview .node rect,
+.md-diagram-panel-preview .node circle,
+.md-diagram-panel-preview .node ellipse,
+.md-diagram-panel-preview .node polygon,
+.md-diagram-panel-preview .node path { /*形状*/
+    stroke: var(--table-border-color) !important;
+    fill: var(--code-block-bg-color) !important;
+}
+#write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
+    color: var(--code-block-color) !important;
+    font-family: var(--text-font) !important;
+    font-size: 1rem !important;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 4px;
+    color: var(--drake-highlight);
+    border: .1rem solid #e8eaed;
+    background: #f8f9fa;
+    border-radius: 4px;
+    padding: .1rem .4rem;
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote {
+    color: var(--blockquote-color) !important;
+    border-radius: 4px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+#write strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+.on-focus-mode #write a .md-plain:hover, .on-focus-mode .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--blur-text-color);
+}
+#write a .md-plain:hover, .md-htmlblock-container a:hover,
+.on-focus-mode #write .md-focus a .md-plain:hover, .on-focus-mode .md-focus .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+#write a code, a:any-link {
+    color: var(--a-color);
+}
+#write a code:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 0.1em;
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write p {
+    word-spacing: .05rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2.md-end-block.md-heading {
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+h2.md-end-block.md-heading:after {
+    display: block;
+    content: '';
+    height: 2px;
+    margin-top: 4px;
+    background-color: var(--h2-underline-color);
+    border-radius: 2px;
+}
+.on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
+    background-color: var(--blur-text-color) !important;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+p {
+    margin: 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: var(--table-header-bg-color);
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    vertical-align: top;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+#typora-sidebar {
+    font-size: 1.1rem;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: 1rem;
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA light theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner.CodeMirror {
+    background: none;
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-number {
+    color: #c5221f;
+}
+.cm-s-inner span.cm-atom {
+    color: #c5221f;
+}
+.cm-s-inner span.cm-def {
+    color: #00f;
+}
+.cm-s-inner span.cm-variable {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-variable-2 {
+    color: #00627A;
+}
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type {
+    color: #9334e6;
+}
+.cm-s-inner span.cm-property {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-keyword {
+    color: #1967d2;
+}
+.cm-s-inner span.cm-operator {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-comment {
+    color: #b80672;
+}
+.cm-s-inner span.cm-string {
+    color: #008000;
+}
+.cm-s-inner span.cm-string-2 {
+    color: #008000;
+}
+.cm-s-inner span.cm-qualifier {
+    color: var(--code-block-color);
+}
+.cm-s-inner span.cm-error {
+    color: red;
+}
+.cm-s-inner span.cm-attribute {
+    color: #9334e6;
+}
+.cm-s-inner span.cm-tag.cm-bracket {
+    color: #1967d2;
+}
+.cm-s-inner span.cm-link {
+    color: #4A86E8;
+}
+.cm-s-inner span.cm-builtin {
+    color: var(--code-block-color);
+}
+.cm-s-inner .cm-meta {
+    color: #c5221f;
+}
+.cm-s-inner .CodeMirror-gutters {
+    border-right: 1px solid rgba(120, 120, 120, 0.3);
+}
+.cm-s-inner .CodeMirror-linenumber {
+    color: #787878;
+}
+
+
+</style><title>追梦计划 [附录]</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><blockquote><p><span>声明: 本站全部内容源自互联网,不进行任何盈利行为,如有侵权.联系邮箱: learnonly@learnony.xyz</span></p><p><span>全文链接: </span><a href='https://xue.youdao.com/sw/style/funsci?beginfrom=cidian'><span>有道词典·看天下 (youdao.com)</span></a></p><p><strong><span>本网站仅做 整合 / 美化 处理</span></strong></p><p><span>本站网址: </span><a href='https://belief.zkeq.xyz' target='_blank' class='url'>https://belief.zkeq.xyz</a><span>   </span></p><p><span>最后更新: 2022年1月13日</span></p></blockquote><h2 id='no1ted书呆子在线学习指南'><span>No.1【TED】书呆子在线学习指南</span></h2><div id="play-1"></div>
+<script>
+const p1 = new DPlayer({
+    container: document.getElementById('play-1'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/4f45fef89d7b4e0241e5ff8335d95b47.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no2-ted我们能否编辑记忆'><span>No.2 【TED】我们能否编辑记忆？</span></h2><div id="play-2"></div>
+<script>
+const p2 = new DPlayer({
+    container: document.getElementById('play-2'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f615fc456c8b0b052e7ac8f462c7861f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no3-ted当生物学成为科技时会发生什么'><span>No.3 【TED】当生物学成为科技时会发生什么？</span></h2><div id="play-3"></div>
+<script>
+const p3 = new DPlayer({
+    container: document.getElementById('play-3'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3cc00cc71e6443013e949fd55a8f31dc.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no4-ted威廉王子未来十年挽救地球的壮举'><span>No.4 【TED】威廉王子：未来十年挽救地球的壮举</span></h2><div id="play-4"></div>
+<script>
+const p4 = new DPlayer({
+    container: document.getElementById('play-4'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3f5edeee3a53480f633b63a0a7d0a8b7.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no5-ted大脑是如何定义美的'><span>No.5 【TED】大脑是如何定义美的</span></h2><div id="play-5"></div>
+<script>
+const p5 = new DPlayer({
+    container: document.getElementById('play-5'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b67b14ad0b7689407b05c9116c18b6fc.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no6-ted6分钟了解四十亿年人类进化史'><span>No.6 【TED】6分钟了解四十亿年人类进化史</span></h2><div id="play-6"></div>
+<script>
+const p6 = new DPlayer({
+    container: document.getElementById('play-6'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/cb7092086ce993db473978454c389c76.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no7-ted河流会告诉我们的地球历史'><span>No.7 【TED】河流会告诉我们的地球历史</span></h2><div id="play-7"></div>
+<script>
+const p7 = new DPlayer({
+    container: document.getElementById('play-7'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1992e689028dcaab58bdbe469533796e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no8-tedai如何提高记忆力工作与生活'><span>No.8 【TED】AI如何提高记忆力、工作与生活？</span></h2><div id="play-8"></div>
+<script>
+const p8 = new DPlayer({
+    container: document.getElementById('play-8'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d50468624ff96130c49ab9e6708c1fdb.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no9-ted为什么我们需要与陌生人交流'><span>No.9 【TED】为什么我们需要与陌生人交流</span></h2><div id="play-9"></div>
+<script>
+const p9 = new DPlayer({
+    container: document.getElementById('play-9'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e40df7a4fcefe1ac227d41d3b3f4274b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no10-ted一次奇妙的公开课太空奇遇'><span>No.10 【TED】一次奇妙的公开课，太空奇遇</span></h2><div id="play-10"></div>
+<script>
+const p10 = new DPlayer({
+    container: document.getElementById('play-10'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f037ba1379776890945db5d3794ee303.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no11-ted我们应该如何做得更好'><span>No.11 【TED】我们应该如何做得更好？</span></h2><div id="play-11"></div>
+<script>
+const p11 = new DPlayer({
+    container: document.getElementById('play-11'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/941afa5b48216fe41ef71820bee30dbe.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no12-ted开启情绪识别的大门'><span>No.12 【TED】开启情绪识别的大门</span></h2><div id="play-12"></div>
+<script>
+const p12 = new DPlayer({
+    container: document.getElementById('play-12'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/04da910dd4cf80656aa82fef5f48ac5f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no13-ted想象一个没有屏幕的互联网世界'><span>No.13 【TED】想象一个没有屏幕的互联网世界</span></h2><div id="play-13"></div>
+<script>
+const p13 = new DPlayer({
+    container: document.getElementById('play-13'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/51d828e92a6ac9b5201a536da90ec9ef.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no14-ted你是给予者还是索取者'><span>No.14 【TED】你是给予者还是索取者？</span></h2><div id="play-14"></div>
+<script>
+const p14 = new DPlayer({
+    container: document.getElementById('play-14'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/4b0d7838229fb84d5a807b9ca50af397.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no15-ted如何有效地求同存异'><span>No.15 【TED】如何有效地求同存异</span></h2><div id="play-15"></div>
+<script>
+const p15 = new DPlayer({
+    container: document.getElementById('play-15'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7695ceb78934725db5805c01c894464d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no16-ted理解世界的秘诀数学'><span>No.16 【TED】理解世界的秘诀：数学</span></h2><div id="play-16"></div>
+<script>
+const p16 = new DPlayer({
+    container: document.getElementById('play-16'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0d74303d1b66dadae2d4c5a6d85fab16.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no17-ted寻找太阳系外的行星'><span>No.17 【TED】寻找太阳系外的行星</span></h2><div id="play-17"></div>
+<script>
+const p17 = new DPlayer({
+    container: document.getElementById('play-17'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1fdf1bd3626359aaded16cb80717a540.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no18-ted让科幻小说中的未来成为现实'><span>No.18 【TED】让科幻小说中的未来成为现实</span></h2><div id="play-18"></div>
+<script>
+const p18 = new DPlayer({
+    container: document.getElementById('play-18'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a4fab537b9e65cfd0137e3648f8a947b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no19-ted阅读诗歌从诗歌中感受美与生活'><span>No.19 【TED】阅读诗歌：从诗歌中感受美与生活</span></h2><div id="play-19"></div>
+<script>
+const p19 = new DPlayer({
+    container: document.getElementById('play-19'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/eccd356fce91730e581ba35fe0f70b62.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no20-ted想要改变世界吗从勇敢去关心开始'><span>No.20 【TED】想要改变世界吗？从勇敢去关心开始</span></h2><div id="play-20"></div>
+<script>
+const p20 = new DPlayer({
+    container: document.getElementById('play-20'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/93c898043230f6d4f65d657cd922606d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no21-ted你有拖延症吗'><span>No.21 【TED】你有拖延症吗?</span></h2><div id="play-21"></div>
+<script>
+const p21 = new DPlayer({
+    container: document.getElementById('play-21'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f0da120df6791166125e44c5ca36b133.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no22-ted保罗·布鲁姆快乐的源泉'><span>No.22 【TED】保罗·布鲁姆：快乐的源泉</span></h2><div id="play-22"></div>
+<script>
+const p22 = new DPlayer({
+    container: document.getElementById('play-22'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/46c48a128dc718b9ae7c90f6f1f27ace.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no23-ted马丁·赛利格曼谈论积极心理学'><span>No.23 【TED】马丁·赛利格曼：谈论积极心理学</span></h2><div id="play-23"></div>
+<script>
+const p23 = new DPlayer({
+    container: document.getElementById('play-23'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/71f4bdd65aabee1c0bdd85d0cf13dacd.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no24-ted时间与水'><span>No.24 【TED】时间与水</span></h2><div id="play-24"></div>
+<script>
+const p24 = new DPlayer({
+    container: document.getElementById('play-24'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d4ff64ea7a3811e137c76a76f842f108.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no25-ted为什么人们会有数学焦虑症'><span>No.25 【TED】为什么人们会有</span><span>&quot;</span><span>数学焦虑症</span><span>&quot;</span><span>?</span></h2><div id="play-25"></div>
+<script>
+const p25 = new DPlayer({
+    container: document.getElementById('play-25'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e9be8ed344151903d2ddbacf6e9066ad.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no26-ted享受摄影记录的那个瞬间'><span>No.26 【TED】享受摄影记录的那个瞬间</span></h2><div id="play-26"></div>
+<script>
+const p26 = new DPlayer({
+    container: document.getElementById('play-26'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/6791726d51282fe25749c9796433d24f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no27-ted如何找到在工作中能助你成功的人'><span>No.27 【TED】如何找到在工作中能助你成功的人</span></h2><div id="play-27"></div>
+<script>
+const p27 = new DPlayer({
+    container: document.getElementById('play-27'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bff1a6f6e6c64eb6c29cb00f3779675f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no28-ted关于暗物质研究进展'><span>No.28 【TED】关于暗物质研究进展</span></h2><div id="play-28"></div>
+<script>
+const p28 = new DPlayer({
+    container: document.getElementById('play-28'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/98b3feb2dd790bcc7b102a37975c5c70.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no29-ted工作的意义是什么'><span>No.29 【TED】工作的意义是什么？</span></h2><div id="play-29"></div>
+<script>
+const p29 = new DPlayer({
+    container: document.getElementById('play-29'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c9f59ca665a3666e5a3309ea05247e40.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no30-ted为什么你对公共演讲会产生恐惧心理'><span>No.30 【TED】为什么你对公共演讲会产生恐惧心理</span></h2><div id="play-30"></div>
+<script>
+const p30 = new DPlayer({
+    container: document.getElementById('play-30'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/446108e1669dc7c6181d3b898a7974df.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no31-ted语言所蕴含的信息远远超出你的想象'><span>No.31 【TED】语言所蕴含的信息远远超出你的想象</span></h2><div id="play-31"></div>
+<script>
+const p31 = new DPlayer({
+    container: document.getElementById('play-31'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0a0755df81c27afbc7d84a6dad985e6e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no32-ted人类会怎样进化去适应太空的环境'><span>No.32 【TED】人类会怎样进化去适应太空的环境</span></h2><div id="play-32"></div>
+<script>
+const p32 = new DPlayer({
+    container: document.getElementById('play-32'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/29d7f7d3f0d9d51be5984095d4d0767b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no33-ted把热爱变事业前先问自己这2个问题'><span>No.33 【TED】把热爱变事业前，先问自己这2个问题</span></h2><div id="play-33"></div>
+<script>
+const p33 = new DPlayer({
+    container: document.getElementById('play-33'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/4f709751a7b74782eb8c791765eea698.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no34-ted如何在一颗彗星上着陆'><span>No.34 【TED】如何在一颗彗星上着陆</span></h2><div id="play-34"></div>
+<script>
+const p34 = new DPlayer({
+    container: document.getElementById('play-34'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/079d20e768b50fd4105d8e85991e1b80.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no35-ted关于婚姻你不能不知的事'><span>No.35 【TED】关于婚姻你不能不知的事</span></h2><div id="play-35"></div>
+<script>
+const p35 = new DPlayer({
+    container: document.getElementById('play-35'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/467afaca5609e8fda290b2670a34a2a2.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no36-ted弥留之际他们如何面对死亡'><span>No.36 【TED】弥留之际，他们如何面对死亡</span></h2><div id="play-36"></div>
+<script>
+const p36 = new DPlayer({
+    container: document.getElementById('play-36'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1f57da130d359236d3882d596ce1f9be.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no37-ted地球外的生命是如何起源和生存的'><span>No.37 【TED】地球外的生命是如何起源和生存的？</span></h2><div id="play-37"></div>
+<script>
+const p37 = new DPlayer({
+    container: document.getElementById('play-37'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/2a113d29439d9280c0cacc96f90b63e4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no38-ted在非洲找寻人类的起源'><span>No.38 【TED】在非洲找寻人类的起源</span></h2><div id="play-38"></div>
+<script>
+const p38 = new DPlayer({
+    container: document.getElementById('play-38'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a4608d21992a08473df24931f93105f3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no39-ted我从31天的海底生活中学到了什么'><span>No.39 【TED】我从31天的海底生活中学到了什么</span></h2><div id="play-39"></div>
+<script>
+const p39 = new DPlayer({
+    container: document.getElementById('play-39'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c73c88f61913246c42b287eac7c7d219.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no40-ted怎样拍摄一张黑洞的图片'><span>No.40 【TED】怎样拍摄一张黑洞的图片？</span></h2><div id="play-40"></div>
+<script>
+const p40 = new DPlayer({
+    container: document.getElementById('play-40'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/56ce6e533b0d9919ce073e6178370dee.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no41-ted火星现在是什么时间'><span>No.41 【TED】火星现在是什么时间？</span></h2><div id="play-41"></div>
+<script>
+const p41 = new DPlayer({
+    container: document.getElementById('play-41'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/8933ba11910462c89574d48438b7cad2.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no42-ted黄执中像辩手一样生活'><span>No.42 【TED】黄执中：像辩手一样生活</span></h2><div id="play-42"></div>
+<script>
+const p42 = new DPlayer({
+    container: document.getElementById('play-42'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a75a9984e82bc3329cfcc6e55d51a364.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no43-ted正确的教育方式避免过度呵护'><span>No.43 【TED】正确的教育方式，避免过度呵护</span></h2><div id="play-43"></div>
+<script>
+const p43 = new DPlayer({
+    container: document.getElementById('play-43'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9e626662a2f704f103a86351021ffd66.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no44-ted数学有助于揭开癌症的奥秘'><span>No.44 【TED】数学有助于揭开癌症的奥秘？</span></h2><div id="play-44"></div>
+<script>
+const p44 = new DPlayer({
+    container: document.getElementById('play-44'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/8f0123719bd5f30fb7fa7260d17d3359.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no45-ted为何说铅笔是完美的'><span>No.45 【TED】为何说铅笔是完美的？</span></h2><div id="play-45"></div>
+<script>
+const p45 = new DPlayer({
+    container: document.getElementById('play-45'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/28d8e46dfc20f76e47e5b8a4840a114d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no46-ted我从全职奶爸经历中学到的事儿'><span>No.46 【TED】我从全职奶爸经历中学到的事儿</span></h2><div id="play-46"></div>
+<script>
+const p46 = new DPlayer({
+    container: document.getElementById('play-46'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1b02c4c8deb4ed07a4421a7e156cc320.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no47-ted我们为什么会对机器人有感情'><span>No.47 【TED】我们为什么会对机器人有感情</span></h2><div id="play-47"></div>
+<script>
+const p47 = new DPlayer({
+    container: document.getElementById('play-47'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d00054299a3a75baff583d1c130b4603.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no48-ted从太空观察地球是种什么样的体验'><span>No.48 【TED】从太空观察地球是种什么样的体验</span></h2><div id="play-48"></div>
+<script>
+const p48 = new DPlayer({
+    container: document.getElementById('play-48'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/2ee6273512070b599e2f68eb1f7faa19.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no49-ted中国如何改变购物的未来'><span>No.49 【TED】中国如何改变购物的未来</span></h2><div id="play-49"></div>
+<script>
+const p49 = new DPlayer({
+    container: document.getElementById('play-49'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0e9ed4112c5591447be850f0f68eba2c.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no50-ted今天我们该如何更好地讨论爱情'><span>No.50 【TED】今天，我们该如何更好地讨论爱情</span></h2><div id="play-50"></div>
+<script>
+const p50 = new DPlayer({
+    container: document.getElementById('play-50'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/84640ff34b650854dfbed2abefa63812.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no51-ted你想过吗退货的商品都去哪了'><span>No.51 【TED】你想过吗？退货的商品都去哪了？</span></h2><div id="play-51"></div>
+<script>
+const p51 = new DPlayer({
+    container: document.getElementById('play-51'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/77f6bc1e63f6db86613e0c29415b06a3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no52-ted地球上最像火星的地方'><span>No.52 【TED】地球上最像火星的地方</span></h2><div id="play-52"></div>
+<script>
+const p52 = new DPlayer({
+    container: document.getElementById('play-52'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f2a7fc35e89004d591b1eac78ab07edf.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no53-ted新发现的人种如何改变人类进化论'><span>No.53 【TED】新发现的人种如何改变人类进化论</span></h2><div id="play-53"></div>
+<script>
+const p53 = new DPlayer({
+    container: document.getElementById('play-53'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/99b166c163028478602271d896c29fd4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no54-ted如果有一天你的母亲忘记了你'><span>No.54 【TED】如果有一天，你的母亲忘记了你...</span></h2><div id="play-54"></div>
+<script>
+const p54 = new DPlayer({
+    container: document.getElementById('play-54'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a9be93cf60ba51b3d37aaec00966cde1.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no55-ted教育帮我重新书写了人生'><span>No.55 【TED】教育帮我重新书写了人生</span></h2><div id="play-55"></div>
+<script>
+const p55 = new DPlayer({
+    container: document.getElementById('play-55'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/50acf24be0a65183bc3ea60f50cc554f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no56-ted科幻小说是如何激励我们登上月球的'><span>No.56 【TED】科幻小说是如何激励我们登上月球的</span></h2><div id="play-56"></div>
+<script>
+const p56 = new DPlayer({
+    container: document.getElementById('play-56'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/87e2340b2810ea18fec138e30d1daa25.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no57-ted怎样让工作少一些痛苦'><span>No.57 【TED】怎样让工作少一些痛苦</span></h2><div id="play-57"></div>
+<script>
+const p57 = new DPlayer({
+    container: document.getElementById('play-57'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/fe1a0d1a75cd37b92e695afab3c9f69a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no58-ted你遇到过不健康的爱吗'><span>No.58 【TED】你遇到过不健康的爱吗？</span></h2><div id="play-58"></div>
+<script>
+const p58 = new DPlayer({
+    container: document.getElementById('play-58'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1a67dc40ce03b62367d719e2ee04fd2e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no59-ted皮克斯的动画电影为什么好看'><span>No.59 【TED】皮克斯的动画电影为什么好看？</span></h2><div id="play-59"></div>
+<script>
+const p59 = new DPlayer({
+    container: document.getElementById('play-59'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/def7b6c4073af8415f55b1a0daeed0b3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no60-ted一张里程碑式的黑洞照片'><span>No.60 【TED】一张里程碑式的黑洞照片</span></h2><div id="play-60"></div>
+<script>
+const p60 = new DPlayer({
+    container: document.getElementById('play-60'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/39953fb56f30cb680033431f85bfbc65.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no61-ted为什么我们常常会生气'><span>No.61 【TED】为什么我们常常会生气？</span></h2><div id="play-61"></div>
+<script>
+const p61 = new DPlayer({
+    container: document.getElementById('play-61'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0049fafc09a87a5f340b30e31778212f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no62-ted电影如何改变我们看世界的方式'><span>No.62 【TED】电影如何改变我们看世界的方式</span></h2><div id="play-62"></div>
+<script>
+const p62 = new DPlayer({
+    container: document.getElementById('play-62'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ab5cd785219dd81d6b3d9e1a8c8a88cb.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no63-ted如何将漫画引入课堂教学'><span>No.63 【TED】如何将漫画引入课堂教学</span></h2><div id="play-63"></div>
+<script>
+const p63 = new DPlayer({
+    container: document.getElementById('play-63'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7cadd895617a5c1934d7cea71d12c4f0.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no64-ted讲礼貌是虚情假意吗'><span>No.64 【TED】讲礼貌是虚情假意吗？</span></h2><div id="play-64"></div>
+<script>
+const p64 = new DPlayer({
+    container: document.getElementById('play-64'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/5d3ce5d4a7a934febf9b6ea4d9e2ba65.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no65-ted年纪轻的人会更容易成功吗'><span>No.65 【TED】年纪轻的人会更容易成功吗?</span></h2><div id="play-65"></div>
+<script>
+const p65 = new DPlayer({
+    container: document.getElementById('play-65'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/8f724c0e156e91314943f30f56d39f2a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no66-ted我在国际太空站上的生活'><span>No.66 【TED】我在国际太空站上的生活</span></h2><div id="play-66"></div>
+<script>
+const p66 = new DPlayer({
+    container: document.getElementById('play-66'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/8efad7a23503bcec9bac467e19173fd3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no67-ted大数据时代是谁在创造意义'><span>No.67 【TED】大数据时代，是谁在创造意义</span></h2><div id="play-67"></div>
+<script>
+const p67 = new DPlayer({
+    container: document.getElementById('play-67'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/cfa00ccf40b08fba6c11680854f25f59.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no68-帮助他人最好的方法是倾听而不是提供建议'><span>No.68 帮助他人最好的方法是倾听而不是提供建议</span></h2><div id="play-68"></div>
+<script>
+const p68 = new DPlayer({
+    container: document.getElementById('play-68'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3152bdd078b4cdd054a28815645949d6.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no69-ted拒绝丧偶式育儿父亲需给同等的爱'><span>No.69 【TED】拒绝丧偶式育儿，父亲需给同等的爱</span></h2><div id="play-69"></div>
+<script>
+const p69 = new DPlayer({
+    container: document.getElementById('play-69'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/53b3a1a030c893f857e96ff257545c08.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no70-ted不要被情感左右做情感的主人'><span>No.70 【TED】不要被情感左右，做情感的主人</span></h2><div id="play-70"></div>
+<script>
+const p70 = new DPlayer({
+    container: document.getElementById('play-70'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3bce75901cd2104d859edd74945a8fbd.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no71-ted一款帮助我们建造城市的游戏'><span>No.71 【TED】一款帮助我们建造城市的游戏</span></h2><div id="play-71"></div>
+<script>
+const p71 = new DPlayer({
+    container: document.getElementById('play-71'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a1b037594de3aa6605eedd56b83930ff.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no72-ted你的注意力为何总是无法集中'><span>No.72 【TED】你的注意力为何总是无法集中？</span></h2><div id="play-72"></div>
+<script>
+const p72 = new DPlayer({
+    container: document.getElementById('play-72'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/aa0242a30bf421344c9034f2735de20e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no73-ted如何跟压力做朋友'><span>No.73 【TED】如何跟压力做朋友？</span></h2><div id="play-73"></div>
+<script>
+const p73 = new DPlayer({
+    container: document.getElementById('play-73'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b7df65c0eefc07cd81eec92fac19378b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no74-ted幸福是什么'><span>No.74 【TED】幸福是什么？</span></h2><div id="play-74"></div>
+<script>
+const p74 = new DPlayer({
+    container: document.getElementById('play-74'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/aaa1dc6aa1bf4f03775fcc4772050561.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no75-ted找工作更强调能力而非经验'><span>No.75 【TED】找工作更强调能力而非经验</span></h2><div id="play-75"></div>
+<script>
+const p75 = new DPlayer({
+    container: document.getElementById('play-75'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/827756e5f0a18d94e574a16d53ae53df.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no76-ted史蒂芬·平克谈语言和思想'><span>No.76 【TED】史蒂芬·平克谈语言和思想</span></h2><div id="play-76"></div>
+<script>
+const p76 = new DPlayer({
+    container: document.getElementById('play-76'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/15e981aa83bf9e0e07963f56a90ffc22.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no77-ted人类情绪的历史'><span>No.77 【TED】人类情绪的历史</span></h2><div id="play-77"></div>
+<script>
+const p77 = new DPlayer({
+    container: document.getElementById('play-77'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/53b4267eec5ec56abcd093198711a9a9.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no78-ted用歌曲来阐述历史'><span>No.78 【TED】用歌曲来阐述历史</span></h2><div id="play-78"></div>
+<script>
+const p78 = new DPlayer({
+    container: document.getElementById('play-78'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/40863982be837a5a9fe71b8d42c71292.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no79-ted如何爱与被爱'><span>No.79 【TED】如何爱与被爱？</span></h2><div id="play-79"></div>
+<script>
+const p79 = new DPlayer({
+    container: document.getElementById('play-79'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/2d8dcaa40fc7ddc3d4d294844b2649b4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no80-ted揭露心理学的9个错误观念'><span>No.80 【TED】揭露心理学的9个错误观念</span></h2><div id="play-80"></div>
+<script>
+const p80 = new DPlayer({
+    container: document.getElementById('play-80'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/44307d5c7f27f6828604de1393bb672d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no81-ted人类100年后会变成什么样子'><span>No.81 【TED】人类100年后会变成什么样子？</span></h2><div id="play-81"></div>
+<script>
+const p81 = new DPlayer({
+    container: document.getElementById('play-81'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/82507ced7f9c99ab4a8f1807adec6267.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no82-ted宇宙为何会存在'><span>No.82 【TED】宇宙为何会存在？</span></h2><div id="play-82"></div>
+<script>
+const p82 = new DPlayer({
+    container: document.getElementById('play-82'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/66ed20aa7994e5f18cfc92fa88cef690.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no83-ted地球的24小时在一张画中'><span>No.83 【TED】地球的24小时在一张画中</span></h2><div id="play-83"></div>
+<script>
+const p83 = new DPlayer({
+    container: document.getElementById('play-83'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3063e87b201c57a2d51105f7aa484515.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no84-ted物理的新纪元'><span>No.84 【TED】物理的新纪元</span></h2><div id="play-84"></div>
+<script>
+const p84 = new DPlayer({
+    container: document.getElementById('play-84'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3af2d00af1c7a3e9f3e9fd5616949d90.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no85-ted4种影响我们的声音方式'><span>No.85 【TED】4种影响我们的声音方式</span></h2><div id="play-85"></div>
+<script>
+const p85 = new DPlayer({
+    container: document.getElementById('play-85'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3ec65918842bbc35669bcf5a5c2209ee.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no86-ted8个成功秘笈'><span>No.86 【TED】8个成功秘笈</span></h2><div id="play-86"></div>
+<script>
+const p86 = new DPlayer({
+    container: document.getElementById('play-86'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9dbe6f9926e72b933d5aa04284043b59.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no87-ted活着的意义是什么'><span>No.87 【TED】活着的意义是什么？</span></h2><div id="play-87"></div>
+<script>
+const p87 = new DPlayer({
+    container: document.getElementById('play-87'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f62f29057b8d8e17ed0b8118af19facf.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no88-ted我们能战胜贫穷吗'><span>No.88 【TED】我们能战胜贫穷吗？</span></h2><div id="play-88"></div>
+<script>
+const p88 = new DPlayer({
+    container: document.getElementById('play-88'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/5872ca2ecf1b62a8f947f059b88edc14.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no89-ted马斯克可持续能源改变世界'><span>No.89 【TED】马斯克：可持续能源改变世界</span></h2><div id="play-89"></div>
+<script>
+const p89 = new DPlayer({
+    container: document.getElementById('play-89'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7bd797e3a3e72ec2d2fea545d68fad65.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no90-ted一个编舞者的现场创作过程'><span>No.90 【TED】一个编舞者的现场创作过程</span></h2><div id="play-90"></div>
+<script>
+const p90 = new DPlayer({
+    container: document.getElementById('play-90'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/fccd3d9d3bda3ff89c2ba292c3c119ac.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no91-ted创造幸福的7条定律'><span>No.91 【TED】创造幸福的7条定律</span></h2><div id="play-91"></div>
+<script>
+const p91 = new DPlayer({
+    container: document.getElementById('play-91'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d1717305b2cd305024636e72d36d454c.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no92-ted激动人心的吉他表演'><span>No.92 【TED】激动人心的吉他表演</span></h2><div id="play-92"></div>
+<script>
+const p92 = new DPlayer({
+    container: document.getElementById('play-92'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1607535d3f86f54c8cec583f107ae324.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no93-ted格陵兰冰原之下的秘密'><span>No.93 【TED】格陵兰冰原之下的秘密</span></h2><div id="play-93"></div>
+<script>
+const p93 = new DPlayer({
+    container: document.getElementById('play-93'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b5e2b9d808785f30072182dc802aec9b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no94-ted如何才能让别人接受你的观点'><span>No.94 【TED】如何才能让别人接受你的观点？</span></h2><div id="play-94"></div>
+<script>
+const p94 = new DPlayer({
+    container: document.getElementById('play-94'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c6aa8baecbe525c2accde3e4649724df.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no95-ted5个摧毁你梦想的办法'><span>No.95 【TED】5个摧毁你梦想的办法</span></h2><div id="play-95"></div>
+<script>
+const p95 = new DPlayer({
+    container: document.getElementById('play-95'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ce3a7527266def194e66862098cf97d9.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no96-ted考试分数不是教育的目的'><span>No.96 【TED】考试分数不是教育的目的</span></h2><div id="play-96"></div>
+<script>
+const p96 = new DPlayer({
+    container: document.getElementById('play-96'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0a28c13f68e16912a93a226eaabe0156.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no97-ted坠入爱河的大脑会变成什么样'><span>No.97 【TED】坠入爱河的大脑会变成什么样？</span></h2><div id="play-97"></div>
+<script>
+const p97 = new DPlayer({
+    container: document.getElementById('play-97'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a98ea35f10d66799eb4d4ac8c0cc337b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no98-ted马特想更幸福吗留在那一刻'><span>No.98 【TED】马特：想更幸福吗？留在那一刻</span></h2><div id="play-98"></div>
+<script>
+const p98 = new DPlayer({
+    container: document.getElementById('play-98'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f9943188bd1aab4dbaab21ed2672038e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no99-ted幸福可以用金钱买到吗'><span>No.99 【TED】幸福可以用金钱买到吗？</span></h2><div id="play-99"></div>
+<script>
+const p99 = new DPlayer({
+    container: document.getElementById('play-99'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/36a9edc4436a54404a9878c63d3a7b71.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no100-ted这种咒语能带你获得幸福'><span>No.100 【TED】这种咒语，能带你获得幸福</span></h2><div id="play-100"></div>
+<script>
+const p100 = new DPlayer({
+    container: document.getElementById('play-100'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/37311fc2ca81ac7041bef58a7911d4a2.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no101-ted如何科学地激发我们的好奇心'><span>No.101 【TED】如何科学地激发我们的好奇心？</span></h2><div id="play-101"></div>
+<script>
+const p101 = new DPlayer({
+    container: document.getElementById('play-101'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ed260f777cc0373b23a70a31affe23be.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no102-ted我们能从2000份讣告中学到什么'><span>No.102 【TED】我们能从2000份讣告中学到什么</span></h2><div id="play-102"></div>
+<script>
+const p102 = new DPlayer({
+    container: document.getElementById('play-102'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/5e7cb644bf44a5dd4d82a913cbcf4856.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no103-ted人类如何抵达其他星球'><span>No.103 【TED】人类如何抵达其他星球？</span></h2><div id="play-103"></div>
+<script>
+const p103 = new DPlayer({
+    container: document.getElementById('play-103'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0a1289d4b4e7c360662c90230c6a067d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no104-ted丁克我们为什么一定要生孩子呢'><span>No.104 【TED】丁克：我们为什么一定要生孩子呢？</span></h2><div id="play-104"></div>
+<script>
+const p104 = new DPlayer({
+    container: document.getElementById('play-104'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/888e3c490bf556722f973fc181adb7b7.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no105-ted海底深处的世界是什么样的'><span>No.105 【TED】海底深处的世界是什么样的？</span></h2><div id="play-105"></div>
+<script>
+const p105 = new DPlayer({
+    container: document.getElementById('play-105'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/345fd1b471a43c61e7a318e8dbee1751.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no106-ted我们的大脑是如何定义美的'><span>No.106 【TED】我们的大脑是如何定义美的？</span></h2><div id="play-106"></div>
+<script>
+const p106 = new DPlayer({
+    container: document.getElementById('play-106'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bc87e435056e0d8f4183e757a2ba1459.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no107-ted在死亡面前生活如何有意义'><span>No.107 【TED】在死亡面前，生活如何有意义？</span></h2><div id="play-107"></div>
+<script>
+const p107 = new DPlayer({
+    container: document.getElementById('play-107'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0fed4a97f385f0c1a92aa133b9ec53ad.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no108-ted当你和世界不一样那就让你不一样'><span>No.108 【TED】当你和世界不一样，那就让你不一样</span></h2><div id="play-108"></div>
+<script>
+const p108 = new DPlayer({
+    container: document.getElementById('play-108'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/433ae63692c96fdc3ff10a3755e800d0.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no109-ted从我们身边寻找快乐的方法'><span>No.109 【TED】从我们身边寻找快乐的方法</span></h2><div id="play-109"></div>
+<script>
+const p109 = new DPlayer({
+    container: document.getElementById('play-109'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/71249372ad8f6c7956096504282c4a5f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no110-ted我们为什么要学习为了自由'><span>No.110 【TED】我们为什么要学习？为了自由</span></h2><div id="play-110"></div>
+<script>
+const p110 = new DPlayer({
+    container: document.getElementById('play-110'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/93e5de4b347e4b261d57df62297b0799.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no111-ted自闭症------我们了解多少'><span>No.111 【TED】自闭症——我们了解多少</span></h2><div id="play-111"></div>
+<script>
+const p111 = new DPlayer({
+    container: document.getElementById('play-111'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9336d7b5634b889cceeb3ba83636819a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no112-ted科技如何帮助我们理解自己的情绪'><span>No.112 【TED】科技如何帮助我们理解自己的情绪？</span></h2><div id="play-112"></div>
+<script>
+const p112 = new DPlayer({
+    container: document.getElementById('play-112'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/28ec635f42c707050ca5fc53b0d87fe9.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no113-ted一个罕见的星系颠覆你对宇宙的认知'><span>No.113 【TED】一个罕见的星系颠覆你对宇宙的认知</span></h2><div id="play-113"></div>
+<script>
+const p113 = new DPlayer({
+    container: document.getElementById('play-113'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0ad39aeb0f9313f9bcd52f351c4200cc.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no114-ted你的社交生活可能是长寿的秘籍'><span>No.114 【TED】你的社交生活可能是长寿的秘籍！</span></h2><div id="play-114"></div>
+<script>
+const p114 = new DPlayer({
+    container: document.getElementById('play-114'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ca27735f1dfb2df56b7475ce083522af.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no115-ted在工作场合融洽相处的3种方式'><span>No.115 【TED】在工作场合融洽相处的3种方式</span></h2><div id="play-115"></div>
+<script>
+const p115 = new DPlayer({
+    container: document.getElementById('play-115'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/01494a8db54ab0796f56c0c911b2ac28.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no116-ted这是世界上最难听的音乐'><span>No.116 【TED】这是世界上最难听的音乐......</span></h2><div id="play-116"></div>
+<script>
+const p116 = new DPlayer({
+    container: document.getElementById('play-116'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/dfb61a2f1ee2465b82ef3ac843f78665.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no117-ted我们该如何挽救日渐衰败的新闻业'><span>No.117 【TED】我们该如何挽救日渐衰败的新闻业</span></h2><div id="play-117"></div>
+<script>
+const p117 = new DPlayer({
+    container: document.getElementById('play-117'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/742fe348e4b9b4a68a53290d70933033.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no118-ted如何找到在工作中能助你成功的人'><span>No.118 【TED】如何找到在工作中能助你成功的人</span></h2><div id="play-118"></div>
+<script>
+const p118 = new DPlayer({
+    container: document.getElementById('play-118'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/97ae469779228bf860d870312e2587a5.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no119-ted一个解释月球起源的新理论'><span>No.119 【TED】一个解释月球起源的新理论</span></h2><div id="play-119"></div>
+<script>
+const p119 = new DPlayer({
+    container: document.getElementById('play-119'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/89d50c2867946f75f35ee1ecca2fc224.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no120-ted读书带给我的治愈力'><span>No.120 【TED】读书带给我的治愈力</span></h2><div id="play-120"></div>
+<script>
+const p120 = new DPlayer({
+    container: document.getElementById('play-120'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1e373972a68bf2ac41904f7730dfd3dc.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no121-ted关于星系黑洞和恒星最详细的地图'><span>No.121 【TED】关于星系，黑洞和恒星最详细的地图</span></h2><div id="play-121"></div>
+<script>
+const p121 = new DPlayer({
+    container: document.getElementById('play-121'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/acc4b67905e8b924f02409089bc9d60e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no122-ted其实孩子们整天对着手机并不可怕'><span>No.122 【TED】其实孩子们整天对着手机并不可怕</span></h2><div id="play-122"></div>
+<script>
+const p122 = new DPlayer({
+    container: document.getElementById('play-122'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c7b05d2b64327f258fa7ebb77f033036.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no123-ted为什么天天面对手机使我们不开心'><span>No.123 【TED】为什么天天面对手机使我们不开心？</span></h2><div id="play-123"></div>
+<script>
+const p123 = new DPlayer({
+    container: document.getElementById('play-123'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/8efa077404291e5b2347d2bfb95cd55d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no124-ted这可能是你抑郁和焦虑的原因'><span>No.124 【TED】这可能是你抑郁和焦虑的原因</span></h2><div id="play-124"></div>
+<script>
+const p124 = new DPlayer({
+    container: document.getElementById('play-124'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9926e0255ec3dc53db61c704b084e9e3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no125-ted将地球上的24小时浓缩为一张照片'><span>No.125 【TED】将地球上的24小时浓缩为一张照片</span></h2><div id="play-125"></div>
+<script>
+const p125 = new DPlayer({
+    container: document.getElementById('play-125'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d329cd895f202b04ddfa612b003b8a1e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no126-ted你这一辈子你希望得到什么'><span>No.126 【TED】你这一辈子，你希望得到什么？</span></h2><div id="play-126"></div>
+<script>
+const p126 = new DPlayer({
+    container: document.getElementById('play-126'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/eb43e14b8b0f05f54cdeb18a06d97fa3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no127-ted不读书的人到底输在哪'><span>No.127 【TED】不读书的人到底输在哪？</span></h2><div id="play-127"></div>
+<script>
+const p127 = new DPlayer({
+    container: document.getElementById('play-127'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f656ba989190818ce5f5275a553bba1a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no128-ted如何找到你热爱的工作'><span>No.128 【TED】如何找到你热爱的工作？</span></h2><div id="play-128"></div>
+<script>
+const p128 = new DPlayer({
+    container: document.getElementById('play-128'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e52854134860ac075e2f9412ae9b2304.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no129-ted如何在五分钟内知道你活着的意义'><span>No.129 【TED】如何在五分钟内知道你活着的意义？</span></h2><div id="play-129"></div>
+<script>
+const p129 = new DPlayer({
+    container: document.getElementById('play-129'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b4bbddc1d8c166de021c8ecba67ee337.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no130-ted我快乐人生的哲学'><span>No.130 【TED】我快乐人生的哲学</span></h2><div id="play-130"></div>
+<script>
+const p130 = new DPlayer({
+    container: document.getElementById('play-130'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/724ef6f0b67f9442196ebd9e6d4ceaac.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no131-ted如何在3年内赚到一百万'><span>No.131 【TED】如何在3年内赚到一百万？</span></h2><div id="play-131"></div>
+<script>
+const p131 = new DPlayer({
+    container: document.getElementById('play-131'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/58707965ef1411309a31febe71ba354a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no132-ted电影如何改变我们看世界的方式'><span>No.132 【TED】电影如何改变我们看世界的方式</span></h2><div id="play-132"></div>
+<script>
+const p132 = new DPlayer({
+    container: document.getElementById('play-132'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c2a3ff0f09238c5aa6263a18dabc73ed.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no133-ted当一个女人变成了妈妈'><span>No.133 【TED】当一个女人变成了妈妈...</span></h2><div id="play-133"></div>
+<script>
+const p133 = new DPlayer({
+    container: document.getElementById('play-133'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bb2fc5d7b89caea0f4b69c83f02ddf0f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no134-ted如果树能够说话'><span>No.134 【TED】如果树能够说话</span></h2><div id="play-134"></div>
+<script>
+const p134 = new DPlayer({
+    container: document.getElementById('play-134'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f68447d65e1cfa7fe57eb51001e1aa86.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no135-ted如何才能拥有足够好的运气'><span>No.135 【TED】如何才能拥有足够好的运气？</span></h2><div id="play-135"></div>
+<script>
+const p135 = new DPlayer({
+    container: document.getElementById('play-135'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a44c9413db442c596f703f412620eab0.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no136-ted在虚假信息的时代我们如何捍卫真相'><span>No.136 【TED】在虚假信息的时代我们如何捍卫真相</span></h2><div id="play-136"></div>
+<script>
+const p136 = new DPlayer({
+    container: document.getElementById('play-136'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b2f6522066236761f40550ed5f3eee83.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no137-ted为什么我们总是找不到喜爱的工作'><span>No.137 【TED】为什么我们总是找不到喜爱的工作</span></h2><div id="play-137"></div>
+<script>
+const p137 = new DPlayer({
+    container: document.getElementById('play-137'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/04fb575aa9e106c271bfbd4e579ae57d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no138-ted别急着失败要谨慎地失败'><span>No.138 【TED】别急着失败，要谨慎地失败</span></h2><div id="play-138"></div>
+<script>
+const p138 = new DPlayer({
+    container: document.getElementById('play-138'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/fa7d4dfc3d922922f48ac61a6bf8b848.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no139-ted职场的有效矛盾能带来什么'><span>No.139 【TED】职场的有效矛盾能带来什么？</span></h2><div id="play-139"></div>
+<script>
+const p139 = new DPlayer({
+    container: document.getElementById('play-139'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0038e42aff3f17bcbcb5838d31d804cb.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no140-ted如何找到幸福的秘诀'><span>No.140 【TED】如何找到幸福的秘诀？</span></h2><div id="play-140"></div>
+<script>
+const p140 = new DPlayer({
+    container: document.getElementById('play-140'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c18683761768dea9e99cb9c3d31d74f5.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no141-ted打造幸福婚姻避免离婚的三个方法'><span>No.141 【TED】打造幸福婚姻，避免离婚的三个方法</span></h2><div id="play-141"></div>
+<script>
+const p141 = new DPlayer({
+    container: document.getElementById('play-141'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/768e239e17770abfb3c791e029a8bd74.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no142-ted音乐是一种语言'><span>No.142 【TED】音乐是一种语言</span></h2><div id="play-142"></div>
+<script>
+const p142 = new DPlayer({
+    container: document.getElementById('play-142'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/36fb9bd22fc56a0d84614e4e90c46204.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no143-ted人类能够战胜贫穷的三个理由'><span>No.143 【TED】人类能够战胜贫穷的三个理由</span></h2><div id="play-143"></div>
+<script>
+const p143 = new DPlayer({
+    container: document.getElementById('play-143'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/397f2c6ddadb8a74329a0bbd7ca04932.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no144-ted这是能够拯救贫穷的电子产品'><span>No.144 【TED】这是能够拯救贫穷的电子产品</span></h2><div id="play-144"></div>
+<script>
+const p144 = new DPlayer({
+    container: document.getElementById('play-144'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/393bb0725d06abd6ba20d01abb9e536b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no145-ted成为坚韧的人的三个秘诀'><span>No.145 【TED】成为坚韧的人的三个秘诀</span></h2><div id="play-145"></div>
+<script>
+const p145 = new DPlayer({
+    container: document.getElementById('play-145'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/755430a99f3555a6f1e3b52c9113bb2d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no146-ted婴儿是如何感知世界'><span>No.146 【TED】婴儿是如何感知世界？</span></h2><div id="play-146"></div>
+<script>
+const p146 = new DPlayer({
+    container: document.getElementById('play-146'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/309cd396d3de7b482aea14f625a675e4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no147-ted如何用数学方法解释社会行为'><span>No.147 【TED】如何用数学方法解释社会行为？</span></h2><div id="play-147"></div>
+<script>
+const p147 = new DPlayer({
+    container: document.getElementById('play-147'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a486494f5f42fd5ea0243478755be889.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no148-ted15种应对气候危机的方法'><span>No.148 【TED】15种应对气候危机的方法</span></h2><div id="play-148"></div>
+<script>
+const p148 = new DPlayer({
+    container: document.getElementById('play-148'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/40740ce659aecc6fcfaa9f27b52418da.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no149-ted死亡教会我活着的意义'><span>No.149 【TED】死亡教会我活着的意义</span></h2><div id="play-149"></div>
+<script>
+const p149 = new DPlayer({
+    container: document.getElementById('play-149'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/422b3e91890c675eb1712710d25263f5.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no150-ted探索时间和记忆的艺术'><span>No.150 【TED】探索时间和记忆的艺术</span></h2><div id="play-150"></div>
+<script>
+const p150 = new DPlayer({
+    container: document.getElementById('play-150'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/8b51ce97c23ab8d146d1205049f2418c.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no151-ted怎样学外语才最有效果'><span>No.151 【TED】怎样学外语才最有效果？</span></h2><div id="play-151"></div>
+<script>
+const p151 = new DPlayer({
+    container: document.getElementById('play-151'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c96175ee1ffb004d41beba5d65cd0896.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no152-ted全职奶爸的育儿经验'><span>No.152 【TED】全职奶爸的育儿经验</span></h2><div id="play-152"></div>
+<script>
+const p152 = new DPlayer({
+    container: document.getElementById('play-152'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a81bfbd9214ce77cb37b678713605b18.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no153-ted如何超越自我观点并寻求真相'><span>No.153 【TED】如何超越自我观点并寻求真相</span></h2><div id="play-153"></div>
+<script>
+const p153 = new DPlayer({
+    container: document.getElementById('play-153'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1073d6a34e574985935669ecf563c8cb.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no154-ted为什么学校应该推迟上课'><span>No.154 【TED】为什么学校应该推迟上课？</span></h2><div id="play-154"></div>
+<script>
+const p154 = new DPlayer({
+    container: document.getElementById('play-154'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1c3682d7ff8fa3be8240452b34fd3e09.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no155-ted我们在健康的时候讨论死亡'><span>No.155 【TED】我们在健康的时候讨论死亡</span></h2><div id="play-155"></div>
+<script>
+const p155 = new DPlayer({
+    container: document.getElementById('play-155'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/dbf0b050cdd1fafb9025e52f17c5c448.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no156-ted了解自闭症别避而不见'><span>No.156 【TED】了解自闭症，别避而不见</span></h2><div id="play-156"></div>
+<script>
+const p156 = new DPlayer({
+    container: document.getElementById('play-156'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7147181cc45a41335c811c57e5ccd67c.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no157-ted将皮克斯电影融入生活的魔法元素'><span>No.157 【TED】将皮克斯电影融入生活的魔法元素</span></h2><div id="play-157"></div>
+<script>
+const p157 = new DPlayer({
+    container: document.getElementById('play-157'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7637913963d0c4f5f8b1157d8ebca59b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no158-ted记住你自己最重要'><span>No.158 【TED】记住，你自己最重要</span></h2><div id="play-158"></div>
+<script>
+const p158 = new DPlayer({
+    container: document.getElementById('play-158'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/aa946a7c79f6e692efa65082690530ed.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no159-ted纳米科技的未来将会是什么样子'><span>No.159 【TED】纳米科技的未来，将会是什么样子？</span></h2><div id="play-159"></div>
+<script>
+const p159 = new DPlayer({
+    container: document.getElementById('play-159'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c6f0adfea6d8c2259e0cf218464f6e6e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no160-ted网络犯罪到底来源何处'><span>No.160 【TED】网络犯罪到底来源何处？</span></h2><div id="play-160"></div>
+<script>
+const p160 = new DPlayer({
+    container: document.getElementById('play-160'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9db71dedbdf1fdc26ebd6e1677753a31.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no161-ted打破刻板印象给自闭症更多理解'><span>No.161 【TED】打破刻板印象，给自闭症更多理解</span></h2><div id="play-161"></div>
+<script>
+const p161 = new DPlayer({
+    container: document.getElementById('play-161'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/342cde60c5a3243d572a8fa3628f3bbc.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no162-ted究竟什么是存在'><span>No.162 【TED】究竟什么是“存在”？</span></h2><div id="play-162"></div>
+<script>
+const p162 = new DPlayer({
+    container: document.getElementById('play-162'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7ed4fb9d606583c89981f3feb27a744a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no163-ted我们不要一成不变的教育'><span>No.163 【TED】我们不要一成不变的教育！</span></h2><div id="play-163"></div>
+<script>
+const p163 = new DPlayer({
+    container: document.getElementById('play-163'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/990b5f8f8160eb49756be2db00aec882.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no164-ted如何从自己的故事中解脱出来'><span>No.164 【TED】如何从自己的故事中解脱出来</span></h2><div id="play-164"></div>
+<script>
+const p164 = new DPlayer({
+    container: document.getElementById('play-164'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/54363c5b1d7899009a6c91323a89ec21.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no165-ted获胜并不等同于成功'><span>No.165 【TED】获胜”并不等同于“成功”</span></h2><div id="play-165"></div>
+<script>
+const p165 = new DPlayer({
+    container: document.getElementById('play-165'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/4e609b9615010eec0ec657746a797718.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no166-ted窥探前激进圣战士的内心'><span>No.166 【TED】窥探前激进圣战士的内心</span></h2><div id="play-166"></div>
+<script>
+const p166 = new DPlayer({
+    container: document.getElementById('play-166'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/577ea94f1083f735862a7d1d5670cbe6.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no167-ted关于核武器我们应该问这3个问题'><span>No.167 【TED】关于核武器，我们应该问这3个问题</span></h2><div id="play-167"></div>
+<script>
+const p167 = new DPlayer({
+    container: document.getElementById('play-167'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/112e488f679fb84b9817909408027368.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no168-ted各样肤色有各样的美'><span>No.168 【TED】各样肤色，有各样的美。</span></h2><div id="play-168"></div>
+<script>
+const p168 = new DPlayer({
+    container: document.getElementById('play-168'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/80f6c09eec692a7c5dc1a218c6d10702.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no169-ted关注你的心理健康并不可耻'><span>No.169 【TED】关注你的心理健康并不可耻</span></h2><div id="play-169"></div>
+<script>
+const p169 = new DPlayer({
+    container: document.getElementById('play-169'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e1c0236b858b1ea80601189eae24f76b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no170-ted寻求帮助是一种优势不是弱点'><span>No.170 【TED】寻求帮助是一种优势，不是弱点</span></h2><div id="play-170"></div>
+<script>
+const p170 = new DPlayer({
+    container: document.getElementById('play-170'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d5d4d5f663dd3174da23c43a9f084652.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no171-ted当得了医生无法诊断的疾病怎么办'><span>No.171 【TED】当得了医生无法诊断的疾病怎么办？</span></h2><div id="play-171"></div>
+<script>
+const p171 = new DPlayer({
+    container: document.getElementById('play-171'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/932128afd0f4d0964d599ee51d7574f6.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no172-ted为了培育勇敢女孩鼓励她们冒险吧'><span>No.172 【TED】为了培育勇敢女孩，鼓励她们冒险吧</span></h2><div id="play-172"></div>
+<script>
+const p172 = new DPlayer({
+    container: document.getElementById('play-172'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/09581acaf047249a117445ff12564214.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no173-ted互联网中的秘密'><span>No.173 【TED】互联网中的秘密</span></h2><div id="play-173"></div>
+<script>
+const p173 = new DPlayer({
+    container: document.getElementById('play-173'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e6232e453d1f110b22817fa394e36d4e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no174-ted无意识偏见或许你也存在'><span>No.174 【TED】无意识偏见，或许你也存在</span></h2><div id="play-174"></div>
+<script>
+const p174 = new DPlayer({
+    container: document.getElementById('play-174'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e243a4fd2c9a860220e2c1b51edf6f70.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no175-ted如何在你重视的事情上做的更好'><span>No.175 【TED】如何在你重视的事情上做的更好</span></h2><div id="play-175"></div>
+<script>
+const p175 = new DPlayer({
+    container: document.getElementById('play-175'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ffe9ca9b1938bfd47aa19c9f3a0db0db.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no176-ted你是付出者还是获取者'><span>No.176 【TED】你是付出者，还是获取者？</span></h2><div id="play-176"></div>
+<script>
+const p176 = new DPlayer({
+    container: document.getElementById('play-176'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9c7843e340f52536c8188fde9c4cfc8e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no177-ted你周围的所有东西都可以变成电脑'><span>No.177 【TED】你周围的所有东西都可以变成电脑</span></h2><div id="play-177"></div>
+<script>
+const p177 = new DPlayer({
+    container: document.getElementById('play-177'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/2aae4000afce8c3a22d87e476b773eed.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no178-ted人造dna的可能性'><span>No.178 【TED】人造DNA的可能性</span></h2><div id="play-178"></div>
+<script>
+const p178 = new DPlayer({
+    container: document.getElementById('play-178'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bf5d9ec76c1f190143bd27c9b61ad91a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no179-ted移动机器人为你装箱快递'><span>No.179 【TED】移动机器人为你装箱快递</span></h2><div id="play-179"></div>
+<script>
+const p179 = new DPlayer({
+    container: document.getElementById('play-179'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/2a844a52f227a8c12dce190bf2d24468.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no180-ted鸿沟'><span>No.180 【TED】“鸿沟”</span></h2><div id="play-180"></div>
+<script>
+const p180 = new DPlayer({
+    container: document.getElementById('play-180'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b0954740d4657f3fc197040c6e849d7c.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no181-ted用照片记录瞬间会夺走体验感吗'><span>No.181 【TED】用照片记录瞬间会夺走体验感吗？</span></h2><div id="play-181"></div>
+<script>
+const p181 = new DPlayer({
+    container: document.getElementById('play-181'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/86e00cab6e10e6fd167f2bb8946753db.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no182-ted中国的属相'><span>No.182 【TED】中国的属相</span></h2><div id="play-182"></div>
+<script>
+const p182 = new DPlayer({
+    container: document.getElementById('play-182'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bf49d0ca0b27fe524ae04f7bda9954dc.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no183-ted决定梦想距离的是你的决心'><span>No.183 【TED】决定梦想距离的，是你的决心！</span></h2><div id="play-183"></div>
+<script>
+const p183 = new DPlayer({
+    container: document.getElementById('play-183'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/95109e439014c6d619baa2fe24113338.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no184-ted如何用幽默改变串联社会'><span>No.184 【TED】如何用幽默改变、串联社会</span></h2><div id="play-184"></div>
+<script>
+const p184 = new DPlayer({
+    container: document.getElementById('play-184'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e4e3907a0fb705eb197c084fed78be87.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no185-ted拔苗未必能助长'><span>No.185 【TED】拔苗未必能助长</span></h2><div id="play-185"></div>
+<script>
+const p185 = new DPlayer({
+    container: document.getElementById('play-185'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/694dff57da3c0e8f3f85296cd746476b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no186-ted救命的负面情绪'><span>No.186 【TED】救命的“负面情绪”</span></h2><div id="play-186"></div>
+<script>
+const p186 = new DPlayer({
+    container: document.getElementById('play-186'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/27577728c63587fe5cb3d9bd6ff88d6e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no187-ted数学是理解万物之源'><span>No.187 【TED】数学是理解万物之源</span></h2><div id="play-187"></div>
+<script>
+const p187 = new DPlayer({
+    container: document.getElementById('play-187'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b0c88bce335b7b4ac0ee9d9c43151b0b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no188-ted机器人可以通过大学考试吗'><span>No.188 【TED】机器人可以通过大学考试吗？</span></h2><div id="play-188"></div>
+<script>
+const p188 = new DPlayer({
+    container: document.getElementById('play-188'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/8f7028cc6dac448b344b92f23510d575.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no189-ted人工智能的危险比你想象中更奇怪'><span>No.189 【TED】人工智能的危险比你想象中更奇怪</span></h2><div id="play-189"></div>
+<script>
+const p189 = new DPlayer({
+    container: document.getElementById('play-189'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f4fb55376a0539ffc50815b19b5a6211.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no190-ted女性崛起的新趋势'><span>No.190 【TED】女性崛起的新趋势</span></h2><div id="play-190"></div>
+<script>
+const p190 = new DPlayer({
+    container: document.getElementById('play-190'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/46d50952dac64fe6871e06d8b7c3c6e4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no191-ted献给欺凌的受害者你们依然美丽'><span>No.191 【TED】献给欺凌的受害者，你们依然美丽</span></h2><div id="play-191"></div>
+<script>
+const p191 = new DPlayer({
+    container: document.getElementById('play-191'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/40081a81f55849947b0f8ef05abf93a9.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no192-ted解人类性格之谜------你究竟是谁'><span>No.192 【TED】解人类性格之谜——你究竟是谁</span></h2><div id="play-192"></div>
+<script>
+const p192 = new DPlayer({
+    container: document.getElementById('play-192'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/61bdc73698056b251bb8f3c07644a2a3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no193-ted为什么语言是人类最伟大的发明'><span>No.193 【TED】为什么语言是人类最伟大的发明</span></h2><div id="play-193"></div>
+<script>
+const p193 = new DPlayer({
+    container: document.getElementById('play-193'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/47a707e84ad0dcfdee6a095fba31443b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no194-ted请不要外貌焦虑外表不是一切'><span>No.194 【TED】请不要外貌焦虑，外表不是一切</span></h2><div id="play-194"></div>
+<script>
+const p194 = new DPlayer({
+    container: document.getElementById('play-194'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/60a2b3346ef06bc86809c695c1ff4083.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no195-ted全色盲患者自述听到的色彩'><span>No.195 【TED】全色盲患者自述“听到”的色彩</span></h2><div id="play-195"></div>
+<script>
+const p195 = new DPlayer({
+    container: document.getElementById('play-195'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/eafd541a5e5f6f05108335aed58a80d2.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no196-ted科技让我们患上了群体性孤独'><span>No.196 【TED】科技让我们患上了群体性孤独</span></h2><div id="play-196"></div>
+<script>
+const p196 = new DPlayer({
+    container: document.getElementById('play-196'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7bf90fc22385dc835ea66b551f5f0713.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no197-ted如何忘记七个束缚女性的观念'><span>No.197 【TED】如何忘记七个束缚女性的观念</span></h2><div id="play-197"></div>
+<script>
+const p197 = new DPlayer({
+    container: document.getElementById('play-197'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7d8581ee8db8defa959f49215f463009.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no198-ted你上当了吗揭露心理学的十个误解'><span>No.198 【TED】你上当了吗？揭露心理学的十个误解</span></h2><div id="play-198"></div>
+<script>
+const p198 = new DPlayer({
+    container: document.getElementById('play-198'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b9f6243cfb3051894b1a0d386fcbe26d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no199-ted激发学习兴趣的3条黄金法则'><span>No.199 【TED】激发学习兴趣的3条黄金法则</span></h2><div id="play-199"></div>
+<script>
+const p199 = new DPlayer({
+    container: document.getElementById('play-199'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/52b08fa616e5eb2477304b03840d74f1.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no200-ted中国好食物的未来'><span>No.200 【TED】中国好食物的未来</span></h2><div id="play-200"></div>
+<script>
+const p200 = new DPlayer({
+    container: document.getElementById('play-200'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d22e1f66ad43ce98d2e730423f3bd8b0.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no201-ted我爱上了宇宙'><span>No.201 【TED】我爱上了宇宙</span></h2><div id="play-201"></div>
+<script>
+const p201 = new DPlayer({
+    container: document.getElementById('play-201'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7240e703a37ddc041faee24fe41e94c6.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no202-ted与表面光鲜的自己和解'><span>No.202 【TED】与表面光鲜的自己和解</span></h2><div id="play-202"></div>
+<script>
+const p202 = new DPlayer({
+    container: document.getElementById('play-202'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/c35b3e8ee23107389c9923dcdf1b8614.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no203-ted文化中欺骗我们的那些谎言'><span>No.203 【TED】文化中欺骗我们的那些谎言</span></h2><div id="play-203"></div>
+<script>
+const p203 = new DPlayer({
+    container: document.getElementById('play-203'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/5e390a0e97c1a4a51305b12ba1af9440.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no204-ted为什么屏幕剥夺了我们的快乐'><span>No.204 【TED】为什么屏幕剥夺了我们的快乐？</span></h2><div id="play-204"></div>
+<script>
+const p204 = new DPlayer({
+    container: document.getElementById('play-204'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b0621b2eed0a4240c6ede0a20067b51f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no205-ted内向性格的力量'><span>No.205 【TED】内向性格的力量</span></h2><div id="play-205"></div>
+<script>
+const p205 = new DPlayer({
+    container: document.getElementById('play-205'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/6e3e3222406487fd3c2683015aae9124.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no206-ted幽默有益健康记得笑口常开'><span>No.206 【TED】幽默有益健康，记得笑口常开</span></h2><div id="play-206"></div>
+<script>
+const p206 = new DPlayer({
+    container: document.getElementById('play-206'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/771d7f12c09e0c9d5b11b5d1cd740ad5.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no207-ted行动主义者挣脱束缚自己的枷锁'><span>No.207 【TED】行动主义者：挣脱束缚自己的枷锁</span></h2><div id="play-207"></div>
+<script>
+const p207 = new DPlayer({
+    container: document.getElementById('play-207'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/944bad5995eed3268067c3e14b16399d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no208-ted不要轻信他人所述的故事'><span>No.208 【TED】不要轻信他人所述的故事</span></h2><div id="play-208"></div>
+<script>
+const p208 = new DPlayer({
+    container: document.getElementById('play-208'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ec09d81364c943ec770c33495ca333bf.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no209-ted西方如何适应崛起的亚洲'><span>No.209 【TED】西方如何适应崛起的亚洲</span></h2><div id="play-209"></div>
+<script>
+const p209 = new DPlayer({
+    container: document.getElementById('play-209'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/94826a5259e1098709ccb1ca5ff6f3df.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no210-ted一位318岁全息幻影人的爱情故事'><span>No.210 【TED】一位318岁全息幻影人的爱情故事</span></h2><div id="play-210"></div>
+<script>
+const p210 = new DPlayer({
+    container: document.getElementById('play-210'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a3e697823475f5be669b2acd1daa784b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no211-ted人工智能想要具有意识除非活起来'><span>No.211 【TED】人工智能想要具有意识，除非活起来</span></h2><div id="play-211"></div>
+<script>
+const p211 = new DPlayer({
+    container: document.getElementById('play-211'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/296c5bc3bc48018a5471860da9af0cfa.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no212-ted越有钱越无情'><span>No.212 【TED】越有钱越无情？</span></h2><div id="play-212"></div>
+<script>
+const p212 = new DPlayer({
+    container: document.getElementById('play-212'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/329a9d0c94e380f4067a2b0f0bf4887d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no213-ted人类大脑最特别的地方在哪里'><span>No.213 【TED】人类大脑最特别的地方在哪里？</span></h2><div id="play-213"></div>
+<script>
+const p213 = new DPlayer({
+    container: document.getElementById('play-213'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bd307d860049d67e21cde3f32c5b66c5.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no214-ted生命并不因死亡而终止'><span>No.214 【TED】生命并不因死亡而终止</span></h2><div id="play-214"></div>
+<script>
+const p214 = new DPlayer({
+    container: document.getElementById('play-214'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/19a2775b07f3d70f4338733a217ab1af.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no215-ted走出你的舒适区'><span>No.215 【TED】走出你的舒适区</span></h2><div id="play-215"></div>
+<script>
+const p215 = new DPlayer({
+    container: document.getElementById('play-215'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1e72e06d761b377411b2c7d556cfddf8.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no216-ted塑造你的世界观的三种偏见'><span>No.216 【TED】塑造你的世界观的三种偏见</span></h2><div id="play-216"></div>
+<script>
+const p216 = new DPlayer({
+    container: document.getElementById('play-216'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1e75b3aa15711fb590f934c3b207e5ae.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no217-ted我从生活与写作中学到的12个真理'><span>No.217 【TED】我从生活与写作中学到的12个真理</span></h2><div id="play-217"></div>
+<script>
+const p217 = new DPlayer({
+    container: document.getElementById('play-217'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/315a73c53b6f00815b59de406c8633c1.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no218-ted我们为什么要问问题'><span>No.218 【TED】我们为什么要问问题</span></h2><div id="play-218"></div>
+<script>
+const p218 = new DPlayer({
+    container: document.getElementById('play-218'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3818a3ce4cda1d731158563fb4d32575.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no219-ted纪录那些终将逝去的美丽'><span>No.219 【TED】纪录那些终将逝去的美丽</span></h2><div id="play-219"></div>
+<script>
+const p219 = new DPlayer({
+    container: document.getElementById('play-219'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/b65c216c9bee9c1dd9f3883a1767cad5.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no220-ted每个人的故事都值得聆听'><span>No.220 【TED】每个人的故事都值得聆听</span></h2><div id="play-220"></div>
+<script>
+const p220 = new DPlayer({
+    container: document.getElementById('play-220'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ef11e320718e755989018a5c74525a03.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no221-ted外星人可能真的存在'><span>No.221 【TED】外星人可能真的存在</span></h2><div id="play-221"></div>
+<script>
+const p221 = new DPlayer({
+    container: document.getElementById('play-221'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/5cc9bd0741df57b9cba4a954cdb25a0b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no222-ted在一张照片中感受时间的流逝'><span>No.222 【TED】在一张照片中感受时间的流逝</span></h2><div id="play-222"></div>
+<script>
+const p222 = new DPlayer({
+    container: document.getElementById('play-222'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/6a8fac401c8fc172ae1bcdea8ec127f8.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no223-ted一个娱乐界偶像充满意义的一生'><span>No.223 【TED】一个娱乐界偶像充满意义的一生</span></h2><div id="play-223"></div>
+<script>
+const p223 = new DPlayer({
+    container: document.getElementById('play-223'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d7a46f1eba1114af4eaccb6cf8a24dc7.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no224-ted忘记药丸吧细胞疗法即将到来'><span>No.224 【TED】忘记药丸吧，细胞疗法即将到来</span></h2><div id="play-224"></div>
+<script>
+const p224 = new DPlayer({
+    container: document.getElementById('play-224'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0a8a5fda7b26fce5091177ec7077e767.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no225-ted一个抑郁喜剧演员的自白'><span>No.225 【TED】一个抑郁喜剧演员的自白</span></h2><div id="play-225"></div>
+<script>
+const p225 = new DPlayer({
+    container: document.getElementById('play-225'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9b8a6e8f3d41f2e1c46f9f0c791db592.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no226-ted孤独质数的情诗'><span>No.226 【TED】孤独质数的情诗</span></h2><div id="play-226"></div>
+<script>
+const p226 = new DPlayer({
+    container: document.getElementById('play-226'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ccdb27c43bcc0f754cb28f45f520ab61.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no227-ted我们有一种与生俱来的语言天赋'><span>No.227 【TED】我们有一种与生俱来的“语言天赋”</span></h2><div id="play-227"></div>
+<script>
+const p227 = new DPlayer({
+    container: document.getElementById('play-227'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/e57b959f20cdf20cea154762b5fb61d7.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no228-ted世界变得更好还是更糟了'><span>No.228 【TED】世界变得更好还是更糟了？</span></h2><div id="play-228"></div>
+<script>
+const p228 = new DPlayer({
+    container: document.getElementById('play-228'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d54d7b4802891399de5147641ef6450d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no229-ted水滴中的奇妙世界'><span>No.229 【TED】水滴中的奇妙世界</span></h2><div id="play-229"></div>
+<script>
+const p229 = new DPlayer({
+    container: document.getElementById('play-229'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/aa5af5051a69b7dc1d2932b99c074dc0.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no230-ted跟想法约会吧'><span>No.230 【TED】跟想法约会吧！</span></h2><div id="play-230"></div>
+<script>
+const p230 = new DPlayer({
+    container: document.getElementById('play-230'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/6327b141e4f7390ababd86fdc9834a6e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no231-ted你为什么不喜欢你自己的声音'><span>No.231 【TED】你为什么不喜欢你自己的声音</span></h2><div id="play-231"></div>
+<script>
+const p231 = new DPlayer({
+    container: document.getElementById('play-231'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f45d075578b41b8d30c566fde6d0d13e.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no232-ted我们不背弃痛苦而是带着痛苦前进'><span>No.232 【TED】我们不背弃痛苦，而是带着痛苦前进</span></h2><div id="play-232"></div>
+<script>
+const p232 = new DPlayer({
+    container: document.getElementById('play-232'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d8209f3044b17c6c13809daf396abf79.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no233-ted假新闻造成的真实伤害'><span>No.233 【TED】假新闻造成的真实伤害</span></h2><div id="play-233"></div>
+<script>
+const p233 = new DPlayer({
+    container: document.getElementById('play-233'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/302d18988b3bd7f010e60b59f3905db1.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no234-ted护士赞歌'><span>No.234 【TED】护士赞歌</span></h2><div id="play-234"></div>
+<script>
+const p234 = new DPlayer({
+    container: document.getElementById('play-234'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/64b815488a9cb258a65973c1ddf252bb.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no235-ted接受真情实感的力量'><span>No.235 【TED】接受真情实感的力量</span></h2><div id="play-235"></div>
+<script>
+const p235 = new DPlayer({
+    container: document.getElementById('play-235'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/cabaa3928dfe6fabe59a5d8835cd482b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no236-ted人类具有书写自己命运的权力'><span>No.236 【TED】人类具有书写自己命运的权力</span></h2><div id="play-236"></div>
+<script>
+const p236 = new DPlayer({
+    container: document.getElementById('play-236'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a9b3c538d5ebfd531358cc1eb6d829f1.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no237-ted带有信息的音乐应该被理解'><span>No.237 【TED】带有信息的音乐应该被理解</span></h2><div id="play-237"></div>
+<script>
+const p237 = new DPlayer({
+    container: document.getElementById('play-237'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0dbfcc2b9bf0726f0b02fbbdd073fc22.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no238-ted女性的怒火承载了世代的智慧'><span>No.238 【TED】女性的怒火承载了世代的智慧</span></h2><div id="play-238"></div>
+<script>
+const p238 = new DPlayer({
+    container: document.getElementById('play-238'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/12527eb268a2737c8b3487ed0890fd6b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no239-ted是时候让宗教重生了'><span>No.239 【TED】是时候让宗教重生了！</span></h2><div id="play-239"></div>
+<script>
+const p239 = new DPlayer({
+    container: document.getElementById('play-239'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/789b95ae52172af2d550cf6233fb68c4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no240-ted关于写作慢读教会了我什么'><span>No.240 【TED】关于写作，慢读教会了我什么？</span></h2><div id="play-240"></div>
+<script>
+const p240 = new DPlayer({
+    container: document.getElementById('play-240'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/6c9e259f7af4b49f82d4c93b7dc33b6c.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no241-ted如何帮助年轻人构建更好的未来'><span>No.241 【TED】如何帮助年轻人构建更好的未来</span></h2><div id="play-241"></div>
+<script>
+const p241 = new DPlayer({
+    container: document.getElementById('play-241'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ff3fb97a52e9a16a53d2b4a1adc87776.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no242-ted今天的互联网到底错在哪里'><span>No.242 【TED】今天的互联网到底错在哪里</span></h2><div id="play-242"></div>
+<script>
+const p242 = new DPlayer({
+    container: document.getElementById('play-242'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/512140438de8790d99c0b57dad30618d.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no243-ted在死亡面前生活如何有意义'><span>No.243 【TED】在死亡面前，生活如何有意义</span></h2><div id="play-243"></div>
+<script>
+const p243 = new DPlayer({
+    container: document.getElementById('play-243'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f6118db01afdac65acb48d8505adf4dd.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no244-ted如何克服偏见坦然面对'><span>No.244 【TED】如何克服偏见？坦然面对</span></h2><div id="play-244"></div>
+<script>
+const p244 = new DPlayer({
+    container: document.getElementById('play-244'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7179d86e531c3809e3155b716aca9d93.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no245-ted如何在职场中认真对待多样化包容性'><span>No.245 【TED】如何在职场中认真对待多样化包容性</span></h2><div id="play-245"></div>
+<script>
+const p245 = new DPlayer({
+    container: document.getElementById('play-245'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0b87ad45604af8b55997588ed30eba8b.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no246-ted帮助别人让我们更幸福'><span>No.246 【TED】帮助别人让我们更幸福</span></h2><div id="play-246"></div>
+<script>
+const p246 = new DPlayer({
+    container: document.getElementById('play-246'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/89a1441bbe03e0d5a516eb6935b37568.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no247-ted如何让自己和他人更自信'><span>No.247 【TED】如何让自己和他人更自信</span></h2><div id="play-247"></div>
+<script>
+const p247 = new DPlayer({
+    container: document.getElementById('play-247'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/1c5a4593bd22f666dbb3f5c8821fd1f3.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no248-ted女性在政治上取得的进步'><span>No.248 【TED】女性在政治上取得的进步</span></h2><div id="play-248"></div>
+<script>
+const p248 = new DPlayer({
+    container: document.getElementById('play-248'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a65cad793ddb44f8c8459ea82e15a0b4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no249-ted人工智能是如何让我们变得更好的'><span>No.249 【TED】人工智能是如何让我们变得更好的</span></h2><div id="play-249"></div>
+<script>
+const p249 = new DPlayer({
+    container: document.getElementById('play-249'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/a6c4895170822b200f9d34a2e9fa62d8.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no250-ted在活着的时候讨论死亡'><span>No.250 【TED】在活着的时候讨论死亡</span></h2><div id="play-250"></div>
+<script>
+const p250 = new DPlayer({
+    container: document.getElementById('play-250'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/337268f8a8fba5d87e0b3a96ea4ea731.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no251-ted敢于不同意去怀疑的勇气'><span>No.251 【TED】敢于不同意，去怀疑的勇气</span></h2><div id="play-251"></div>
+<script>
+const p251 = new DPlayer({
+    container: document.getElementById('play-251'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/bea1390a01305dd42a7e28dfe80700a5.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no252-ted无人车的道德评判标准是什么'><span>No.252 【TED】无人车的道德评判标准是什么？</span></h2><div id="play-252"></div>
+<script>
+const p252 = new DPlayer({
+    container: document.getElementById('play-252'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/119318eab589abd23b8a63f7e9df1987.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no253-ted为何成功的秘诀在于设定正确的目标'><span>No.253 【TED】为何成功的秘诀在于设定正确的目标</span></h2><div id="play-253"></div>
+<script>
+const p253 = new DPlayer({
+    container: document.getElementById('play-253'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/9f5592a983cf1d3de37a24056dd8c5be.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no254-ted如何将全球变暖的灾难论转变为行动'><span>No.254 【TED】如何将全球变暖的灾难论转变为行动</span></h2><div id="play-254"></div>
+<script>
+const p254 = new DPlayer({
+    container: document.getElementById('play-254'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/cdf4d31ecf3f01cedf1b78e982a987f8.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no255-ted制造业工作岗位流失的真相'><span>No.255 【TED】制造业工作岗位流失的真相</span></h2><div id="play-255"></div>
+<script>
+const p255 = new DPlayer({
+    container: document.getElementById('play-255'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/66486074f40279a18d407d4466c9aede.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no256-ted如何让人工智能远离人类的偏见'><span>No.256 【TED】如何让人工智能远离人类的偏见</span></h2><div id="play-256"></div>
+<script>
+const p256 = new DPlayer({
+    container: document.getElementById('play-256'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f17bf75afb299e1922f3d75f988575aa.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no257-ted了解我们的文化以及更好的生活方式'><span>No.257 【TED】了解我们的文化以及更好的生活方式</span></h2><div id="play-257"></div>
+<script>
+const p257 = new DPlayer({
+    container: document.getElementById('play-257'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f6e99ac4abd733d176cbe6ea3449145f.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no258-ted公民如何重申对互联网的权力'><span>No.258 【TED】公民如何重申对互联网的权力</span></h2><div id="play-258"></div>
+<script>
+const p258 = new DPlayer({
+    container: document.getElementById('play-258'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/f44249e4149fedff543da81df9f028b5.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no259-ted放弃做好人成为更好的人'><span>No.259 【TED】放弃做“好人”，成为更好的人</span></h2><div id="play-259"></div>
+<script>
+const p259 = new DPlayer({
+    container: document.getElementById('play-259'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/0eccdfb8684ee17c149949381cc57850.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no260-ted为什么地球有朝一日可能会变成火星'><span>No.260 【TED】为什么地球有朝一日可能会变成火星</span></h2><div id="play-260"></div>
+<script>
+const p260 = new DPlayer({
+    container: document.getElementById('play-260'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/af07574746cb0fb94d16f29e5cc6a7d7.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no261-ted如何在数据中找自己'><span>No.261 【TED】如何在数据中找自己</span></h2><div id="play-261"></div>
+<script>
+const p261 = new DPlayer({
+    container: document.getElementById('play-261'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ca143022b2e7044ea1b30b999379a19a.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no262-ted我们如何毫无恐惧的一起直面未来'><span>No.262 【TED】我们如何毫无恐惧的一起直面未来</span></h2><div id="play-262"></div>
+<script>
+const p262 = new DPlayer({
+    container: document.getElementById('play-262'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/ab2c67ce800257c870340ae05aa7dced.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no263-ted科技公司如何控制你的注意力'><span>No.263 【TED】科技公司如何控制你的注意力</span></h2><div id="play-263"></div>
+<script>
+const p263 = new DPlayer({
+    container: document.getElementById('play-263'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/3dbac4d384e155447f5c54a1310acb92.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no264-ted拖延症人群的内心世界'><span>No.264 【TED】拖延症人群的内心世界</span></h2><div id="play-264"></div>
+<script>
+const p264 = new DPlayer({
+    container: document.getElementById('play-264'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/5b0a3fe68814da1bb43ffe9861363ca2.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no265-ted我们怎样能教会电脑理解我们的情感'><span>No.265 【TED】我们怎样能教会电脑理解我们的情感</span></h2><div id="play-265"></div>
+<script>
+const p265 = new DPlayer({
+    container: document.getElementById('play-265'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/656bea9b48ff36762a15fac7835d99f4.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no266-ted你在为自己创造着怎样的现实'><span>No.266 【TED】你在为自己创造着怎样的现实？</span></h2><div id="play-266"></div>
+<script>
+const p266 = new DPlayer({
+    container: document.getElementById('play-266'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/d815b913542f2ee0f0e2da60120d4527.mp4',
+    },
+});
+</script><hr /><hr /><h2 id='no267-ted噪音对健康有害别急这里有对策'><span>No.267 【TED】噪音对健康有害？别急，这里有对策</span></h2><div id="play-267"></div>
+<script>
+const p267 = new DPlayer({
+    container: document.getElementById('play-267'),
+    theme:'#fcf35d',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'https://ydlunacommon-cdn.nosdn.127.net/7b9a8c196545cecb94120f95432a640a.mp4',
+    },
+});
+</script><p>&nbsp;</p><center><a style="color: rgb(254,17,130)" href="https://icp.gov.moe/?keyword=20223985" target="_blank">萌ICP备20223985号</a></center></div></div>
+</body>
+</html>
