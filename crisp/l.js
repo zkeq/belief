@@ -103,18 +103,18 @@
             document.getElementsByTagName("head")[0].appendChild(n);
         } catch (t) {}
       }),
-    //   (i.prototype.Vp = function () {
-    //     try {
-    //       var t = document.createElement("script");
-    //       (t.src = [this._e + "/", this.t_ + "/", "client.js?" + this.ca].join(
-    //         ""
-    //       )),
-    //         (t.type = "text/javascript"),
-    //         (t.async = 1),
-    //         this.$p(t),
-    //         document.getElementsByTagName("head")[0].appendChild(t);
-    //     } catch (t) {}
-    //   }),
+      (i.prototype.Vp = function () {
+        try {
+          var t = document.createElement("script");
+          (t.src = [this._e + "/", this.t_ + "/", "client.js?" + this.ca].join(
+            ""
+          )),
+            (t.type = "text/javascript"),
+            (t.async = 1),
+            this.$p(t),
+            document.getElementsByTagName("head")[0].appendChild(t);
+        } catch (t) {}
+      }),
     //   (i.prototype.Zp = function () {
     //     try {
     //       var t = this.i_(),
