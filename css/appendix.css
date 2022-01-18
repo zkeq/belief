@@ -607,9 +607,9 @@ dl,
 table {
     margin: 0.8em 0;
 }
-p {
+/* p {
     margin: 0;
-}
+} */
 
 li > ol,
 li > ul {
@@ -1302,8 +1302,8 @@ a.ty-link {
     display: inline-block;
     white-space: pre-wrap;
     background: rgb(0, 0, 0);
-    line-height: 3.5rem;
     font-family: Georgia,"Subtitle";
+    font-size:large !important;
 }
 
 
