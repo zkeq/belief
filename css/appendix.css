@@ -214,6 +214,22 @@ mark .md-meta { color: rgb(0, 0, 0); }
     font-weight: bold;
     font-style: normal;
 }
+@font-face{
+    font-family: 'HarmonyOS';
+    src: local('HarmonyOS'),
+    url('https://unpkg.zhimg.com/zkeq-font@1.6.0/HarmonyOS_Sans_Medium.ttf') format('truetype');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}
+/* @font-face{
+    font-family: 'HarmonyOS_zh';
+    src: local('HarmonyOS_zh'),
+    url('https://unpkg.zhimg.com/zkeq-font@1.5.0/HarmonyOS.ttf') format('truetype');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+} */
 /*
  * Copyright (C) 2018 Drake, Inc.
  *
@@ -1301,9 +1317,10 @@ a.ty-link {
 .dplayer-subtitle {
     display: inline-block;
     white-space: pre-wrap;
-    background: rgb(0, 0, 0);
-    font-family: Georgia,"Subtitle";
-    font-size: medium !important;
+    background: rgba(0, 0, 0, 0.75);
+    font-family:  "HarmonyOS", "Subtitle";
+    -webkit-text-stroke: 0.03rem rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem !important;
 }
 
 
