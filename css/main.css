@@ -446,7 +446,7 @@ blockquote {
 
 /*link*/
 #write a {
-    color: var(--a-color);
+    /* color: var(--a-color); */
     text-decoration: none;
 }
 .on-focus-mode #write a .md-plain, .on-focus-mode .md-htmlblock-container a:hover {
@@ -1291,4 +1291,6 @@ a.ty-link {
 .cm-s-inner .CodeMirror-linenumber {
     color: #787878;
 }
-
+.dplayer-info-panel-item-data a{
+    text-decoration:underline !important
+}
