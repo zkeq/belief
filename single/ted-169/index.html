@@ -1,0 +1,576 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="referrer" content="no-referrer">
+<script src="/yinghua/Ascii.js"></script>
+<script src="/dplayer/dplayer.js"></script>
+<link rel="stylesheet" href="/css/daily.css">
+
+<title>【TED】怎样拍摄一张黑洞的图片</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><blockquote><p><span>声明: 本站全部内容源自互联网,不进行任何盈利行为</span></p><p><strong><span>仅做 整合 / 美化 处理</span></strong></p><p><span>首页: </span><a href='https://belief.zkeq.xyz' target='_blank' class='url'>https://belief.zkeq.xyz</a><span> </span></p></blockquote><h2 id='title'><span>【TED】怎样拍摄一张黑洞的图片</span></h2><div id="play"></div>
+<script>
+const play = new DPlayer({
+    container: document.getElementById('play'),
+    theme:'#c61e07',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'http://mov.bn.netease.com/open-movie/nos/mp4/2021/08/06/SGFQEN9H8_shd.mp4'
+    },
+    subtitle: {
+        url:'https://s-bj-2220-open-srt.oss.dogecdn.com/169.vtt',
+        fontSize: '25px',
+    },
+});
+</script><p>&nbsp;</p><p><code>In the movie "Interstellar,"</code>
+<span>在电影《星际穿越》中，</span>
+<code>we get an up-close look at a supermassive black hole.</code>
+<span>我们得以近距离观察一个超级黑洞。</span>
+<code>Set against a backdrop of bright gas,</code>
+<span>在明亮气体构成的背景下，</span>
+<code>the black hole's massive gravitational pull</code>
+<span>黑洞的巨大引力</span>
+<code>bends light into a ring.</code>
+<span>将光线弯曲成环形。</span>
+<code>However, this isn't a real photograph,</code>
+<span>但是，（电影中的）这一幕 并不是一张真正的照片，</span>
+<code>but a computer graphic rendering --</code>
+<span>而是电脑合成的效果——</span>
+<code>an artistic interpretation of what a black hole might look like.</code>
+<span>它只是一个对于黑洞 可能样子的艺术表现。</span>
+<code>A hundred years ago,</code>
+<span>一百多年前，</span>
+<code>Albert Einstein first published his theory of general relativity.</code>
+<span>阿尔伯特·爱因斯坦 第一次发表了广义相对论学说。</span>
+<code>In the years since then,</code>
+<span>在之后的数年里，</span>
+<code>scientists have provided a lot of evidence in support of it.</code>
+<span>科学家们又对此提供了许多佐证。</span>
+<code>But one thing predicted from this theory, black holes,</code>
+<span>但相对论中所预测的一点，黑洞，</span>
+<code>still have not been directly observed.</code>
+<span>却始终无法被直接观察到。</span>
+<code>Although we have some idea as to what a black hole might look like,</code>
+<span>尽管我们大致知道一个黑洞 看起来应该是什么样，</span>
+<code>we've never actually taken a picture of one before.</code>
+<span>却从未真正拍摄过它。</span>
+<code>However, you might be surprised to know that that may soon change.</code>
+<span>不过，这个现状可能很快就会改变。</span>
+<code>We may be seeing our first picture of a black hole in the next couple years.</code>
+<span>在接下来几年内，我们或许就能 见到第一张黑洞的图片。</span>
+<code>Getting this first picture will come down to an international team of scientists,</code>
+<span>这一重任会落在一个由 各国科学家组成的团队上，</span>
+<code>an Earth-sized telescope</code>
+<span>同时需要一个 地球大小的天文望远镜，</span>
+<code>and an algorithm that puts together the final picture.</code>
+<span>以及一个可以让我们合成出 最终图片的算法。</span>
+<code>Although I won't be able to show you a real picture of a black hole today,</code>
+<span>尽管今天我不能让你们 见到真正的黑洞图片，</span>
+<code>I'd like to give you a brief glimpse into the effort involved</code>
+<span>我还是想让你们大致了解一下</span>
+<code>in getting that first picture.</code>
+<span>得到第一张（黑洞）图片 所需要的努力。</span>
+<code>My name is Katie Bouman,</code>
+<span>我叫凯蒂·伯曼，</span>
+<code>and I'm a PhD student at MIT.</code>
+<span>是麻省理工学院的一名博士生。</span>
+<code>I do research in a computer science lab</code>
+<span>我在计算机科学实验室中进行</span>
+<code>that works on making computers see through images and video.</code>
+<span>让电脑解析图片和视频信息的研究。</span>
+<code>But although I'm not an astronomer,</code>
+<span>尽管我并不是个天文学家，</span>
+<code>today I'd like to show you</code>
+<span>今天我还是想向大家展示</span>
+<code>how I've been able to contribute to this exciting project.</code>
+<span>我是怎样在这个项目中贡献 自己的一份力量的。</span>
+<code>If you go out past the bright city lights tonight,</code>
+<span>如果你远离城市的灯光，</span>
+<code>you may just be lucky enough to see a stunning view</code>
+<span>你可能有幸看到银河系</span>
+<code>of the Milky Way Galaxy.</code>
+<span>那令人震撼的美景。</span>
+<code>And if you could zoom past millions of stars,</code>
+<span>而如果你可以穿过百万星辰， 将镜头放大到</span>
+<code>26,000 light-years toward the heart of the spiraling Milky Way,</code>
+<span>2.6万光年以外的银河系中心，</span>
+<code>we'd eventually reach a cluster of stars right at the center.</code>
+<span>我们就能抵达（银河系）中央的 一群恒星。</span>
+<code>Peering past all the galactic dust with infrared telescopes,</code>
+<span>天文学家们已经穿过星尘，使用红外望远镜</span>
+<code>astronomers have watched these stars for over 16 years.</code>
+<span>观察了这些恒星整整十六年。</span>
+<code>But it's what they don't see that is the most spectacular.</code>
+<span>但是天文学家们所看不到的东西 才是最为壮观的。</span>
+<code>These stars seem to orbit an invisible object.</code>
+<span>这些恒星似乎是在围绕一个 隐形的物体旋转。</span>
+<code>By tracking the paths of these stars,</code>
+<span>通过观测这些星星的移动路径，</span>
+<code>astronomers have concluded</code>
+<span>天文学家们得出结论，</span>
+<code>that the only thing small and heavy enough to cause this motion</code>
+<span>体积足够小，而质量又大到能导致 恒星们如此运动的唯一物体</span>
+<code>is a supermassive black hole --</code>
+<span>就是超级黑洞——</span>
+<code>an object so dense that it sucks up anything that ventures too close --</code>
+<span>它的密度极大，高到它能吸进 周围所有东西，</span>
+<code>even light.</code>
+<span>甚至光。</span>
+<code>But what happens if we were to zoom in even further?</code>
+<span>那么，如果我们继续放大下去， 会发生什么？</span>
+<code>Is it possible to see something that, by definition, is impossible to see?</code>
+<span>是不是就可能看见一些， 理论上不可能看到的东西呢？</span>
+<code>Well, it turns out that if we were to zoom in at radio wavelengths,</code>
+<span>事实上，如果我们以 无线电波长放大，</span>
+<code>we'd expect to see a ring of light</code>
+<span>我们会看到一圈光线，</span>
+<code>caused by the gravitational lensing of hot plasma</code>
+<span>是由围绕着黑洞的</span>
+<code>zipping around the black hole.</code>
+<span>等离子体引力透镜产生的。</span>
+<code>In other words,</code>
+<span>换句话说，</span>
+<code>the black hole casts a shadow on this backdrop of bright material,</code>
+<span>这个黑洞，在背后明亮物质的衬托下，</span>
+<code>carving out a sphere of darkness.</code>
+<span>留下一个圆形的暗影。</span>
+<code>This bright ring reveals the black hole's event horizon,</code>
+<span>而它周围那明亮的光环 指示了黑洞边境的位置。</span>
+<code>where the gravitational pull becomes so great</code>
+<span>在这里，引力作用变得无比巨大，</span>
+<code>that not even light can escape.</code>
+<span>大到就连光线都无法逃离。</span>
+<code>Einstein's equations predict the size and shape of this ring,</code>
+<span>爱因斯坦用公式推测了 这个环的大小和形状，</span>
+<code>so taking a picture of it wouldn't only be really cool,</code>
+<span>所以，给光环拍照不仅很酷，</span>
+<code>it would also help to verify that these equations hold</code>
+<span>还能帮助我们检验这些公式在</span>
+<code>in the extreme conditions around the black hole.</code>
+<span>黑洞周围的极端环境下是否成立。</span>
+<code>However, this black hole is so far away from us,</code>
+<span>不过，这个黑洞离我们太过遥远，</span>
+<code>that from Earth, this ring appears incredibly small --</code>
+<span>从地球上看，它非常，非常小——</span>
+<code>the same size to us as an orange on the surface of the moon.</code>
+<span>大概就和月球上的一个橘子一样大。</span>
+<code>That makes taking a picture of it extremely difficult.</code>
+<span>这导致给它拍照变得无比艰难。</span>
+<code>Why is that?</code>
+<span>为什么呢？</span>
+<code>Well, it all comes down to a simple equation.</code>
+<span>一切都源于一个简单的等式。</span>
+<code>Due to a phenomenon called diffraction,</code>
+<span>由于衍射现象，</span>
+<code>there are fundamental limits</code>
+<span>我们所能看到的</span>
+<code>to the smallest objects that we can possibly see.</code>
+<span>最小物体是有限制的。</span>
+<code>This governing equation says that in order to see smaller and smaller,</code>
+<span>这个等式指出，当想要看到的 东西越来越小时，</span>
+<code>we need to make our telescope bigger and bigger.</code>
+<span>望远镜需要变得更大。</span>
+<code>But even with the most powerful optical telescopes here on Earth,</code>
+<span>但即使是地球上功能最强大的 光学望远镜，</span>
+<code>we can't even get close to the resolution necessary</code>
+<span>其分辨率甚至不足以</span>
+<code>to image on the surface of the moon.</code>
+<span>让我们得到月球表面的图片。</span>
+<code>In fact, here I show one of the highest resolution images ever taken</code>
+<span>事实上，这里是一张有史以来 从地球上拍摄的最高清的</span>
+<code>of the moon from Earth.</code>
+<span>月球图片。</span>
+<code>It contains roughly 13,000 pixels,</code>
+<span>它包含约1.3万个像素，</span>
+<code>and yet each pixel would contain over 1.5 million oranges.</code>
+<span>而每一个像素里包含超过150万个橘子。</span>
+<code>So how big of a telescope do we need</code>
+<span>所以，我们需要多大的望远镜</span>
+<code>in order to see an orange on the surface of the moon</code>
+<span>才能看到月球表面的橘子，</span>
+<code>and, by extension, our black hole?</code>
+<span>以及，那个黑洞呢？</span>
+<code>Well, it turns out that by crunching the numbers,</code>
+<span>事实上，通过计算，</span>
+<code>you can easily calculate that we would need a telescope</code>
+<span>我们可以轻易得出所需的 望远镜的大小，</span>
+<code>the size of the entire Earth.</code>
+<span>就和整个地球一样大。</span>
+<code>(Laughter)</code>
+<span>（笑声）</span>
+<code>If we could build this Earth-sized telescope,</code>
+<span>而如果我们能够建造出这个 地球大小的望远镜，</span>
+<code>we could just start to make out that distinctive ring of light</code>
+<span>就能够分辨出那指示着视界线的</span>
+<code>indicative of the black hole's event horizon.</code>
+<span>独特的光环。</span>
+<code>Although this picture wouldn't contain all the detail we see</code>
+<span>尽管在这张照片上，我们无法看到</span>
+<code>in computer graphic renderings,</code>
+<span>电脑合成图上的那些细节，</span>
+<code>it would allow us to safely get our first glimpse</code>
+<span>它仍可以让我们对于</span>
+<code>of the immediate environment around a black hole.</code>
+<span>黑洞周围的环境有个大致的了解。</span>
+<code>However, as you can imagine,</code>
+<span>但是，正如你预料，</span>
+<code>building a single-dish telescope the size of the Earth is impossible.</code>
+<span>想建造一个地球大小的射电望远镜 是不可能的。</span>
+<code>But in the famous words of Mick Jagger,</code>
+<span>不过，米克·贾格尔有一句名言：</span>
+<code>"You can't always get what you want,</code>
+<span>“你不可能永远心想事成，</span>
+<code>but if you try sometimes, you just might find</code>
+<span>但如果你尝试了，说不定就 正好能找到</span>
+<code>you get what you need."</code>
+<span>你所需要的东西。”</span>
+<code>And by connecting telescopes from around the world,</code>
+<span>通过将遍布全世界的望远镜 连接起来，</span>
+<code>an international collaboration called the Event Horizon Telescope</code>
+<span>“视界线望远镜”， 一个国际合作项目，诞生了。</span>
+<code>is creating a computational telescope the size of the Earth,</code>
+<span>这个项目通过电脑制作一个 地球大小的望远镜，</span>
+<code>capable of resolving structure</code>
+<span>能够帮助我们找到</span>
+<code>on the scale of a black hole's event horizon.</code>
+<span>黑洞视界线的结构。</span>
+<code>This network of telescopes is scheduled to take its very first picture</code>
+<span>这个由无数小望远镜构成的网络 将会在明年拍下它的</span>
+<code>of a black hole next year.</code>
+<span>第一张黑洞图片。</span>
+<code>Each telescope in the worldwide network works together.</code>
+<span>在这个网络中，每一个望远镜 都与其他所有望远镜一同工作。</span>
+<code>Linked through the precise timing of atomic clocks,</code>
+<span>通过原子钟的准确时间相连，</span>
+<code>teams of researchers at each of the sites freeze light</code>
+<span>各地的研究团队们通过收集</span>
+<code>by collecting thousands of terabytes of data.</code>
+<span>上万千兆字节的数据来定位光线。</span>
+<code>This data is then processed in a lab right here in Massachusetts.</code>
+<span>接下来，这份数据会在 麻省的实验室进行处理。</span>
+<code>So how does this even work?</code>
+<span>那么，这一项目到底是 怎么运作的呢？</span>
+<code>Remember if we want to see the black hole in the center of our galaxy,</code>
+<span>大家是否记得，如果要看到 银河系中心的那个黑洞，</span>
+<code>we need to build this impossibly large Earth-sized telescope?</code>
+<span>我们需要一个地球大小的望远镜？</span>
+<code>For just a second, let's pretend we could build</code>
+<span>现在，先假设我们可以</span>
+<code>a telescope the size of the Earth.</code>
+<span>将这个望远镜建造出来。</span>
+<code>This would be a little bit like turning the Earth</code>
+<span>这可能有点像是把地球变成</span>
+<code>into a giant spinning disco ball.</code>
+<span>一个巨大的球形迪斯科灯。</span>
+<code>Each individual mirror would collect light</code>
+<span>每一面镜子都会收集光线，</span>
+<code>that we could then combine together to make a picture.</code>
+<span>然后，我们就可以将这些光线 组合成图片。</span>
+<code>However, now let's say we remove most of those mirrors</code>
+<span>但是，现在，假设我们将 大多数镜子移走，</span>
+<code>so only a few remained.</code>
+<span>只有几片留了下来。</span>
+<code>We could still try to combine this information together,</code>
+<span>我们仍可以尝试将信息合成图片，</span>
+<code>but now there are a lot of holes.</code>
+<span>但现在，图片中有很多洞。</span>
+<code>These remaining mirrors represent the locations where we have telescopes.</code>
+<span>这几片留下来的镜子就代表了 地球上的几处天文望远镜。</span>
+<code>This is an incredibly small number of measurements to make a picture from.</code>
+<span>这对于制成一张图片来说， 还远远不够。</span>
+<code>But although we only collect light at a few telescope locations,</code>
+<span>不过，尽管我们只在寥寥几处 地方收集光线，</span>
+<code>as the Earth rotates, we get to see other new measurements.</code>
+<span>每当地球旋转时，我们便可以 得到新的信息。</span>
+<code>In other words, as the disco ball spins, those mirrors change locations</code>
+<span>换言之，当迪斯科球旋转时， 镜子会改变位置，</span>
+<code>and we get to observe different parts of the image.</code>
+<span>而我们就可以看到图片的各个部分。</span>
+<code>The imaging algorithms we develop fill in the missing gaps of the disco ball</code>
+<span>我们开发的生成图片的算法 可以将迪斯科球上的空缺部分填满，</span>
+<code>in order to reconstruct the underlying black hole image.</code>
+<span>从而建造出隐藏的黑洞图片。</span>
+<code>If we had telescopes located everywhere on the globe --</code>
+<span>如果我们能在地球上每一处 都装上望远镜，</span>
+<code>in other words, the entire disco ball --</code>
+<span>或者说能有整个迪斯科球，</span>
+<code>this would be trivial.</code>
+<span>那么这个算法并不算重要。</span>
+<code>However, we only see a few samples, and for that reason,</code>
+<span>但现在我们只有少量的样本，</span>
+<code>there are an infinite number of possible images</code>
+<span>所以，可能有无数张图像</span>
+<code>that are perfectly consistent with our telescope measurements.</code>
+<span>符合望远镜所测量到的信息。</span>
+<code>However, not all images are created equal.</code>
+<span>但并不是每一张图片都一样。</span>
+<code>Some of those images look more like what we think of as images than others.</code>
+<span>有些图片，比其他一些 看起来更像我们想象中的图片。</span>
+<code>And so, my role in helping to take the first image of a black hole</code>
+<span>所以我在拍摄黑洞 这一项目中的任务是，</span>
+<code>is to design algorithms that find the most reasonable image</code>
+<span>开发一种既可以找到最合理图像，</span>
+<code>that also fits the telescope measurements.</code>
+<span>又能使图像符合望远镜 所测量到的信息的算法。</span>
+<code>Just as a forensic sketch artist uses limited descriptions</code>
+<span>就像法医素描师通过有限的信息，</span>
+<code>to piece together a picture using their knowledge of face structure,</code>
+<span>结合自己对于人脸结构的认知 画出一张画像一样，</span>
+<code>the imaging algorithms I develop use our limited telescope data</code>
+<span>我正在开发的图片算法， 是使用望远镜提供的有限数据</span>
+<code>to guide us to a picture that also looks like stuff in our universe.</code>
+<span>来生成一张看起来像是 宇宙里的东西的图片。</span>
+<code>Using these algorithms, we're able to piece together pictures</code>
+<span>通过这些算法，我们能从散乱 而充满干扰的数据中</span>
+<code>from this sparse, noisy data.</code>
+<span>合成一张图片。</span>
+<code>So here I show a sample reconstruction done using simulated data,</code>
+<span>这里是一个用模拟数据 进行重现的例子：</span>
+<code>when we pretend to point our telescopes</code>
+<span>我们假设将望远镜指向</span>
+<code>to the black hole in the center of our galaxy.</code>
+<span>银河系中心的黑洞。</span>
+<code>Although this is just a simulation, reconstruction such as this give us hope</code>
+<span>尽管这只是一个模拟，像这样的 重建工作给了我们</span>
+<code>that we'll soon be able to reliably take the first image of a black hole</code>
+<span>真正给黑洞拍摄可行照片的希望，</span>
+<code>and from it, determine the size of its ring.</code>
+<span>之后便可以决定其光环的大小。</span>
+<code>Although I'd love to go on about all the details of this algorithm,</code>
+<span>虽然我很想继续描绘 这个算法的细节，</span>
+<code>luckily for you, I don't have the time.</code>
+<span>但你们很幸运，我没有这个时间。</span>
+<code>But I'd still like to give you a brief idea</code>
+<span>可我仍然想大概让你们了解一下</span>
+<code>of how we define what our universe looks like,</code>
+<span>我们是怎样定义宇宙的样子，</span>
+<code>and how we use this to reconstruct and verify our results.</code>
+<span>以及是怎样以此来重建 和校验我们的结果的。</span>
+<code>Since there are an infinite number of possible images</code>
+<span>由于有无数种可以完美解释</span>
+<code>that perfectly explain our telescope measurements,</code>
+<span>望远镜测量结果的图片，</span>
+<code>we have to choose between them in some way.</code>
+<span>我们需要找到一个方式进行挑选。</span>
+<code>We do this by ranking the images</code>
+<span>我们会按照这些图片是</span>
+<code>based upon how likely they are to be the black hole image,</code>
+<span>真正黑洞图片的可能性进行排序，</span>
+<code>and then choosing the one that's most likely.</code>
+<span>然后选出可能性最高的那一张。</span>
+<code>So what do I mean by this exactly?</code>
+<span>我这话到底是什么意思呢？</span>
+<code>Let's say we were trying to make a model</code>
+<span>假设我们正在建立一个能够</span>
+<code>that told us how likely an image were to appear on Facebook.</code>
+<span>指出一张图出现在脸书上的 可能性的模型。</span>
+<code>We'd probably want the model to say</code>
+<span>我们希望这个模型能指出</span>
+<code>it's pretty unlikely that someone would post this noise image on the left,</code>
+<span>不太可能有人会上传最左边的图像，</span>
+<code>and pretty likely that someone would post a selfie</code>
+<span>而像右边那样的自拍照</span>
+<code>like this one on the right.</code>
+<span>画出一张图片一样，</span>
+<code>The image in the middle is blurry,</code>
+<span>中间那张图有点模糊，</span>
+<code>so even though it's more likely we'd see it on Facebook</code>
+<span>所以它被发表的可能性</span>
+<code>compared to the noise image,</code>
+<span>比左边的噪点图像大，</span>
+<code>it's probably less likely we'd see it compared to the selfie.</code>
+<span>但比右边自拍发表的可能性要小。</span>
+<code>But when it comes to images from the black hole,</code>
+<span>但是当模型的主角变成 黑洞的照片时，</span>
+<code>we're posed with a real conundrum: we've never seen a black hole before.</code>
+<span>一个难题出现了：我们从未 见过真正的黑洞。</span>
+<code>In that case, what is a likely black hole image,</code>
+<span>在这样的情况下， 什么样的图才更像黑洞，</span>
+<code>and what should we assume about the structure of black holes?</code>
+<span>而我们又该怎样假设黑洞的结构呢？</span>
+<code>We could try to use images from simulations we've done,</code>
+<span>我们或许能够使用模拟试验 得出的图片，</span>
+<code>like the image of the black hole from "Interstellar,"</code>
+<span>比如《星际穿越》里的那张黑洞图。</span>
+<code>but if we did this, it could cause some serious problems.</code>
+<span>但这样做可能会引起 一些严重的问题。</span>
+<code>What would happen if Einstein's theories didn't hold?</code>
+<span>如果爱因斯坦的理论是错的怎么办？</span>
+<code>We'd still want to reconstruct an accurate picture of what was going on.</code>
+<span>我们仍然想要得到一张 准确而真实的图片。</span>
+<code>If we bake Einstein's equations too much into our algorithms,</code>
+<span>而如果我们在算法中掺入太多 爱因斯坦的公式，</span>
+<code>we'll just end up seeing what we expect to see.</code>
+<span>最终只会看到我们所希望看到的。</span>
+<code>In other words, we want to leave the option open</code>
+<span>换句话说，我们想保留在银河系中心</span>
+<code>for there being a giant elephant at the center of our galaxy.</code>
+<span>看到一头大象这样的可能性。</span>
+<code>(Laughter)</code>
+<span>（笑声）</span>
+<code>Different types of images have very distinct features.</code>
+<span>不同类型的照片拥有 完全不同的特征。</span>
+<code>We can easily tell the difference between black hole simulation images</code>
+<span>我们可以轻松分辨出 一张黑洞模拟图</span>
+<code>and images we take every day here on Earth.</code>
+<span>和我们日常拍的照片的差别。</span>
+<code>We need a way to tell our algorithms what images look like</code>
+<span>我们需要在不过度提供某类图片 特征的情况下，</span>
+<code>without imposing one type of image's features too much.</code>
+<span>告诉我们的算法，一张正常的图片 应该是什么样。</span>
+<code>One way we can try to get around this</code>
+<span>做到这一点的一种方法是，</span>
+<code>is by imposing the features of different kinds of images</code>
+<span>向算法展示拥有不同特征的图片，</span>
+<code>and seeing how the type of image we assume affects our reconstructions.</code>
+<span>然后看看这些图片会怎样 影响重建的结果。</span>
+<code>If all images' types produce a very similar-looking image,</code>
+<span>如果不同类型的图片都产生出了 差不多的图像，</span>
+<code>then we can start to become more confident</code>
+<span>那么我们便可以更有信心了，</span>
+<code>that the image assumptions we're making are not biasing this picture that much.</code>
+<span>我们对图片的假设并没有 导致结果出现太大偏差。</span>
+<code>This is a little bit like giving the same description</code>
+<span>这就有点像让来自不同国家的 三个法医素描师</span>
+<code>to three different sketch artists from all around the world.</code>
+<span>根据同样的文字描述来作画。</span>
+<code>If they all produce a very similar-looking face,</code>
+<span>如果他们画出的脸都差不多，</span>
+<code>then we can start to become confident</code>
+<span>那么我们就能比较确信，</span>
+<code>that they're not imposing their own cultural biases on the drawings.</code>
+<span>他们各自的文化背景 并没有影响到他们的画。</span>
+<code>One way we can try to impose different image features</code>
+<span>将不同图片的特征赋予 （算法）的一个方法</span>
+<code>is by using pieces of existing images.</code>
+<span>就是使用现有的图片的碎片特征。</span>
+<code>So we take a large collection of images,</code>
+<span>所以，我们将大量的图像</span>
+<code>and we break them down into their little image patches.</code>
+<span>分解成无数小图片，</span>
+<code>We then can treat each image patch a little bit like pieces of a puzzle.</code>
+<span>然后像拼图一样处理这些小图片。</span>
+<code>And we use commonly seen puzzle pieces to piece together an image</code>
+<span>我们用其中常见的拼图碎片 来组合成一张</span>
+<code>that also fits our telescope measurements.</code>
+<span>符合望远镜所测量数据的完整图片。</span>
+<code>Different types of images have very distinctive sets of puzzle pieces.</code>
+<span>不同类型的图片拥有 完全不同的拼图碎片。</span>
+<code>So what happens when we take the same data</code>
+<span>所以，当我们使用相同的数据和</span>
+<code>but we use different sets of puzzle pieces to reconstruct the image?</code>
+<span>截然不同的拼图类型来 重现图像时，会发生什么呢？</span>
+<code>Let's first start with black hole image simulation puzzle pieces.</code>
+<span>我们先从黑洞模拟类的拼图开始。</span>
+<code>OK, this looks reasonable.</code>
+<span>这张图看起来还比较合理。</span>
+<code>This looks like what we expect a black hole to look like.</code>
+<span>它比较符合我们预料中黑洞的样子。</span>
+<code>But did we just get it</code>
+<span>但我们得到这个结果</span>
+<code>because we just fed it little pieces of black hole simulation images?</code>
+<span>是否仅仅是因为我们拿的是 黑洞模拟拼图呢？</span>
+<code>Let's try another set of puzzle pieces</code>
+<span>我们再来试试另一组拼图，</span>
+<code>from astronomical, non-black hole objects.</code>
+<span>这组拼图由宇宙中不是黑洞的 各种天体构成。</span>
+<code>OK, we get a similar-looking image.</code>
+<span>很好，我们得到了一幅相似的图片。</span>
+<code>And then how about pieces from everyday images,</code>
+<span>那如果我们拿日常照片的拼图 会怎么样呢，</span>
+<code>like the images you take with your own personal camera?</code>
+<span>就像你每天拿自己的相机 拍的那种照片？</span>
+<code>Great, we see the same image.</code>
+<span>太好了，我们看到了和之前 一样的图像。</span>
+<code>When we get the same image from all different sets of puzzle pieces,</code>
+<span>当我们通过不同类型的拼图 得出一样的图片时，</span>
+<code>then we can start to become more confident</code>
+<span>我们就有充足的自信说</span>
+<code>that the image assumptions we're making</code>
+<span>我们对图片进行的推测，</span>
+<code>aren't biasing the final image we get too much.</code>
+<span>并没有引起最终结果的太大偏差。</span>
+<code>Another thing we can do is take the same set of puzzle pieces,</code>
+<span>我们能做的另一件事是， 用同一组拼图，</span>
+<code>such as the ones derived from everyday images,</code>
+<span>比如源自日常图片的那一种，</span>
+<code>and use them to reconstruct many different kinds of source images.</code>
+<span>来得到不同类型的源图片。</span>
+<code>So in our simulations,</code>
+<span>所以，在我们的模拟试验中，</span>
+<code>we pretend a black hole looks like astronomical non-black hole objects,</code>
+<span>我们假设黑洞看起来像一个 非黑洞天体，</span>
+<code>as well as everyday images like the elephant in the center of our galaxy.</code>
+<span>以及在银河系中心的一头大象。</span>
+<code>When the results of our algorithms on the bottom look very similar</code>
+<span>当下面一排算法算出的图片</span>
+<code>to the simulation's truth image on top,</code>
+<span>看起来和上面一排实际图片 十分相似时，</span>
+<code>then we can start to become more confident in our algorithms.</code>
+<span>我们就能对我们的算法 有更多信心了。</span>
+<code>And I really want to emphasize here</code>
+<span>在这里我想强调，</span>
+<code>that all of these pictures were created</code>
+<span>此处所有的图片都是由</span>
+<code>by piecing together little pieces of everyday photographs,</code>
+<span>拼接日常照片而得出的，</span>
+<code>like you'd take with your own personal camera.</code>
+<span>就像你自己用相机拍的照片一样。</span>
+<code>So an image of a black hole we've never seen before</code>
+<span>所以，一张我们从未见过的 黑洞的照片，</span>
+<code>may eventually be created by piecing together pictures we see all the time</code>
+<span>最终却可能由我们日常 熟悉的图片构成：</span>
+<code>of people, buildings, trees, cats and dogs.</code>
+<span>人，楼房，树，小猫，小狗……</span>
+<code>Imaging ideas like this will make it possible for us</code>
+<span>想象这样的想法使拍摄第一张</span>
+<code>to take our very first pictures of a black hole,</code>
+<span>黑洞的图片成为可能，</span>
+<code>and hopefully, verify those famous theories</code>
+<span>同时使我们有望校验</span>
+<code>on which scientists rely on a daily basis.</code>
+<span>科学家们每天所依靠的著名理论。</span>
+<code>But of course, getting imaging ideas like this working</code>
+<span>但是，要想让如此充满想象力的 点子实际工作，</span>
+<code>would never have been possible without the amazing team of researchers</code>
+<span>离不开这些我有幸一同工作的</span>
+<code>that I have the privilege to work with.</code>
+<span>出色的研究者团队。</span>
+<code>It still amazes me</code>
+<span>我仍然对此感到振奋：</span>
+<code>that although I began this project with no background in astrophysics,</code>
+<span>虽然在项目开始时我没有任何 天文学背景知识，</span>
+<code>what we have achieved through this unique collaboration</code>
+<span>我们通过这一独特合作 所达成的成就，</span>
+<code>could result in the very first images of a black hole.</code>
+<span>可能导致世界上第一幅 黑洞照片的诞生。</span>
+<code>But big projects like the Event Horizon Telescope</code>
+<span>像视界线望远镜这样大项目的成功</span>
+<code>are successful due to all the interdisciplinary expertise</code>
+<span>是由来自不同学科的人们 用他们各自的专业知识，</span>
+<code>different people bring to the table.</code>
+<span>一起创造的结果。</span>
+<code>We're a melting pot of astronomers,</code>
+<span>我们是一个由天文学家，物理学家，</span>
+<code>physicists, mathematicians and engineers.</code>
+<span>数学家和工程学家构成的大熔炉。</span>
+<code>This is what will make it soon possible</code>
+<span>这就是我们能够很快达成</span>
+<code>to achieve something once thought impossible.</code>
+<span>一个看起来不可能达成的 成就的原因。</span>
+<code>I'd like to encourage all of you to go out</code>
+<span>在此我想鼓励你们所有人，走出去，</span>
+<code>and help push the boundaries of science,</code>
+<span>推动科学的边际，</span>
+<code>even if it may at first seem as mysterious to you as a black hole.</code>
+<span>尽管刚开始它看起来可能 和一个黑洞一样神秘。</span>
+<code>Thank you.</code>
+<span>谢谢大家。</span>
+<code>(Applause)</code>
+<span>（掌声）</span></p><center><a style="color: rgb(254,17,130)" href="https://icp.gov.moe/?keyword=20223985" target="_blank">萌ICP备20223985号</a></center></div></div>
+</body>
+</html>

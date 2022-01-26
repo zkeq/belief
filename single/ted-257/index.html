@@ -1,0 +1,654 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="referrer" content="no-referrer">
+<script src="/yinghua/Ascii.js"></script>
+<script src="/dplayer/dplayer.js"></script>
+<link rel="stylesheet" href="/css/daily.css">
+
+<title>【TED】两栖蝾螈机器人</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><blockquote><p><span>声明: 本站全部内容源自互联网,不进行任何盈利行为</span></p><p><strong><span>仅做 整合 / 美化 处理</span></strong></p><p><span>首页: </span><a href='https://belief.zkeq.xyz' target='_blank' class='url'>https://belief.zkeq.xyz</a><span> </span></p></blockquote><h2 id='title'><span>【TED】两栖蝾螈机器人</span></h2><div id="play"></div>
+<script>
+const play = new DPlayer({
+    container: document.getElementById('play'),
+    theme:'#c61e07',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'http://mov.bn.netease.com/open-movie/nos/mp4/2021/04/29/SG7QJAI4C_shd.mp4'
+    },
+    subtitle: {
+        url:'https://s-bj-2220-open-srt.oss.dogecdn.com/257.vtt',
+        fontSize: '25px',
+    },
+});
+</script><p>&nbsp;</p><p><code>This is Pleurobot.</code>
+<span>这是一只蝾螈机器人</span>
+<code>Pleurobot is a robot that we designed to closely mimic a salamander species</code>
+<span>是一种我们根据蝾螈设计出的仿生机器人</span>
+<code>called Pleurodeles waltl.</code>
+<span>我们把它称为蝾螈机器人</span>
+<code>Pleurobot can walk, as you can see here,</code>
+<span>就想你看到的，它会爬行</span>
+<code>and as you'll see later, it can also swim.</code>
+<span>一会儿你还会看到它游泳</span>
+<code>So you might ask, why did we design this robot?</code>
+<span>你可能会问我们为什么设计这样一个机器人</span>
+<code>And in fact, this robot has been designed as a scientific tool for neuroscience.</code>
+<span>其实，蝾螈机器人是一种用来研究神经科学的工具</span>
+<code>Indeed, we designed it together with neurobiologists</code>
+<span>我们和神经科学家一起设计出蝾螈机器人</span>
+<code>to understand how animals move,</code>
+<span>希望能更好理解动物的运动原理</span>
+<code>and especially how the spinal cord controls locomotion.</code>
+<span>尤其是脊髓控制运动的机理</span>
+<code>But the more I work in biorobotics,</code>
+<span>但是，我们对仿生机器人的研究越深入</span>
+<code>the more I'm really impressed by animal locomotion.</code>
+<span>就越被动物运动的复杂原理所震撼</span>
+<code>If you think of a dolphin swimming or a cat running or jumping around,</code>
+<span>试想一下在海里遨游的海豚、又跑又跳的小猫</span>
+<code>or even us as humans,</code>
+<span>甚至还有我们人类</span>
+<code>when you go jogging or play tennis,</code>
+<span>在进行慢跑或者打网球的时候</span>
+<code>we do amazing things.</code>
+<span>我们的每一个动作都那么神奇</span>
+<code>And in fact, our nervous system solves a very, very complex control problem.</code>
+<span>实际上，在运动时，神经系统的控制过程十分复杂</span>
+<code>It has to coordinate more or less 200 muscles perfectly,</code>
+<span>神经系统要协调200块左右的肌肉一起运作</span>
+<code>because if the coordination is bad, we fall over or we do bad locomotion.</code>
+<span>一旦协调紊乱，我们就会摔跤或者肢体不协调</span>
+<code>And my goal is to understand how this works.</code>
+<span>而我的目标就是要弄清楚这种协调机制的原理</span>
+<code>There are four main components behind animal locomotion.</code>
+<span>动物的运动需要四个部分</span>
+<code>The first component is just the body,</code>
+<span>首先就是肢体</span>
+<code>and in fact we should never underestimate</code>
+<span>生物力学对于动物肢体运动的简化</span>
+<code>to what extent the biomechanics already simplify locomotion in animals.</code>
+<span>已经到了令人难以想象地步</span>
+<code>Then you have the spinal cord,</code>
+<span>第二个部分就是脊髓</span>
+<code>and in the spinal cord you find reflexes,</code>
+<span>脊髓中有很多反射神经</span>
+<code>multiple reflexes that create a sensorimotor coordination loop</code>
+<span>这些反射神经在脊髓中的神经活动和机械活动之间</span>
+<code>between neural activity in the spinal cord and mechanical activity.</code>
+<span>建立了感觉协调环</span>
+<code>A third component are central pattern generators.</code>
+<span>第三个要素是中枢模式发生器</span>
+<code>These are very interesting circuits in the spinal cord of vertebrate animals</code>
+<span>脊椎动物的脊髓中有一些有趣的电路</span>
+<code>that can generate, by themselves,</code>
+<span>这些电路在接收简单的信号时</span>
+<code>very coordinated rhythmic patterns of activity</code>
+<span>可以自发地产生非常协调的</span>
+<code>while receiving only very simple input signals.</code>
+<span>节律运动模式</span>
+<code>And these input signals</code>
+<span>在我们运动的时候</span>
+<code>coming from descending modulation from higher parts of the brain,</code>
+<span>大脑的高级中枢</span>
+<code>like the motor cortex, the cerebellum, the basal ganglia,</code>
+<span>例如运动皮层、小脑和基地神经节</span>
+<code>will all modulate activity of the spinal cord</code>
+<span>进行下行调节并产生上述信号</span>
+<code>while we do locomotion.</code>
+<span>并对脊髓中的活动起到调控作用</span>
+<code>But what's interesting is to what extent just a low-level component,</code>
+<span>但是有趣的是，脊髓和肢体这类低级中枢</span>
+<code>the spinal cord, together with the body,</code>
+<span>在完成运动过程中</span>
+<code>already solve a big part of the locomotion problem.</code>
+<span>到底扮演了何种角色</span>
+<code>You probably know it by the fact that you can cut the head off a chicken,</code>
+<span>大家应该都知道，即使鸡的头被砍掉了</span>
+<code>it can still run for a while,</code>
+<span>它也不会立即死亡</span>
+<code>showing that just the lower part, spinal cord and body,</code>
+<span>这个事实表明低级的脊髓和躯干</span>
+<code>already solve a big part of locomotion.</code>
+<span>在完成运动过程中扮演了重要的角色</span>
+<code>Now, understanding how this works is very complex,</code>
+<span>但是想要弄清楚它的工作原理还是很困难</span>
+<code>because first of all,</code>
+<span>因为，第一点就是</span>
+<code>recording activity in the spinal cord is very difficult.</code>
+<span>想要记录脊髓中的活动十分复杂</span>
+<code>It's much easier to implant electrodes in the motor cortex</code>
+<span>由于脊椎的保护作用，把电极植入到脊髓中</span>
+<code>than in the spinal cord, because it's protected by the vertebrae.</code>
+<span>要比植入到运动皮层中难得多</span>
+<code>Especially in humans, very hard to do.</code>
+<span>对于人类来说更是难上加难</span>
+<code>A second difficulty is that locomotion is really due to a very complex</code>
+<span>另外一个难题就是，运动基于这四个要素的相互作用</span>
+<code>and very dynamic interaction between these four components.</code>
+<span>是一个复杂的动态过程</span>
+<code>So it's very hard to find out what's the role of each over time.</code>
+<span>因此，很难区分各要素所发挥的作用</span>
+<code>This is where biorobots like Pleurobot and mathematical models</code>
+<span>所以，像蝾螈机器人这样的仿生机器人和数学模型</span>
+<code>can really help.</code>
+<span>就派上用场了</span>
+<code>So what's biorobotics?</code>
+<span>那么到底什么是仿生机器人学呢</span>
+<code>Biorobotics is a very active field of research in robotics</code>
+<span>这是机器人研究中一个热门的领域</span>
+<code>where people want to take inspiration from animals</code>
+<span>人们试图从动物身上获取灵感</span>
+<code>to make robots to go outdoors,</code>
+<span>并运用到机器人身上，使它们可以运用于户外</span>
+<code>like service robots or search and rescue robots</code>
+<span>例如服务用机器人、搜救机器人</span>
+<code>or field robots.</code>
+<span>以及农业机器人</span>
+<code>And the big goal here is to take inspiration from animals</code>
+<span>现在最大的目标就是从动物身上获得灵感</span>
+<code>to make robots that can handle complex terrain --</code>
+<span>使机器人能够应对一些复杂的地形</span>
+<code>stairs, mountains, forests,</code>
+<span>例如楼梯、山区、树林</span>
+<code>places where robots still have difficulties</code>
+<span>这些地形对于机器人来说还是个挑战</span>
+<code>and where animals can do a much better job.</code>
+<span>它们并不能像动物那样灵活应对</span>
+<code>The robot can be a wonderful scientific tool as well.</code>
+<span>机器人也是一项极好的科学研究工具</span>
+<code>There are some very nice projects where robots are used,</code>
+<span>在一些优秀研究项目中得以应用</span>
+<code>like a scientific tool for neuroscience, for biomechanics or for hydrodynamics.</code>
+<span>例如神经科学、仿生学和流体动力学</span>
+<code>And this is exactly the purpose of Pleurobot.</code>
+<span>这也正是蝾螈机器人存在的意义</span>
+<code>So what we do in my lab is to collaborate with neurobiologists</code>
+<span>所以，我们在实验室里与神经生物学家合作</span>
+<code>like Jean-Marie Cabelguen, a neurobiologist in Bordeaux in France,</code>
+<span>法国波尔多大学的神经生物学家 让·玛丽 卡贝肯就是其中之一</span>
+<code>and we want to make spinal cord models and validate them on robots.</code>
+<span>我们制作出脊髓的模型并用机器人加以验证</span>
+<code>And here we want to start simple.</code>
+<span>我们希望先从简单的动物入手</span>
+<code>So it's good to start with simple animals</code>
+<span>例如七鳃鳗</span>
+<code>like lampreys, which are very primitive fish,</code>
+<span>这种原始的鱼类</span>
+<code>and then gradually go toward more complex locomotion,</code>
+<span>然后慢慢过渡到运动更复杂的动物</span>
+<code>like in salamanders,</code>
+<span>例如蝾螈</span>
+<code>but also in cats and in humans,</code>
+<span>然后还有猫、人类</span>
+<code>in mammals.</code>
+<span>等哺乳动物</span>
+<code>And here, a robot becomes an interesting tool</code>
+<span>这样一来</span>
+<code>to validate our models.</code>
+<span>机器人成为一种验证模型的有趣工具</span>
+<code>And in fact, for me, Pleurobot is a kind of dream becoming true.</code>
+<span>实际上，蝾螈机器人的出现使得我的梦想成真</span>
+<code>Like, more or less 20 years ago I was already working on a computer</code>
+<span>因为，大约在20年前</span>
+<code>making simulations of lamprey and salamander locomotion</code>
+<span>我在读博士期间就通过计算机</span>
+<code>during my PhD.</code>
+<span>模拟七鳃鳗和蝾螈的运动</span>
+<code>But I always knew that my simulations were just approximations.</code>
+<span>但是，我一直很清楚我的模拟非常粗糙</span>
+<code>Like, simulating the physics in water or with mud or with complex ground,</code>
+<span>因为在水中和在泥泞等地形复杂的陆地上的运动</span>
+<code>it's very hard to simulate that properly on a computer.</code>
+<span>很难在电脑上精确地模拟出来</span>
+<code>Why not have a real robot and real physics?</code>
+<span>那么为什么不用机器人真正地模拟这些动作呢</span>
+<code>So among all these animals, one of my favorites is the salamander.</code>
+<span>所以在众多的动物中，蝾螈成为我最喜欢的动物之一</span>
+<code>You might ask why, and it's because as an amphibian,</code>
+<span>你可能会问为什么,因为从进化的角度来看</span>
+<code>it's a really key animal from an evolutionary point of view.</code>
+<span>蝾螈作为两栖动物,发挥着至关重要的作用</span>
+<code>It makes a wonderful link between swimming,</code>
+<span>它在两种运动方式间建立起美妙的联系</span>
+<code>as you find it in eels or fish,</code>
+<span>一个是鳗和鱼类在水中的游泳方式</span>
+<code>and quadruped locomotion, as you see in mammals, in cats and humans.</code>
+<span>一个是猫、人类等哺乳动物在陆上的运动方式</span>
+<code>And in fact, the modern salamander</code>
+<span>事实上，现代的蝾螈</span>
+<code>is very close to the first terrestrial vertebrate,</code>
+<span>和最早出现的陆生脊椎动物十分相近</span>
+<code>so it's almost a living fossil,</code>
+<span>所以说，蝾螈就像是活化石一样</span>
+<code>which gives us access to our ancestor,</code>
+<span>通过它，我们有机会了解我们的祖先</span>
+<code>the ancestor to all terrestrial tetrapods.</code>
+<span>即四足动物的祖先</span>
+<code>So the salamander swims</code>
+<span>蝾螈以所谓的鳗形游泳的步态</span>
+<code>by doing what's called an anguilliform swimming gait,</code>
+<span>在水中游动</span>
+<code>so they propagate a nice traveling wave of muscle activity from head to tail.</code>
+<span>因此肌肉活动产生的优美行波从头部传到尾部</span>
+<code>And if you place the salamander on the ground,</code>
+<span>如果把它放在地上</span>
+<code>it switches to what's called a walking trot gait.</code>
+<span>它的动作转变为快速爬行的步态</span>
+<code>In this case, you have nice periodic activation of the limbs</code>
+<span>在这种情况下，蝾螈的四肢被定期地激活</span>
+<code>which are very nicely coordinated</code>
+<span>十分协调地</span>
+<code>with this standing wave undulation of the body,</code>
+<span>随着身体驻波的起伏而运动</span>
+<code>and that's exactly the gait that you are seeing here on Pleurobot.</code>
+<span>这就是蝾螈机器人行走的步态的原型</span>
+<code>Now, one thing which is very surprising and fascinating in fact</code>
+<span>现在令人惊叹的是</span>
+<code>is the fact that all this can be generated just by the spinal cord and the body.</code>
+<span>所有这些活动仅靠脊髓和肢体就可以完成</span>
+<code>So if you take a decerebrated salamander --</code>
+<span>如果拿一只去脑的蝾螈</span>
+<code>it's not so nice but you remove the head --</code>
+<span>虽然这听起来有些残忍，但是你把它的头部切除</span>
+<code>and if you electrically stimulate the spinal cord,</code>
+<span>如果以低强度的刺激电激它的脊髓</span>
+<code>at low level of stimulation this will induce a walking-like gait.</code>
+<span>它会表现出类似爬行的步态</span>
+<code>If you stimulate a bit more, the gait accelerates.</code>
+<span>但如果你加大刺激的强度，步态就会发生变化</span>
+<code>And at some point, there's a threshold,</code>
+<span>这里存在一个临界值，如果强度达到临界点</span>
+<code>and automatically, the animal switches to swimming.</code>
+<span>它会自己变成游泳的步态</span>
+<code>This is amazing.</code>
+<span>这简直太神奇了</span>
+<code>Just changing the global drive,</code>
+<span>仅仅改变了刺激的强度</span>
+<code>as if you are pressing the gas pedal</code>
+<span>就像是踩下了</span>
+<code>of descending modulation to your spinal cord,</code>
+<span>下行调节脊髓的油门一样</span>
+<code>makes a complete switch between two very different gaits.</code>
+<span>实现了两种完全不同的步态之间的转变</span>
+<code>And in fact, the same has been observed in cats.</code>
+<span>而且我们在猫身上发现了同样的规律</span>
+<code>If you stimulate the spinal cord of a cat,</code>
+<span>刺激猫的脊髓</span>
+<code>you can switch between walk, trot and gallop.</code>
+<span>就可以使它在行走、慢跑和快跑之间进行转换</span>
+<code>Or in birds, you can make a bird switch between walking,</code>
+<span>还可以实现鸟从行走到拍动翅膀之间的转换</span>
+<code>at a low level of stimulation,</code>
+<span>相应地，需要从低强度的刺激</span>
+<code>and flapping its wings at high-level stimulation.</code>
+<span>转变为高强度的刺激</span>
+<code>And this really shows that the spinal cord</code>
+<span>这恰好证明了</span>
+<code>is a very sophisticated locomotion controller.</code>
+<span>脊髓是一处智能的运动控制中心</span>
+<code>So we studied salamander locomotion in more detail,</code>
+<span>因此我们对于蝾螈的运动展开更仔细的研究</span>
+<code>and we had in fact access to a very nice X-ray video machine</code>
+<span>我们从德国耶拿大学的马丁·费希尔教授的手中</span>
+<code>from Professor Martin Fischer in Jena University in Germany.</code>
+<span>得到了一台非常精妙的X射线成像仪</span>
+<code>And thanks to that, you really have an amazing machine</code>
+<span>多亏了这台精妙的仪器</span>
+<code>to record all the bone motion in great detail.</code>
+<span>我们可以记录更多关于骨骼运动的细节</span>
+<code>That's what we did.</code>
+<span>这就是我们得到的成像</span>
+<code>So we basically figured out which bones are important for us</code>
+<span>然后我们大致选出关键的骨骼</span>
+<code>and collected their motion in 3D.</code>
+<span>并且搜集他们三维运动数据</span>
+<code>And what we did is collect a whole database of motions,</code>
+<span>我们所做的就是搜集运动过程的全数据</span>
+<code>both on ground and in water,</code>
+<span>既有在陆地爬行的，也有在水中游行的</span>
+<code>to really collect a whole database of motor behaviors</code>
+<span>真的是动物</span>
+<code>that a real animal can do.</code>
+<span>在运动过程中的全部数据</span>
+<code>And then our job as roboticists was to replicate that in our robot.</code>
+<span>然后我们这些机器人学家的任务就是 把数据复制到机器人身上</span>
+<code>So we did a whole optimization process to find out the right structure,</code>
+<span>因此我们为了找到正确的结构，进行了全套的优化方案</span>
+<code>where to place the motors, how to connect them together,</code>
+<span>例如在哪里放置这些运动，如何让它们连贯起来</span>
+<code>to be able to replay these motions as well as possible.</code>
+<span>才能尽可能地重现这些动作</span>
+<code>And this is how Pleurobot came to life.</code>
+<span>这就是蝾螈机器人诞生的过程</span>
+<code>So let's look at how close it is to the real animal.</code>
+<span>接下来我们就来欣赏一下 它和活生生的动物多么相似吧</span>
+<code>So what you see here is almost a direct comparison</code>
+<span>你现在看到的就是非常直观的对比</span>
+<code>between the walking of the real animal and the Pleurobot.</code>
+<span>一个是活生生的动物，一个是蝾螈机器人</span>
+<code>You can see that we have almost a one-to-one exact replay</code>
+<span>你可以看到我们几乎实现了两者在步态上</span>
+<code>of the walking gait.</code>
+<span>一对一的重现</span>
+<code>If you go backwards and slowly, you see it even better.</code>
+<span>如果进行慢速回放，你会看得更清楚</span>
+<code>But even better, we can do swimming.</code>
+<span>但是更神奇的是，我们成功重现了游行</span>
+<code>So for that we have a dry suit that we put all over the robot --</code>
+<span>但我们必须给机器人穿上外套</span>
+<code>(Laughter)</code>
+<span>（笑声）</span>
+<code>and then we can go in water and start replaying the swimming gaits.</code>
+<span>然后就可以入水重现游行的步态</span>
+<code>And here, we were very happy, because this is difficult to do.</code>
+<span>看到这里我们很是欣慰，因为这个过程真得很艰辛</span>
+<code>The physics of interaction are complex.</code>
+<span>物理交互作用十分复杂</span>
+<code>Our robot is much bigger than a small animal,</code>
+<span>因为蝾螈机器人比真正的蝾螈大得多</span>
+<code>so we had to do what's called dynamic scaling of the frequencies</code>
+<span>所以我们必须进行所谓的动态频率缩放</span>
+<code>to make sure we had the same interaction physics.</code>
+<span>确保蝾螈机器人能实现一样的物理协调</span>
+<code>But you see at the end, we have a very close match,</code>
+<span>但是你看，最后两者已经十分相近</span>
+<code>and we were very, very happy with this.</code>
+<span>对此我们非常高兴</span>
+<code>So let's go to the spinal cord.</code>
+<span>让我们再回到脊髓的研究</span>
+<code>So here what we did with Jean-Marie Cabelguen</code>
+<span>我们和Jean-Marie Cabelguen教授所做的工作就是</span>
+<code>is model the spinal cord circuits.</code>
+<span>模拟脊髓中的电路</span>
+<code>And what's interesting is that the salamander</code>
+<span>但是非常有趣的是，我们发现蝾螈</span>
+<code>has kept a very primitive circuit,</code>
+<span>始终保持一种非常原始的电路</span>
+<code>which is very similar to the one we find in the lamprey,</code>
+<span>这和我们在七鳃鳗身上发现的很相似</span>
+<code>this primitive eel-like fish,</code>
+<span>就是那个原始的鳗形鱼类</span>
+<code>and it looks like during evolution,</code>
+<span>似乎在进化过程中</span>
+<code>new neural oscillators have been added to control the limbs,</code>
+<span>产生了一种新的神经振荡器来控制肢干</span>
+<code>to do the leg locomotion.</code>
+<span>并完成腿部的运动</span>
+<code>And we know where these neural oscillators are</code>
+<span>现在我们知道了这些神经振荡器的位置</span>
+<code>but what we did was to make a mathematical model</code>
+<span>但是我们还需要建立数学模型</span>
+<code>to see how they should be coupled</code>
+<span>来研究它们是如何连接起来</span>
+<code>to allow this transition between the two very different gaits.</code>
+<span>实现两种完全不同的步态的转换</span>
+<code>And we tested that on board of a robot.</code>
+<span>我们在机器人的背部进行测试</span>
+<code>And this is how it looks.</code>
+<span>就像这个样子</span>
+<code>So what you see here is a previous version of Pleurobot</code>
+<span>你现在看到的就是蝾螈机器人的原始版本</span>
+<code>that's completely controlled by our spinal cord model</code>
+<span>它完全由背部的脊髓模型</span>
+<code>programmed on board of the robot.</code>
+<span>进行控制</span>
+<code>And the only thing we do</code>
+<span>然后我们只需要</span>
+<code>is send to the robot through a remote control</code>
+<span>通过远程控制，向机器人发送</span>
+<code>the two descending signals it normally should receive</code>
+<span>它在正常情况下从大脑高级部位接受的到的</span>
+<code>from the upper part of the brain.</code>
+<span>两种下行调节信号</span>
+<code>And what's interesting is, by playing with these signals,</code>
+<span>有趣的是，通过这些信号</span>
+<code>we can completely control speed, heading and type of gait.</code>
+<span>我们可以完全控制步态的速度，方向和类型</span>
+<code>For instance,</code>
+<span>举例来说</span>
+<code>when we stimulate at a low level, we have the walking gait,</code>
+<span>当我们的刺激强度较低时，表现为行走的步态</span>
+<code>and at some point, if we stimulate a lot,</code>
+<span>当我们加大刺激的强度到某个极限</span>
+<code>very rapidly it switches to the swimming gait.</code>
+<span>它迅速转换成游行的步态</span>
+<code>And finally, we can also do turning very nicely</code>
+<span>最后，我们也可以很轻松地再变回来</span>
+<code>by just stimulating more one side of the spinal cord than the other.</code>
+<span>只需要刺激脊髓的另一端</span>
+<code>And I think it's really beautiful</code>
+<span>我觉得这真的很美妙</span>
+<code>how nature has distributed control</code>
+<span>大自然竟然赋予了脊髓</span>
+<code>to really give a lot of responsibility to the spinal cord</code>
+<span>这么重大的责任</span>
+<code>so that the upper part of the brain doesn't need to worry about every muscle.</code>
+<span>以至于脑部高级中枢部分根本不需要担心每一块肌肉</span>
+<code>It just has to worry about this high-level modulation,</code>
+<span>它只需要进行高层调节</span>
+<code>and it's really the job of the spinal cord to coordinate all the muscles.</code>
+<span>而协调所有的肌肉就是脊髓的任务了</span>
+<code>So now let's go to cat locomotion and the importance of biomechanics.</code>
+<span>我们再回到猫的运动，进一步认识仿生学的的重要性</span>
+<code>So this is another project</code>
+<span>这就是另一个项目了</span>
+<code>where we studied cat biomechanics,</code>
+<span>我们对猫进行了仿生学研究</span>
+<code>and we wanted to see how much the morphology helps locomotion.</code>
+<span>想弄清楚形态学对于肢体动作的影响</span>
+<code>And we found three important criteria in the properties,</code>
+<span>我们发现，从根本上讲</span>
+<code>basically, of the limbs.</code>
+<span>躯干具有三个重要的属性</span>
+<code>The first one is that a cat limb</code>
+<span>首先就是猫的四肢，</span>
+<code>more or less looks like a pantograph-like structure.</code>
+<span>或多或少地类似于受电弓的结构</span>
+<code>So a pantograph is a mechanical structure</code>
+<span>受电弓是一种机械结构</span>
+<code>which keeps the upper segment and the lower segments always parallel.</code>
+<span>它使得上框架和下框架始终保持平行</span>
+<code>So a simple geometrical system that kind of coordinates a bit</code>
+<span>如此简单的几何学系统</span>
+<code>the internal movement of the segments.</code>
+<span>竟能协调上下框架的内部移动</span>
+<code>A second property of cat limbs is that they are very lightweight.</code>
+<span>猫的四肢的第二个属性就是轻盈性</span>
+<code>Most of the muscles are in the trunk,</code>
+<span>大部分的肌肉都集中在身体</span>
+<code>which is a good idea, because then the limbs have low inertia</code>
+<span>这真是个好点子，这样一来四肢的惯性就很小</span>
+<code>and can be moved very rapidly.</code>
+<span>猫就可以灵活地运动</span>
+<code>The last final important property is this very elastic behavior of the cat limb,</code>
+<span>最后一个重要的属性是四肢的弹性</span>
+<code>so to handle impacts and forces.</code>
+<span>可以应对各种冲击和压力</span>
+<code>And this is how we designed Cheetah-Cub.</code>
+<span>我们就是根据这些属性设计出猎豹机器人</span>
+<code>So let's invite Cheetah-Cub onstage.</code>
+<span>接下来有请猎豹机器人登场</span>
+<code>So this is Peter Eckert, who does his PhD on this robot,</code>
+<span>这是由彼得埃克特在博士期间研制的机器人</span>
+<code>and as you see, it's a cute little robot.</code>
+<span>你可以看到，它是一个非常可爱的小型机器人</span>
+<code>It looks a bit like a toy,</code>
+<span>看起来就像玩具一样</span>
+<code>but it was really used as a scientific tool</code>
+<span>但它的的确确是一项科研工具</span>
+<code>to investigate these properties of the legs of the cat.</code>
+<span>用来研究猫的四肢的属性</span>
+<code>So you see, it's very compliant, very lightweight,</code>
+<span>你看，它的四肢十分协调、轻盈</span>
+<code>and also very elastic,</code>
+<span>并且富有弹性</span>
+<code>so you can easily press it down and it will not break.</code>
+<span>你可以轻而易举地把它压下去，但它一点事都没有</span>
+<code>It will just jump, in fact.</code>
+<span>实际上，它只会跳起来</span>
+<code>And this very elastic property is also very important.</code>
+<span>所以说四肢的弹跳性非常重要</span>
+<code>And you also see a bit these properties</code>
+<span>你也可以把四肢的三个节段</span>
+<code>of these three segments of the leg as pantograph.</code>
+<span>看作一个受电弓</span>
+<code>Now, what's interesting is that this quite dynamic gait</code>
+<span>现在，有趣的是这个动态的装置</span>
+<code>is obtained purely in open loop,</code>
+<span>实现了完全的开环回路</span>
+<code>meaning no sensors, no complex feedback loops.</code>
+<span>也就是说没有传感器，也没有复杂的反馈回路</span>
+<code>And that's interesting, because it means</code>
+<span>这真的很有趣，因为这意味着</span>
+<code>that just the mechanics already stabilized this quite rapid gait,</code>
+<span>仅仅靠机器就可以维持这个敏捷的装置的平衡</span>
+<code>and that really good mechanics already basically simplify locomotion.</code>
+<span>并且这个精巧的机器对运动进行了基本的简化</span>
+<code>To the extent that we can even disturb a bit locomotion,</code>
+<span>在某种程度上，我们甚至可以在运动过程中制造一些障碍</span>
+<code>as you will see in the next video,</code>
+<span>在接下来的视频是你会看到</span>
+<code>where we can for instance do some exercise where we have the robot go down a step,</code>
+<span>例如我们做一些实验让机器人下台阶</span>
+<code>and the robot will not fall over,</code>
+<span>机器人并不会摔倒</span>
+<code>which was a surprise for us.</code>
+<span>这确实出乎我们的意料</span>
+<code>This is a small perturbation.</code>
+<span>对于这个细微的干扰</span>
+<code>I was expecting the robot to immediately fall over,</code>
+<span>我预期机器人会立刻摔倒</span>
+<code>because there are no sensors, no fast feedback loop.</code>
+<span>因为它没有传感器，也没有快速反馈回路</span>
+<code>But no, just the mechanics stabilized the gait,</code>
+<span>但是出乎我们的意料，仅仅靠这个机器维持了装着的平衡</span>
+<code>and the robot doesn't fall over.</code>
+<span>机器人并没有摔倒</span>
+<code>Obviously, if you make the step bigger, and if you have obstacles,</code>
+<span>显然，如果增大跨度，再设置一些障碍</span>
+<code>you need the full control loops and reflexes and everything.</code>
+<span>就需要全控制回路和反射弧等一系列东西</span>
+<code>But what's important here is that just for small perturbation,</code>
+<span>但是眼下最重要的是，对于一些细微的干扰</span>
+<code>the mechanics are right.</code>
+<span>仅仅靠机器就可以完成</span>
+<code>And I think this is a very important message</code>
+<span>我想这对仿生学家、机器人学家和神经学家来说</span>
+<code>from biomechanics and robotics to neuroscience,</code>
+<span>是一个非常重要的信息，那就是：</span>
+<code>saying don't underestimate to what extent the body already helps locomotion.</code>
+<span>不要低估躯干对于运动所发挥的作用</span>
+<code>Now, how does this relate to human locomotion?</code>
+<span>那么这是如何联系到人类的运动上的呢</span>
+<code>Clearly, human locomotion is more complex than cat and salamander locomotion,</code>
+<span>显然，人类的运动比猫和蝾螈的运动更为复杂</span>
+<code>but at the same time, the nervous system of humans is very similar</code>
+<span>但是另一方面，人类的神经系统</span>
+<code>to that of other vertebrates.</code>
+<span>和其他脊椎动物的十分相似</span>
+<code>And especially the spinal cord</code>
+<span>尤其是脊髓</span>
+<code>is also the key controller for locomotion in humans.</code>
+<span>它同样是人类运动的重要处理中心</span>
+<code>That's why, if there's a lesion of the spinal cord,</code>
+<span>这就是为什么一旦脊髓受损</span>
+<code>this has dramatic effects.</code>
+<span>将会导致严重的后果</span>
+<code>The person can become paraplegic or tetraplegic.</code>
+<span>例如瘫痪或者四肢麻痹</span>
+<code>This is because the brain loses this communication</code>
+<span>这是由于大脑与脊髓</span>
+<code>with the spinal cord.</code>
+<span>之间的信息传递受损</span>
+<code>Especially, it loses this descending modulation</code>
+<span>尤其是用于引发和调节运动的</span>
+<code>to initiate and modulate locomotion.</code>
+<span>下行调节机制</span>
+<code>So a big goal of neuroprosthetics</code>
+<span>所以神经学家的一大目标</span>
+<code>is to be able to reactivate that communication</code>
+<span>就是通过电刺激或者化学刺激</span>
+<code>using electrical or chemical stimulations.</code>
+<span>激活两者之间的信息传递</span>
+<code>And there are several teams in the world that do exactly that,</code>
+<span>世界上有些团队就在研究这一领域</span>
+<code>especially at EPFL.</code>
+<span>在洛桑联邦理工学院更是如此</span>
+<code>My colleagues Grégoire Courtine and Silvestro Micera,</code>
+<span>例如我的同事格雷瓜尔·库尔蒂纳</span>
+<code>with whom I collaborate.</code>
+<span>还有西尔维斯特·米切拉</span>
+<code>But to do this properly, it's very important to understand</code>
+<span>但是为了做好这一点，理解以下几点非常重要</span>
+<code>how the spinal cord works,</code>
+<span>脊髓是如何工作的</span>
+<code>how it interacts with the body,</code>
+<span>它是如何与躯干相互作用的</span>
+<code>and how the brain communicates with the spinal cord.</code>
+<span>以及大脑是如何与脊髓进行信息传递的</span>
+<code>This is where the robots and models that I've presented today</code>
+<span>我今天所呈现的机器人和模型</span>
+<code>will hopefully play a key role</code>
+<span>就将针对上述重要问题</span>
+<code>towards these very important goals.</code>
+<span>发挥关键的作用</span>
+<code>Thank you.</code>
+<span>感谢大家</span>
+<code>(Applause)</code>
+<span>（掌声）</span>
+<code>Bruno Giussani: Auke, I've seen in your lab other robots</code>
+<span>布鲁诺·朱萨尼：奥克，我在你的实验室 看到一些其他的机器人</span>
+<code>that do things like swim in pollution</code>
+<span>例如在污水中游泳</span>
+<code>and measure the pollution while they swim.</code>
+<span>并检测污染程度的机器人</span>
+<code>But for this one,</code>
+<span>但是你在演讲中提到的蝾螈机器人</span>
+<code>you mentioned in your talk, like a side project,</code>
+<span>它更像是一个小项目</span>
+<code>search and rescue,</code>
+<span>它的鼻子上有一个照相机</span>
+<code>and it does have a camera on its nose.</code>
+<span>可以进行搜救工作</span>
+<code>Auke Ijspeert: Absolutely. So the robot --</code>
+<span>奥克：确实是这样，关于机器人</span>
+<code>We have some spin-off projects</code>
+<span>我们有很多派生项目</span>
+<code>where we would like to use the robots to do search and rescue inspection,</code>
+<span>我们希望用这些机器人进行搜救和视察工作</span>
+<code>so this robot is now seeing you.</code>
+<span>所以蝾螈机器人诞生了</span>
+<code>And the big dream is to, if you have a difficult situation</code>
+<span>我们设想的是，如果有人陷入困境</span>
+<code>like a collapsed building or a building that is flooded,</code>
+<span>例如建筑坍塌或者遭遇洪水</span>
+<code>and this is very dangerous for a rescue team or even rescue dogs,</code>
+<span>这对救援团队和搜救犬来说都是危险的</span>
+<code>why not send in a robot that can crawl around, swim, walk,</code>
+<span>那么为什么不派一个个既会爬行 又会游行的机器人呢</span>
+<code>with a camera onboard to do inspection and identify survivors</code>
+<span>它的背部还装有照相机，可以用来 进行侦查、识别幸存者</span>
+<code>and possibly create a communication link with the survivor.</code>
+<span>甚至可能实现与幸存者的联系</span>
+<code>BG: Of course, assuming the survivors don't get scared by the shape of this.</code>
+<span>布鲁诺:当然，前提是幸存者没有被机器人的样子吓到</span>
+<code>AI: Yeah, we should probably change the appearance quite a bit,</code>
+<span>奥克:是的，我们将对机器人的外形进行改善</span>
+<code>because here I guess a survivor might die of a heart attack</code>
+<span>否则，我猜幸存者可能会被吓出心脏病</span>
+<code>just of being worried that this would feed on you.</code>
+<span>害怕机器人会吃了他们</span>
+<code>But by changing the appearance and it making it more robust,</code>
+<span>但是我相信，通过改变它的外形，让它更强健一些</span>
+<code>I'm sure we can make a good tool out of it.</code>
+<span>它将会发挥很重要的作用</span>
+<code>BG: Thank you very much. Thank you and your team.</code>
+<span>布鲁诺:非常感谢你和你的团队</span></p><center><a style="color: rgb(254,17,130)" href="https://icp.gov.moe/?keyword=20223985" target="_blank">萌ICP备20223985号</a></center></div></div>
+</body>
+</html>

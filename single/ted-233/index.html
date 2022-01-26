@@ -1,0 +1,660 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="referrer" content="no-referrer">
+<script src="/yinghua/Ascii.js"></script>
+<script src="/dplayer/dplayer.js"></script>
+<link rel="stylesheet" href="/css/daily.css">
+
+<title>【TED】网络设计，事关你我</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><blockquote><p><span>声明: 本站全部内容源自互联网,不进行任何盈利行为</span></p><p><strong><span>仅做 整合 / 美化 处理</span></strong></p><p><span>首页: </span><a href='https://belief.zkeq.xyz' target='_blank' class='url'>https://belief.zkeq.xyz</a><span> </span></p></blockquote><h2 id='title'><span>【TED】网络设计，事关你我</span></h2><div id="play"></div>
+<script>
+const play = new DPlayer({
+    container: document.getElementById('play'),
+    theme:'#c61e07',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'http://mov.bn.netease.com/open-movie/nos/mp4/2021/07/14/SGDUSATV9_shd.mp4'
+    },
+    subtitle: {
+        url:'https://s-bj-2220-open-srt.oss.dogecdn.com/233.vtt',
+        fontSize: '25px',
+    },
+});
+</script><p>&nbsp;</p><p><code>What do you think of when I say the word "design"?</code>
+<span>[AI] 当我说“设计”这个词时，你会怎么想？</span>
+<code>You probably think of things like this.</code>
+<span>[AI] 你可能会想到这样的事情。</span>
+<code>finely crafted objects that you can hold in your hand.</code>
+<span>[AI] 精心制作的物品，你可以拿在手里。</span>
+<code>or maybe logos and posters and maps</code>
+<span>[AI] 或者是商标、海报和地图</span>
+<code>that visually explain things.</code>
+<span>[AI] 可以直观地解释事情。</span>
+<code>classic icons of timeless design.</code>
+<span>[AI] 永恒设计的经典图标。</span>
+<code>But I'm not here to talk about that kind of design.</code>
+<span>[AI] 但我不是来这里谈论这种设计的。</span>
+<code>I want to talk about the kind</code>
+<span>[AI] 我想谈谈那种</span>
+<code>that you probably use every day</code>
+<span>[AI] 你可能每天都在用</span>
+<code>and may not give much thought to.</code>
+<span>[AI] 而且可能不会考虑太多。</span>
+<code>designs that change all the time</code>
+<span>[AI] 不断变化的设计</span>
+<code>and that live inside your pocket.</code>
+<span>[AI] 那就住在你的口袋里。</span>
+<code>I'm talking about the design</code>
+<span>[AI] 我说的是设计</span>
+<code>of digital experiences</code>
+<span>[AI] 数字体验</span>
+<code>and specifically the design of systems</code>
+<span>[AI] 特别是系统的设计</span>
+<code>that are so big that their scale</code>
+<span>[AI] 他们的规模如此之大</span>
+<code>can be hard to comprehend.</code>
+<span>[AI] 可能很难理解。</span>
+<code>Consider the fact that Google processes</code>
+<span>[AI] 考虑谷歌过程的事实</span>
+<code>over one billion search queries every day.</code>
+<span>[AI] 每天超过10亿次搜索查询。</span>
+<code>that every minute. over 100 hours</code>
+<span>[AI] 每分钟都是这样。超过100小时</span>
+<code>of footage are uploaded to YouTube.</code>
+<span>[AI] 视频被上传到YouTube。</span>
+<code>That's more in a single day</code>
+<span>[AI] 一天之内就有更多</span>
+<code>than all three major U.S. networks broadcast</code>
+<span>[AI] 比美国三大电视网广播的都多</span>
+<code>in the last five years combined.</code>
+<span>[AI] 在过去的五年里。</span>
+<code>And Facebook transmitting the photos.</code>
+<span>[AI] Facebook也在传送照片。</span>
+<code>messages and stories</code>
+<span>[AI] 信息和故事</span>
+<code>of over 1.23 billion people.</code>
+<span>[AI] 超过12.3亿人。</span>
+<code>That's almost half of the Internet population.</code>
+<span>[AI] 这几乎占互联网人口的一半。</span>
+<code>and a sixth of humanity.</code>
+<span>[AI] 人类的六分之一。</span>
+<code>These are some of the products</code>
+<span>[AI] 这些是一些产品</span>
+<code>that I've helped design over the course of my career.</code>
+<span>[AI] 在我的职业生涯中，我一直在帮助设计。</span>
+<code>and their scale is so massive</code>
+<span>[AI] 他们的规模是如此巨大</span>
+<code>that they've produced unprecedented</code>
+<span>[AI] 他们创造了前所未有的</span>
+<code>design challenges.</code>
+<span>[AI] 设计挑战。</span>
+<code>But what is really hard</code>
+<span>[AI] 但真正困难的是什么</span>
+<code>about designing at scale is this:</code>
+<span>[AI] 关于按比例设计，如下所示：</span>
+<code>It's hard in part because</code>
+<span>[AI] 这很难，部分原因是</span>
+<code>it requires a combination of two things.</code>
+<span>[AI] 它需要两件事的结合。</span>
+<code>audacity and humility —</code>
+<span>[AI] 厚颜无耻-</span>
+<code>audacity to believe that the thing that you're making</code>
+<span>[AI] 大胆地相信你正在做的事情</span>
+<code>is something that the entire world wants and needs.</code>
+<span>[AI] 是全世界都想要和需要的东西。</span>
+<code>and humility to understand that as a designer.</code>
+<span>[AI] 作为一名设计师，谦逊地理解这一点。</span>
+<code>it's not about you or your portfolio.</code>
+<span>[AI] 这与你或你的投资组合无关。</span>
+<code>it's about the people that you're designing for.</code>
+<span>[AI] 这是关于你为之设计的人。</span>
+<code>and how your work just might help them</code>
+<span>[AI] 你的工作对他们有什么帮助</span>
+<code>live better lives.</code>
+<span>[AI] 过更好的生活。</span>
+<code>Now. unfortunately. there's no school</code>
+<span>[AI] 现在不幸地没有学校</span>
+<code>that offers the course Designing for Humanity 101.</code>
+<span>[AI] 这提供了人性设计101课程。</span>
+<code>I and the other designers</code>
+<span>[AI] 我和其他设计师</span>
+<code>who work on these kinds of products</code>
+<span>[AI] 谁在做这类产品</span>
+<code>have had to invent it as we go along.</code>
+<span>[AI] 我们不得不在前进的过程中发明它。</span>
+<code>and we are teaching ourselves</code>
+<span>[AI] 我们在自学</span>
+<code>the emerging best practices of designing at scale.</code>
+<span>[AI] 大规模设计的新兴最佳实践。</span>
+<code>and today I'd like share some of the things</code>
+<span>[AI] 今天我想和大家分享一些事情</span>
+<code>that we've learned over the years.</code>
+<span>[AI] 这是我们多年来学到的。</span>
+<code>Now. the first thing that you need to know</code>
+<span>[AI] 现在你需要知道的第一件事</span>
+<code>about designing at scale</code>
+<span>[AI] 关于规模化设计</span>
+<code>is that the little things really matter.</code>
+<span>[AI] 小事情真的很重要。</span>
+<code>Here's a really good example of how</code>
+<span>[AI] 这里有一个很好的例子说明</span>
+<code>a very tiny design element can make a big impact.</code>
+<span>[AI] 一个非常微小的设计元素可以产生巨大的影响。</span>
+<code>The team at Facebook that manages the Facebook "Like" button</code>
+<span>[AI] 管理Facebook“喜欢”按钮的Facebook团队</span>
+<code>decided that it needed to be redesigned.</code>
+<span>[AI] 决定需要重新设计。</span>
+<code>The button had kind of gotten out of sync with the evolution of our brand</code>
+<span>[AI] 这个按钮与我们品牌的发展有点不同步</span>
+<code>and it needed to be modernized.</code>
+<span>[AI] 它需要现代化。</span>
+<code>Now you might think. well. it's a tiny little button.</code>
+<span>[AI] 现在你可能会想。好这是一个小小的按钮。</span>
+<code>it probably is a pretty straightforward.</code>
+<span>[AI] 这可能是一个非常简单的问题。</span>
+<code>easy design assignment. but it wasn't.</code>
+<span>[AI] 简单的设计任务。但事实并非如此。</span>
+<code>Turns out. there were all kinds of constraints</code>
+<span>[AI] 结果是。有各种各样的限制</span>
+<code>for the design of this button.</code>
+<span>[AI] 用于此按钮的设计。</span>
+<code>You had to work within specific height and width parameters.</code>
+<span>[AI] 您必须在特定的高度和宽度参数内工作。</span>
+<code>You had to be careful to make it work</code>
+<span>[AI] 你必须小心才能让它工作</span>
+<code>in a bunch of different languages.</code>
+<span>[AI] 用一大堆不同的语言。</span>
+<code>and be careful about using fancy gradients or borders</code>
+<span>[AI] 要小心使用奇特的渐变或边框</span>
+<code>because it has to degrade gracefully</code>
+<span>[AI] 因为它必须优雅地退化</span>
+<code>in old web browsers.</code>
+<span>[AI] 在旧的web浏览器中。</span>
+<code>The truth is. designing this tiny little button</code>
+<span>[AI] 事实是。设计这个小按钮</span>
+<code>was a huge pain in the butt.</code>
+<span>[AI] 屁股痛得厉害。</span>
+<code>Now. this is the new version of the button.</code>
+<span>[AI] 现在这是按钮的新版本。</span>
+<code>and the designer who led this project estimates</code>
+<span>[AI] 领导这个项目的设计师估计</span>
+<code>that he spent over 280 hours</code>
+<span>[AI] 他花了280多个小时</span>
+<code>redesigning this button over the course of months.</code>
+<span>[AI] 在几个月内重新设计此按钮。</span>
+<code>Now. why would we spend so much time</code>
+<span>[AI] 现在我们为什么要花这么多时间</span>
+<code>on something so small?</code>
+<span>[AI] 这么小的东西？</span>
+<code>It's because when you're designing at scale.</code>
+<span>[AI] 这是因为当你按比例设计时。</span>
+<code>there's no such thing as a small detail.</code>
+<span>[AI] 没有一个小细节。</span>
+<code>This innocent little button</code>
+<span>[AI] 这个天真的小按钮</span>
+<code>is seen on average 22 billion times a day</code>
+<span>[AI] 平均每天看220亿次</span>
+<code>and on over 7.5 million websites.</code>
+<span>[AI] 超过750万个网站。</span>
+<code>It's one of the single most viewed design elements ever created.</code>
+<span>[AI] 这是有史以来最受欢迎的设计元素之一。</span>
+<code>Now that's a lot of pressure for a little button</code>
+<span>[AI] 现在一个小按钮的压力很大</span>
+<code>and the designer behind it.</code>
+<span>[AI] 以及背后的设计师。</span>
+<code>but with these kinds of products.</code>
+<span>[AI] 但是有了这些产品。</span>
+<code>you need to get even the tiny things right.</code>
+<span>[AI] 你甚至需要把小事情做好。</span>
+<code>Now. the next thing that you need to understand</code>
+<span>[AI] 现在接下来你需要了解的是</span>
+<code>is how to design with data.</code>
+<span>[AI] 就是如何用数据进行设计。</span>
+<code>Now. when you're working on products like this.</code>
+<span>[AI] 现在当你在做这样的产品时。</span>
+<code>you have incredible amounts of information</code>
+<span>[AI] 你有大量的信息</span>
+<code>about how people are using your product</code>
+<span>[AI] 关于人们如何使用你的产品</span>
+<code>that you can then use to influence</code>
+<span>[AI] 你可以用它来影响别人</span>
+<code>your design decisions.</code>
+<span>[AI] 您的设计决策。</span>
+<code>but it's not just as simple as following the numbers.</code>
+<span>[AI] 但这不仅仅是简单的数字。</span>
+<code>Let me give you an example</code>
+<span>[AI] 让我给你举个例子</span>
+<code>so that you can understand what I mean.</code>
+<span>[AI] 这样你才能理解我的意思。</span>
+<code>Facebook has had a tool for a long time</code>
+<span>[AI] Facebook已经有了一个工具很长时间了</span>
+<code>that allowed people to report photos</code>
+<span>[AI] 这使得人们可以报告照片</span>
+<code>that may be in violation of our community standards.</code>
+<span>[AI] 这可能违反了我们的社区标准。</span>
+<code>things like spam and abuse.</code>
+<span>[AI] 像垃圾邮件和虐待之类的事情。</span>
+<code>And there were a ton of photos reported.</code>
+<span>[AI] 有大量的照片被报道。</span>
+<code>but as it turns out.</code>
+<span>[AI] 但事实证明。</span>
+<code>only a small percentage were actually</code>
+<span>[AI] 实际上只有一小部分人被解雇了</span>
+<code>in violation of those community standards.</code>
+<span>[AI] 违反了这些社区标准。</span>
+<code>Most of them were just your typical party photo.</code>
+<span>[AI] 大多数只是你典型的派对照片。</span>
+<code>Now. to give you a specific hypothetical example.</code>
+<span>[AI] 现在给你一个具体的假设例子。</span>
+<code>let's say my friend Laura hypothetically</code>
+<span>[AI] 假设我的朋友劳拉</span>
+<code>uploads a picture of me</code>
+<span>[AI] 上传我的照片</span>
+<code>from a drunken night of karaoke.</code>
+<span>[AI] 从一个醉醺醺的卡拉OK之夜。</span>
+<code>This is purely hypothetical. I can assure you.</code>
+<span>[AI] 这纯粹是假设。我可以向你保证。</span>
+<code>(Laughter)</code>
+<span>[AI] （众笑）</span>
+<code>Now. incidentally.</code>
+<span>[AI] 现在顺便提一句</span>
+<code>you know how some people are kind of worried</code>
+<span>[AI] 你知道有些人有多担心吗</span>
+<code>that their boss or employee</code>
+<span>[AI] 他们的老板或雇员</span>
+<code>is going to discover embarrassing photos of them</code>
+<span>[AI] 将会发现他们令人尴尬的照片</span>
+<code>on Facebook?</code>
+<span>[AI] 在Facebook上？</span>
+<code>Do you know how hard that is to avoid</code>
+<span>[AI] 你知道这有多难避免吗</span>
+<code>when you actually work at Facebook?</code>
+<span>[AI] 当你在Facebook工作的时候？</span>
+<code>So anyway. there are lots of these photos</code>
+<span>[AI] 所以无论如何。有很多这样的照片</span>
+<code>being erroneously reported as spam and abuse.</code>
+<span>[AI] 被错误地报告为垃圾邮件和滥用。</span>
+<code>and one of the engineers on the team had a hunch.</code>
+<span>[AI] 团队中的一名工程师有预感。</span>
+<code>He really thought there was something else going on</code>
+<span>[AI] 他真的以为还有别的事</span>
+<code>and he was right.</code>
+<span>[AI] 他是对的。</span>
+<code>because when he looked through a bunch of the cases.</code>
+<span>[AI] 因为当他看了一大堆案子的时候。</span>
+<code>he found that most of them</code>
+<span>[AI] 他发现他们中的大多数人</span>
+<code>were from people who were requesting</code>
+<span>[AI] 是从那些要求</span>
+<code>the takedown of a photo of themselves.</code>
+<span>[AI] 拍摄他们自己的照片。</span>
+<code>Now this was a scenario that the team</code>
+<span>[AI] 现在，这是一个团队</span>
+<code>never even took into account before.</code>
+<span>[AI] 以前从未考虑过。</span>
+<code>So they added a new feature</code>
+<span>[AI] 所以他们增加了一个新功能</span>
+<code>that allowed people to message their friend</code>
+<span>[AI] 这使得人们可以给他们的朋友发信息</span>
+<code>to ask them to take the photo down.</code>
+<span>[AI] 让他们把照片拍下来。</span>
+<code>But it didn't work.</code>
+<span>[AI] 但它不起作用。</span>
+<code>Only 20 percent of people</code>
+<span>[AI] 只有20%的人</span>
+<code>sent the message to their friend.</code>
+<span>[AI] 把消息发给他们的朋友。</span>
+<code>So the team went back at it.</code>
+<span>[AI] 于是球队又重新开始了。</span>
+<code>They consulted with experts in conflict resolution.</code>
+<span>[AI] 他们与解决冲突的专家进行了磋商。</span>
+<code>They even studied the universal principles</code>
+<span>[AI] 他们甚至研究了宇宙法则</span>
+<code>of polite language.</code>
+<span>[AI] 礼貌用语。</span>
+<code>which I didn't even actually know existed</code>
+<span>[AI] 我甚至不知道它的存在</span>
+<code>until this research happened.</code>
+<span>[AI] 直到这项研究发生。</span>
+<code>And they found something really interesting.</code>
+<span>[AI] 他们发现了一些非常有趣的东西。</span>
+<code>They had to go beyond just helping people</code>
+<span>[AI] 他们必须不仅仅是帮助别人</span>
+<code>ask their friend to take the photo down.</code>
+<span>[AI] 让他们的朋友把照片拍下来。</span>
+<code>They had to help people express to their friend</code>
+<span>[AI] 他们必须帮助人们向他们的朋友表达自己的想法</span>
+<code>how the photo made them feel.</code>
+<span>[AI] 照片给他们的感觉。</span>
+<code>Here's how the experience works today.</code>
+<span>[AI] 这就是今天的体验。</span>
+<code>So I find this hypothetical photo of myself.</code>
+<span>[AI] 所以我找到了这张我自己的假想照片。</span>
+<code>and it's not spam. it's not abuse.</code>
+<span>[AI] 这不是垃圾邮件。这不是虐待。</span>
+<code>but I really wish it weren't on the site.</code>
+<span>[AI] 但我真希望它不在网站上。</span>
+<code>So I report it and I say.</code>
+<span>[AI] 所以我报告了，我说。</span>
+<code>"I'm in this photo and I don't like it."</code>
+<span>[AI] “我在这张照片里，我不喜欢它。”</span>
+<code>and then we dig deeper.</code>
+<span>[AI] 然后我们再深入挖掘。</span>
+<code>Why don't you like this photo of yourself?</code>
+<span>[AI] 你为什么不喜欢这张你自己的照片？</span>
+<code>And I select "It's embarrassing."</code>
+<span>[AI] 我选择“这很尴尬”</span>
+<code>And then I'm encouraged to message my friend.</code>
+<span>[AI] 然后我被鼓励给我的朋友发短信。</span>
+<code>but here's the critical difference.</code>
+<span>[AI] 但关键的区别在于此。</span>
+<code>I'm provided specific suggested language</code>
+<span>[AI] 我被提供了具体的建议语言</span>
+<code>that helps me communicate to Laura</code>
+<span>[AI] 这有助于我与劳拉沟通</span>
+<code>how the photo makes me feel.</code>
+<span>[AI] 这张照片给我的感觉。</span>
+<code>Now the team found that this relatively small change</code>
+<span>[AI] 现在研究小组发现这个相对较小的变化</span>
+<code>had a huge impact.</code>
+<span>[AI] 产生了巨大的影响。</span>
+<code>Before. only 20 percent of people</code>
+<span>[AI] 之前只有20%的人</span>
+<code>were sending the message.</code>
+<span>[AI] 我们正在发送消息。</span>
+<code>and now 60 percent were.</code>
+<span>[AI] 现在有60%的人是。</span>
+<code>and surveys showed that people</code>
+<span>[AI] 调查显示人们</span>
+<code>on both sides of the conversation</code>
+<span>[AI] 在谈话的双方</span>
+<code>felt better as a result.</code>
+<span>[AI] 结果感觉好多了。</span>
+<code>That same survey showed</code>
+<span>[AI] 同样的调查显示</span>
+<code>that 90 percent of your friends</code>
+<span>[AI] 你90%的朋友</span>
+<code>want to know if they've done something to upset you.</code>
+<span>[AI] 想知道他们是否做了什么让你不高兴的事。</span>
+<code>Now I don't know who the other 10 percent are.</code>
+<span>[AI] 现在我不知道其他10%的人是谁。</span>
+<code>but maybe that's where our "Unfriend" feature</code>
+<span>[AI] 但也许这就是我们的“不朋友”功能</span>
+<code>can come in handy.</code>
+<span>[AI] 可以派上用场。</span>
+<code>So as you can see.</code>
+<span>[AI] 如你所见。</span>
+<code>these decisions are highly nuanced.</code>
+<span>[AI] 这些决定非常微妙。</span>
+<code>Of course we use a lot of data</code>
+<span>[AI] 当然，我们使用了大量的数据</span>
+<code>to inform our decisions.</code>
+<span>[AI] 通知我们的决定。</span>
+<code>but we also rely very heavily on iteration.</code>
+<span>[AI] 但我们也非常依赖迭代。</span>
+<code>research. testing. intuition. human empathy.</code>
+<span>[AI] 研究测试。直觉人类的同理心。</span>
+<code>It's both art and science.</code>
+<span>[AI] 这既是艺术也是科学。</span>
+<code>Now. sometimes the designers who work on these products</code>
+<span>[AI] 现在有时，设计这些产品的设计师</span>
+<code>are called "data-driven."</code>
+<span>[AI] 被称为“数据驱动”</span>
+<code>which is a term that totally drives us bonkers.</code>
+<span>[AI] 这是一个让我们发疯的术语。</span>
+<code>The fact is. it would be irresponsible of us</code>
+<span>[AI] 事实是。这对我们来说是不负责任的</span>
+<code>not to rigorously test our designs</code>
+<span>[AI] 不要严格测试我们的设计</span>
+<code>when so many people are counting on us</code>
+<span>[AI] 当这么多人都指望我们的时候</span>
+<code>to get it right.</code>
+<span>[AI] 让它正确。</span>
+<code>but data analytics</code>
+<span>[AI] 但是数据分析</span>
+<code>will never be a substitute for design intuition.</code>
+<span>[AI] 永远不会取代设计直觉。</span>
+<code>Data can help you make a good design great.</code>
+<span>[AI] 数据可以帮助你做出一个好的设计。</span>
+<code>but it will never made a bad design good.</code>
+<span>[AI] 但它永远不会让一个糟糕的设计变好。</span>
+<code>The next thing that you need to understand as a principle</code>
+<span>[AI] 接下来你需要理解的是一个原则</span>
+<code>is that when you introduce change.</code>
+<span>[AI] 这就是你引入变革的时候。</span>
+<code>you need to do it extraordinarily carefully.</code>
+<span>[AI] 你需要格外小心地做这件事。</span>
+<code>Now I often have joked that</code>
+<span>[AI] 现在我经常开玩笑说</span>
+<code>I spend almost as much time</code>
+<span>[AI] 我花了几乎同样多的时间</span>
+<code>designing the introduction of change</code>
+<span>[AI] 设计变革的引入</span>
+<code>as I do the change itself.</code>
+<span>[AI] 就像我做改变一样。</span>
+<code>and I'm sure that we can all relate to that</code>
+<span>[AI] 我相信我们都能理解这一点</span>
+<code>when something that we use a lot changes</code>
+<span>[AI] 当我们经常使用的东西发生变化时</span>
+<code>and then we have to adjust.</code>
+<span>[AI] 然后我们必须调整。</span>
+<code>The fact is. people can become</code>
+<span>[AI] 事实是。人可以成为</span>
+<code>very efficient at using bad design.</code>
+<span>[AI] 非常有效地使用糟糕的设计。</span>
+<code>and so even if the change is good for them in the long run.</code>
+<span>[AI] 因此，即使这种改变从长远来看对他们有利。</span>
+<code>it's still incredibly frustrating when it happens.</code>
+<span>[AI] 当它发生时，仍然令人难以置信地沮丧。</span>
+<code>and this is particularly true</code>
+<span>[AI] 尤其如此</span>
+<code>with user-generated content platforms.</code>
+<span>[AI] 使用用户生成的内容平台。</span>
+<code>because people can rightfully claim a sense of ownership.</code>
+<span>[AI] 因为人们可以理所当然地要求拥有感。</span>
+<code>It is. after all. their content.</code>
+<span>[AI] 它是。毕竟他们的内容。</span>
+<code>Now. years ago. when I was working at YouTube.</code>
+<span>[AI] 现在几年前。当我在YouTube工作的时候。</span>
+<code>we were looking for ways to</code>
+<span>[AI] 我们在想办法</span>
+<code>encourage more people to rate videos.</code>
+<span>[AI] 鼓励更多人对视频进行评分。</span>
+<code>and it was interesting because when we looked into the data.</code>
+<span>[AI] 这很有趣，因为当我们研究数据时。</span>
+<code>we found that almost everyone was exclusively using</code>
+<span>[AI] 我们发现几乎每个人都只使用</span>
+<code>the highest five-star rating.</code>
+<span>[AI] 最高的五星评级。</span>
+<code>a handful of people were using</code>
+<span>[AI] 少数人正在使用</span>
+<code>the lowest one-star.</code>
+<span>[AI] 最低的一颗星。</span>
+<code>and virtually no one</code>
+<span>[AI] 几乎没有人</span>
+<code>was using two. three or four stars.</code>
+<span>[AI] 他用了两个。三星或四星。</span>
+<code>So we decided to simplify</code>
+<span>[AI] 所以我们决定简化</span>
+<code>into an up-down kind of voting binary model.</code>
+<span>[AI] 变成了一个上下两种投票的二元模型。</span>
+<code>It's going to be much easier for people to engage with.</code>
+<span>[AI] 这将使人们更容易参与。</span>
+<code>But people were very attached</code>
+<span>[AI] 但是人们都很依恋</span>
+<code>to the five-star rating system.</code>
+<span>[AI] 到五星评级系统。</span>
+<code>Video creators really loved their ratings.</code>
+<span>[AI] 视频制作人非常喜欢他们的收视率。</span>
+<code>Millions and millions of people</code>
+<span>[AI] 千百万人</span>
+<code>were accustomed to the old design.</code>
+<span>[AI] 我们习惯了旧的设计。</span>
+<code>So in order to help people</code>
+<span>[AI] 所以为了帮助人们</span>
+<code>prepare themselves for change and acclimate to the new design more quickly.</code>
+<span>[AI] 为变化做好准备，更快地适应新设计。</span>
+<code>we actually published the data graph</code>
+<span>[AI] 我们实际上发布了数据图</span>
+<code>sharing with the community</code>
+<span>[AI] 与社区分享</span>
+<code>the rationale for what we were going to do.</code>
+<span>[AI] 我们将要做的事情的基本原理。</span>
+<code>and it even engaged the larger industry</code>
+<span>[AI] 它甚至参与了更大的行业</span>
+<code>in a conversation. which resulted in</code>
+<span>[AI] 在谈话中。导致</span>
+<code>my favorite TechCrunch headline of all time:</code>
+<span>[AI] 我最喜欢的TechCrunch头条：</span>
+<code>"YouTube Comes to a 5-Star Realization:</code>
+<span>[AI] “YouTube实现了五星级：</span>
+<code>Its Ratings Are Useless."</code>
+<span>[AI] 它的评级毫无用处。"</span>
+<code>Now. it's impossible to completely avoid change aversion when you're making changes</code>
+<span>[AI] 现在当你做出改变时，不可能完全避免对改变的厌恶</span>
+<code>to products that so many people use.</code>
+<span>[AI] 许多人使用的产品。</span>
+<code>Even though we tried to do all the right things.</code>
+<span>[AI] 尽管我们试着做所有正确的事情。</span>
+<code>we still received our customary flood</code>
+<span>[AI] 我们仍按惯例收到洪水</span>
+<code>of video protests and angry emails</code>
+<span>[AI] 视频抗议和愤怒的电子邮件</span>
+<code>and even a package that had to be scanned by security.</code>
+<span>[AI] 甚至是一个需要安全部门扫描的包裹。</span>
+<code>but we have to remember</code>
+<span>[AI] 但我们必须记住</span>
+<code>people care intensely about this stuff.</code>
+<span>[AI] 人们非常关心这些东西。</span>
+<code>and it's because these products. this work.</code>
+<span>[AI] 这是因为这些产品。这项工作。</span>
+<code>really. really matters to them.</code>
+<span>[AI] 真正地对他们来说真的很重要。</span>
+<code>Now. we know that we have to be careful</code>
+<span>[AI] 现在我们知道我们必须小心</span>
+<code>about paying attention to the details.</code>
+<span>[AI] 关于关注细节。</span>
+<code>we have to be cognizant about how we use data</code>
+<span>[AI] 我们必须认识到我们如何使用数据</span>
+<code>in our design process.</code>
+<span>[AI] 在我们的设计过程中。</span>
+<code>and we have to introduce change</code>
+<span>[AI] 我们必须引入变革</span>
+<code>very. very carefully.</code>
+<span>[AI] 非常非常小心。</span>
+<code>Now. these things are all really useful.</code>
+<span>[AI] 现在这些东西都很有用。</span>
+<code>They're good best practices for designing at scale.</code>
+<span>[AI] 它们是大规模设计的最佳实践。</span>
+<code>But they don't mean anything</code>
+<span>[AI] 但它们没有任何意义</span>
+<code>if you don't understand something much more fundamental.</code>
+<span>[AI] 如果你不了解更基本的东西。</span>
+<code>You have to understand who you are designing for.</code>
+<span>[AI] 你必须了解你是为谁设计的。</span>
+<code>Now. when you set a goal to design</code>
+<span>[AI] 现在当你为设计设定目标时</span>
+<code>for the entire human race.</code>
+<span>[AI] 为了整个人类。</span>
+<code>and you start to engage in that goal in earnest.</code>
+<span>[AI] 然后你开始认真地实现这个目标。</span>
+<code>at some point you run into the walls</code>
+<span>[AI] 在某个时候，你会撞到墙上</span>
+<code>of the bubble that you're living in.</code>
+<span>[AI] 你生活的泡沫。</span>
+<code>Now. in San Francisco. we get a little miffed</code>
+<span>[AI] 现在在旧金山。我们有点生气</span>
+<code>when we hit a dead cell zone</code>
+<span>[AI] 当我们到达死囚区时</span>
+<code>because we can't use our phones to navigate</code>
+<span>[AI] 因为我们不能用手机导航</span>
+<code>to the new hipster coffee shop.</code>
+<span>[AI] 去新开的时髦咖啡店。</span>
+<code>But what if you had to drive four hours</code>
+<span>[AI] 但是如果你不得不开四个小时的车呢</span>
+<code>to charge your phone because you had no reliable source of electricity?</code>
+<span>[AI] 因为你没有可靠的电源给你的手机充电？</span>
+<code>What if you had no access to public libraries?</code>
+<span>[AI] 如果你不能进入公共图书馆怎么办？</span>
+<code>What if your country had no free press?</code>
+<span>[AI] 如果你的国家没有新闻自由怎么办？</span>
+<code>What would these products start to mean to you?</code>
+<span>[AI] 这些产品对你来说意味着什么？</span>
+<code>This is what Google. YouTube and Facebook</code>
+<span>[AI] 这就是谷歌所做的。YouTube和Facebook</span>
+<code>look like to most of the world.</code>
+<span>[AI] 对世界上大多数人来说都是这样。</span>
+<code>and it's what they'll look like</code>
+<span>[AI] 这就是他们的样子</span>
+<code>to most of the next five billion people</code>
+<span>[AI] 未来50亿人中的大多数</span>
+<code>to come online.</code>
+<span>[AI] 来上网。</span>
+<code>Designing for low-end cell phones</code>
+<span>[AI] 为低端手机设计</span>
+<code>is not glamorous design work.</code>
+<span>[AI] 这不是迷人的设计作品。</span>
+<code>but if you want to design for the whole world.</code>
+<span>[AI] 但是如果你想为全世界设计。</span>
+<code>you have to design for where people are.</code>
+<span>[AI] 你必须为人们所在的地方设计。</span>
+<code>and not where you are.</code>
+<span>[AI] 而不是你现在的位置。</span>
+<code>So how do we keep this big. big picture in mind?</code>
+<span>[AI] 那么，我们如何保持这样的规模呢。大局在心中？</span>
+<code>We try to travel outside of our bubble to see. hear</code>
+<span>[AI] 我们试图走出我们的泡沫去看。听见</span>
+<code>and understand the people we're designing for.</code>
+<span>[AI] 了解我们为之设计的人。</span>
+<code>We use our products in non-English languages</code>
+<span>[AI] 我们使用非英语语言的产品</span>
+<code>to make sure that they work just as well.</code>
+<span>[AI] 确保它们也能正常工作。</span>
+<code>And we try to use one of these phones from time to time</code>
+<span>[AI] 我们会不时尝试使用这些手机中的一款</span>
+<code>to keep in touch with their reality.</code>
+<span>[AI] 与他们的现实保持联系。</span>
+<code>So what does it mean to design at a global scale?</code>
+<span>[AI] 那么，在全球范围内进行设计意味着什么呢？</span>
+<code>It means difficult and sometimes exasperating work</code>
+<span>[AI] 这意味着困难的，有时是令人恼火的工作</span>
+<code>to try to improve and evolve products.</code>
+<span>[AI] 努力改进和改进产品。</span>
+<code>Finding the audacity and the humility to do right by them</code>
+<span>[AI] 找到勇气和谦逊，让他们做正确的事</span>
+<code>can be pretty exhausting.</code>
+<span>[AI] 可能会很累。</span>
+<code>and the humility part.</code>
+<span>[AI] 还有谦逊的部分。</span>
+<code>it's a little tough on the design ego.</code>
+<span>[AI] 这对设计自我来说有点难。</span>
+<code>Because these products are always changing.</code>
+<span>[AI] 因为这些产品总是在变化。</span>
+<code>everything that I've designed in my career</code>
+<span>[AI] 我在职业生涯中设计的一切</span>
+<code>is pretty much gone.</code>
+<span>[AI] 已经差不多消失了。</span>
+<code>and everything that I will design will fade away.</code>
+<span>[AI] 我要设计的一切都会消失。</span>
+<code>But here's what remains:</code>
+<span>[AI] 但剩下的是：</span>
+<code>the never-ending thrill</code>
+<span>[AI] 永无止境的激动</span>
+<code>of being a part of something that is so big.</code>
+<span>[AI] 成为如此巨大事物的一部分。</span>
+<code>you can hardly get your head around it.</code>
+<span>[AI] 你几乎无法控制它。</span>
+<code>and the promise that it just might change the world.</code>
+<span>[AI] 以及它可能改变世界的承诺。</span>
+<code>Thank you.</code>
+<span>[AI] 非常感谢。</span>
+<code>(Applause)</code>
+<span>[AI] （掌声）</span></p><center><a style="color: rgb(254,17,130)" href="https://icp.gov.moe/?keyword=20223985" target="_blank">萌ICP备20223985号</a></center></div></div>
+</body>
+</html>

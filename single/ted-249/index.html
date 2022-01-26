@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="referrer" content="no-referrer">
+<script src="/yinghua/Ascii.js"></script>
+<script src="/dplayer/dplayer.js"></script>
+<link rel="stylesheet" href="/css/daily.css">
+
+<title>【TED】触觉反馈技术：数字化我们的触觉</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><blockquote><p><span>声明: 本站全部内容源自互联网,不进行任何盈利行为</span></p><p><strong><span>仅做 整合 / 美化 处理</span></strong></p><p><span>首页: </span><a href='https://belief.zkeq.xyz' target='_blank' class='url'>https://belief.zkeq.xyz</a><span> </span></p></blockquote><h2 id='title'><span>【TED】触觉反馈技术：数字化我们的触觉</span></h2><div id="play"></div>
+<script>
+const play = new DPlayer({
+    container: document.getElementById('play'),
+    theme:'#c61e07',
+    preload:'none',
+    video: {
+        pic:'https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg',
+        url: 'http://mov.bn.netease.com/open-movie/nos/mp4/2021/05/28/SGA5K1OOF_shd.mp4'
+    },
+    subtitle: {
+        url:'https://s-bj-2220-open-srt.oss.dogecdn.com/249.vtt',
+        fontSize: '25px',
+    },
+});
+</script><p>&nbsp;</p><p><code>I'm a mechanical engineering professor</code>
+<span>我是宾夕法尼亚大学的</span>
+<code>at the University of Pennsylvania,</code>
+<span>一名机械工程教授</span>
+<code>and my favorite hobby is photography.</code>
+<span>我的爱好是摄影</span>
+<code>And as I travel around the world,</code>
+<span>当我环游世界的时候</span>
+<code>I love taking photographs like these,</code>
+<span>我喜欢像这样照相</span>
+<code>so I can remember all the beautiful and interesting things</code>
+<span>这样我就可以记住我所有见到的</span>
+<code>that I've seen.</code>
+<span>美丽有趣的事物</span>
+<code>But what I can't do is record and share</code>
+<span>但是我没办法做到的是记录和分享</span>
+<code>how these objects feel to touch.</code>
+<span>这些东西摸起来是什么感觉</span>
+<code>And that's kind of surprising,</code>
+<span>而这也是一种会令人惊讶的感觉</span>
+<code>because your sense of touch is really important.</code>
+<span>因为你的触觉真的非常重要</span>
+<code>It's involved in every physical interaction you do every day,</code>
+<span>在你每天做的每一个身体的互动，</span>
+<code>every manipulation task, anything you do in the world.</code>
+<span>每一个控制的动作，在这世界上你做的任何事情中 都有触觉的参与</span>
+<code>So the sense of touch is actually pretty interesting.</code>
+<span>因此，触觉是很非常有趣的</span>
+<code>It has two main components.</code>
+<span>它有两个主要组成要素</span>
+<code>The first is tactile sensations,</code>
+<span>第一个是触感</span>
+<code>things you feel in your skin.</code>
+<span>是你皮肤感受到的感觉</span>
+<code>And the second is kinesthetic sensations.</code>
+<span>第二个是运动觉</span>
+<code>This has to do with the position of your body and how it's moving,</code>
+<span>而这与你的身体的位置，如何移动</span>
+<code>and the forces you encounter.</code>
+<span>以及你所受的外力有关</span>
+<code>And you're really good at incorporating</code>
+<span>并且你很擅长</span>
+<code>both of these types of sensations together</code>
+<span>结合这两者的感觉</span>
+<code>to understand the physical interactions you have with the world</code>
+<span>去理解你和这个世界之间的互动</span>
+<code>and understand as you touch a surface:</code>
+<span>和当你触摸到一个表面时</span>
+<code>is it a rock, is it a cat, is it a bunny, what is it?</code>
+<span>明白它是一个石块，还是一只猫，或是一个兔子， 它是什么呢？</span>
+<code>And so, as an engineer,</code>
+<span>因此，作为一个工程师</span>
+<code>I'm really fascinated</code>
+<span>我对此很着迷</span>
+<code>and I have a lot of respect for how good people are with their hands.</code>
+<span>并且我对人们拥有一双手是多么好 感到很敬佩</span>
+<code>And I'm intrigued and curious</code>
+<span>同时我被勾起了好奇心</span>
+<code>about whether we could make technology better</code>
+<span>关于我们是否可以让科技更好</span>
+<code>by doing a better job at leveraging</code>
+<span>通过在用触觉影响人的能力方面</span>
+<code>the human capability with the sense of touch.</code>
+<span>做得更好</span>
+<code>Could I improve the interfaces to computers and machines</code>
+<span>我能否优化电脑和机器的界面</span>
+<code>by letting you take advantage of your hands?</code>
+<span>通过让你运用你的双手的优势</span>
+<code>And indeed, I think we can,</code>
+<span>确实，我认为我们可以</span>
+<code>and that's at the core of a field called haptics,</code>
+<span>而那就是力触觉领域的核心</span>
+<code>and this is the area that I work in.</code>
+<span>同时这也是我工作的领域</span>
+<code>It's all about interactive touch technology.</code>
+<span>它就是交互是触摸技术</span>
+<code>And the way it works is,</code>
+<span>它的原理</span>
+<code>as you move your body through the world,</code>
+<span>就像是你在这个世界中移动你的肢体</span>
+<code>if, as an engineer, I can make a system that can measure that motion,</code>
+<span>如果，作为 一个工程师， 我可以制造一个可以测量那个动作，</span>
+<code>and then present to you sensations over time</code>
+<span>并在之后再将触觉传感给你的系统</span>
+<code>that kind of make sense,</code>
+<span>那感觉就可以被感知到了</span>
+<code>that match up with what you might feel in the real world,</code>
+<span>它与你在真实世界可能会有的感觉一致</span>
+<code>I can fool you into thinking you're touching something</code>
+<span>我可以骗你让你以为你正在触摸某物</span>
+<code>even though there's nothing there.</code>
+<span>尽管那什么都没有</span>
+<code>So here are three examples</code>
+<span>好了，这有三个例子</span>
+<code>and these are all done from research in my lab at Penn.</code>
+<span>这些都是在我在宾大的实验室里的研究中完成</span>
+<code>The first one is all about that same problem that I was showing you:</code>
+<span>第一个就是关于我刚向你们展示过的一个问题</span>
+<code>how can we capture how objects feel</code>
+<span>我们如何能够捕获到对物体的感觉</span>
+<code>and recreate those experiences?</code>
+<span>然后再现那些感觉</span>
+<code>So the way we solve this problem</code>
+<span>所以我们解决这个问题的方法是</span>
+<code>is by creating a hand-held tool</code>
+<span>通过制造一个便携的工具</span>
+<code>that has many different sensors inside.</code>
+<span>这里面有很多不同的传感器</span>
+<code>It has a force sensor, so we can tell how hard you're pushing;</code>
+<span>它有一个力传感器，所以我们可以了解到你的推力有多大</span>
+<code>it has motion tracking, so we can tell exactly where you've moved it;</code>
+<span>它有一个运动跟踪器， 所以我们可以准确了解到你将它移到了哪里</span>
+<code>and it has a vibration sensor, an accelerometer, inside,</code>
+<span>它还有一个震动传感器，一个加速计在里面</span>
+<code>that detects the shaking back and forth of the tool</code>
+<span>它可以察觉到这个工具的前后震动</span>
+<code>that lets you know that's a piece of canvas</code>
+<span>这可以让你知道那个东西是一块帆布</span>
+<code>and not a piece of silk or something else.</code>
+<span>不是一块丝绸或其他什么东西</span>
+<code>Then we take the data we record from these interactions.</code>
+<span>然后我们获取这些交互传感器中记录的数据</span>
+<code>Here's ten seconds of data.</code>
+<span>这是十秒的记录</span>
+<code>You can see how the vibrations get larger and smaller,</code>
+<span>你可以看到这些震动是如何随着你的运动</span>
+<code>depending on how you move.</code>
+<span>变大或变小</span>
+<code>And we make a mathematical model of those relationships</code>
+<span>接着我们对这些关系建立数学模型</span>
+<code>and program them into a tablet computer</code>
+<span>并将它们编程写入平板电脑中</span>
+<code>so that when you take the stylus</code>
+<span>因此当你拿着这个尖笔</span>
+<code>and go and touch the screen,</code>
+<span>去触摸这个屏幕时</span>
+<code>that voice-coil actuator in the white bracket</code>
+<span>那个在白色托架中的音圈制动器</span>
+<code>plays vibrations to give you the illusion</code>
+<span>产生震动让你产生</span>
+<code>that you're touching the real surface,</code>
+<span>你正在触摸物体真正的表面的错觉</span>
+<code>just like if you touched, dragged back and forth, on the real canvas.</code>
+<span>就好比像你在触碰，前后拉拽真正的帆布</span>
+<code>We can create very compelling illusions.</code>
+<span>我们可以创造非常强烈的幻觉</span>
+<code>We can do this for all kinds of surfaces and it's really a lot of fun.</code>
+<span>我们可以使所有种类的表面实现这个 它真的非常有意思</span>
+<code>We call it haptography -- haptic photography.</code>
+<span>我们称之为触觉反馈技术--触觉的摄影术</span>
+<code>And I think it has potential benefits in all sorts of areas</code>
+<span>并且我认为它在各种领域都有潜在的价值</span>
+<code>like online shopping, maybe interactive museum exhibits,</code>
+<span>比如线上购物，又或许是互动博物馆</span>
+<code>where you're not supposed to touch the precious artifacts,</code>
+<span>在那里你不被允许触摸珍贵的艺术品</span>
+<code>but you always want to.</code>
+<span>但你总是想去碰</span>
+<code>The second example I want to tell you about comes from a collaboration I have</code>
+<span>我想为你讲述的第二个例子</span>
+<code>with Dr. Margrit Maggio at the Penn Dental School.</code>
+<span>是来自我和宾大牙科学院 Margrit Maggio医生的一个合作成果</span>
+<code>Part of her job is to teach dental students</code>
+<span>她工作的一部分是教牙科的学生</span>
+<code>how to tell where in a patient's mouth there are cavities.</code>
+<span>如何知道在病人的口中哪有龋洞</span>
+<code>Of course they look at X-rays,</code>
+<span>当然他们会看X光</span>
+<code>but a large part of this clinical judgment comes from what they feel</code>
+<span>但是这样的临床诊断的一大部分是来自他们的感觉</span>
+<code>when they touch your teeth with a dental explorer.</code>
+<span>当他们用牙探针触碰你的牙齿时</span>
+<code>You've all had this happen, they go across.</code>
+<span>你们都经历过这个，这很普遍</span>
+<code>What they're feeling for is if the tooth is really hard, then it's healthy,</code>
+<span>如果这个牙齿是非常坚硬的他们感觉到的是什么， 那说明它很健康</span>
+<code>but if it's kind of soft and sticky,</code>
+<span>但如果它是软的并且黏糊糊的</span>
+<code>that's a signal that the enamel is starting to decay.</code>
+<span>那是牙釉质蛀蚀的标识</span>
+<code>These types of judgments are hard for a new dental student to make,</code>
+<span>做出这些种类的判断对一个新牙科学生来说是困难的</span>
+<code>because they haven't touched a lot of teeth yet.</code>
+<span>因为他们还没有触碰过很多的牙齿</span>
+<code>And you want them to learn this before they start practicing</code>
+<span>而你想要他们在为真正的病人实践之前</span>
+<code>on real human patients.</code>
+<span>掌握这些</span>
+<code>So what we do is add an accelerometer on to the dental explorer,</code>
+<span>所以我们做的是在牙探针中加入一个加速计</span>
+<code>and then we record what Dr. Maggio feels</code>
+<span>然后我们将Maggio医生触碰不同的拔出的牙齿时</span>
+<code>as she touches different extracted teeth.</code>
+<span>所感知的内容记录下来</span>
+<code>And we can play it back for you as a video</code>
+<span>然后我们将它用视频的形式给你播放</span>
+<code>with a touch track --</code>
+<span>通过一个触碰跟踪--</span>
+<code>not just a sound track, but also a touch track,</code>
+<span>不仅是一个声音跟踪，也是一个触碰跟踪</span>
+<code>that you can feel by holding that repeating tool.</code>
+<span>你就可以通过拿着那个重复工具来感知</span>
+<code>You feel the same things the dentist felt when they did the recording,</code>
+<span>你可以感觉到牙医做记录时和他一样的感觉</span>
+<code>and practice making judgments.</code>
+<span>并练习做出判断</span>
+<code>So here's a sample one.</code>
+<span>这有一个样本</span>
+<code>Here's a tooth that looks kind of suspicious, right?</code>
+<span>这有一个牙齿它看起来有些可疑，对吗？</span>
+<code>It has all those brown stains.</code>
+<span>它有很多的棕色污渍</span>
+<code>You might be thinking, "We should definitely put a filling in this tooth."</code>
+<span>你可能会认为， “很明显我们应该放一些填充物在这个牙齿里”</span>
+<code>But if you pay attention to how it feels,</code>
+<span>但是如果你注意到了它的触感是什么样的</span>
+<code>all the surfaces of this tooth are hard and healthy,</code>
+<span>这个牙齿的所有表面都是坚硬并且健康的</span>
+<code>so this patient does not need a filling.</code>
+<span>所以这个病人不需要填补牙齿</span>
+<code>And these are exactly the kind of judgments doctors make every day</code>
+<span>这些的确是医生每天都要做的判断</span>
+<code>and I think this technology we've invented has a lot of potential</code>
+<span>我认为我们已经发明的这个技术</span>
+<code>for many different things in medical training, because it's really simple</code>
+<span>在医疗训练中的不同处有很多的潜能， 因为它真的很简单</span>
+<code>and it does a great job at recreating what people feel through tools.</code>
+<span>并且它在再现人们通过工具得到的感觉方面做得非常好</span>
+<code>I think it could also help make games more interactive and fun</code>
+<span>我想它还可以让游戏更加具有互动性和有趣</span>
+<code>and more realistic in the sensations that you feel.</code>
+<span>并且在你的感觉上更加真实</span>
+<code>The last example I want to tell you about is again about human movement.</code>
+<span>我想讲的最后一个例子还是关于人的动作</span>
+<code>So if any of you have ever learned sports,</code>
+<span>如果你们都曾学习过体育运动</span>
+<code>how do you get good at something like surfing?</code>
+<span>你是如何熟练掌握像冲浪这样的运动的呢？</span>
+<code>You practice.</code>
+<span>你练习</span>
+<code>You practice some more and more, right?</code>
+<span>你一次又一次地去练习，对吗？</span>
+<code>Making small corrections, maybe getting some input from a coach,</code>
+<span>做一些小的改正，可能是从教练那得到一些建议</span>
+<code>learning how to improve your motions.</code>
+<span>学习如何改进你的动作</span>
+<code>I think we could use computers</code>
+<span>我认为我们可以使用电脑</span>
+<code>to help make that process more efficient and more fun.</code>
+<span>来让那个过程更加高效并且更加有趣</span>
+<code>And so here, for example, if I have six different arm movements</code>
+<span>举个例子，这就是如果我有六个不同的手臂摆动</span>
+<code>that I want you to learn,</code>
+<span>需要你去学习</span>
+<code>you come into my lab at Penn and try out our system.</code>
+<span>你来到我在宾大的实验室然后试用我们的系统</span>
+<code>We use a Kinect to measure your motions, we show graphics on the screen,</code>
+<span>我们用一个Kinect（XBOX360体感周边外设）来测量 你的动作，我们在屏幕上展示图片</span>
+<code>and then we also give you touch cues,</code>
+<span>然后我们还会给你一些触碰提示</span>
+<code>haptic feedback on your arm,</code>
+<span>触觉反馈在你的手臂上</span>
+<code>delivered by these haptic arm bands which have motors inside,</code>
+<span>通过这些里面有电动机的触觉臂带来传递，</span>
+<code>and guide you as you move.</code>
+<span>并且在你运动的时候引导你</span>
+<code>So, if we put it together,</code>
+<span>所以，如果我们把它放到一起</span>
+<code>as you're trying to track this motion,</code>
+<span>当你正在尝试跟踪这个动作时，</span>
+<code>if you deviate -- say, maybe, your arm is a little too high --</code>
+<span>如果你偏离了--假设，可能是，你的手高了一点点--</span>
+<code>we turn on the motors right there on the skin</code>
+<span>我们把在这皮肤上的电动机打开</span>
+<code>to let you know you should move down,</code>
+<span>来让你知道你应该向下移一点</span>
+<code>almost like a coach gently guiding you</code>
+<span>就很像一个教练温柔地指导你</span>
+<code>and helping you master these movements more quickly</code>
+<span>帮助你更快地掌握这些动作</span>
+<code>and make more precise corrections.</code>
+<span>和做些更加精确的改正</span>
+<code>We developed this system for use in stroke rehabilitation,</code>
+<span>我们为在中风康复中的使用开发了这个系统</span>
+<code>but I think there are a lot of applications,</code>
+<span>但我认为它还有很多的应用</span>
+<code>like maybe dance training or all sorts of sports training as well.</code>
+<span>比如可能是舞蹈训练或是各种各样的体育训练</span>
+<code>So now you know a little bit about the field of haptics,</code>
+<span>那么现在关于触觉这个领域你们了解了一点</span>
+<code>which I think you'll hear more about in the coming years.</code>
+<span>关于这些，我想你们在将来的几年中会听到更多</span>
+<code>I've shown you three examples.</code>
+<span>我已经向你们展示了三个例子了</span>
+<code>I just want to take a moment</code>
+<span>我只是想花些时间</span>
+<code>to acknowledge the great students who work with me in my lab at Penn</code>
+<span>来感谢那些在宾大实验室里和我一起工作的很棒的学生们</span>
+<code>and my collaborators.</code>
+<span>以及我的合作者</span>
+<code>They're a great group.</code>
+<span>他们是一个非常棒的团队</span>
+<code>I also want to thank you for your kind attention.</code>
+<span>我还想感谢你们的关注</span>
+<code>(Applause)</code>
+<span>（掌声）</span></p><center><a style="color: rgb(254,17,130)" href="https://icp.gov.moe/?keyword=20223985" target="_blank">萌ICP备20223985号</a></center></div></div>
+</body>
+</html>
