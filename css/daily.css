@@ -466,7 +466,7 @@ blockquote {
 
 /*link*/
 #write a {
-    color: var(--a-color);
+    /* color: var(--a-color); */
     text-decoration: none;
 }
 .on-focus-mode #write a .md-plain, .on-focus-mode .md-htmlblock-container a:hover {
@@ -476,11 +476,20 @@ blockquote {
 .on-focus-mode #write .md-focus a .md-plain, .md-focus .md-htmlblock-container a:hover {
     border-bottom: .1rem solid var(--a-color);
 }
+#write a {
+    /* color: var(--a-color); */
+    text-decoration: none;
+}
 [md-inline=link] a {
     margin: 0 .2rem;
 }
-a:any-link {
+#write a code, a:any-link {
     color: var(--a-color);
+}
+#write a code:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 0.1em;
 }
 
 img {
@@ -1319,4 +1328,8 @@ a.ty-link {
     -webkit-text-stroke: 0.03rem rgba(0, 0, 0, 0.5);
     font-size: 1.5rem !important;
 }
+.dplayer-info-panel-item-data a{
+    text-decoration:underline !important
+}
+
 
