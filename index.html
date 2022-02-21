@@ -9,6 +9,8 @@
 <script src="/Aplayer/APlayer.min.js"></script>
 <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
 <script src="/yinghua/Ascii.js"></script>
+<script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
 <!-- <style type="text/css" >body {zoom:0.9 ! important ;}</style> -->
 <!-- <script src="//code.tidio.co/xs8ljofygqyne18yrxkhkpetzjcvl6lk.js" async></script> -->
 <!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="6bc0c390-cb6a-4774-9785-e80dffc0a578";(function(){d=document;s=d.createElement("script");s.src="/crisp/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
@@ -22,8 +24,15 @@
 <title>追梦计划引导页</title>
 </head>
 <body class='dream-plan os-windows'><div class='dream-plan-content'>
-<div id='write'  class=''><p><img src="https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg" referrerpolicy="no-referrer" alt="head"></p>
+<div id='write'  class=''>
+<video id="player" playsinline controls data-poster="https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg">
+  <source src="https://f.video.weibocdn.com/o0/og6W0eR1lx07Tdv4HZd6010412085VuS0E030.mp4?label=mp4_1440p60&template=2560x1440.20.0&trans_finger=62f6ee65db0b320409660989ee20ccc5&media_id=4729246921457765&tp=8x8A3El:YTkl0eM8&us=0&ori=1&bf=3&ot=h&lp=000045ahoK&ps=mZ6WB&uid=8aeobg&ab=3915-g1,6377-g0,1192-g0,1191-g0,1258-g0,3601-g0&Expires=1645466249&ssig=Vh6tWj8QhH&KID=unistore,video" type="video/mp4" />
+</video>
+<!-- <p><img src="https://s-bj-2220-zkeq.oss.dogecdn.com/head.jpg" referrerpolicy="no-referrer" alt="head"></p> -->
 <div id="aplayer"></div>
+<script>
+  const player = new Plyr('#player');
+</script>
 <!-- <iframe
 name="web"
 width="100%" 
