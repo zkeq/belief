@@ -217,7 +217,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 @font-face{
     font-family: 'HarmonyOS';
     src: local('HarmonyOS'),
-    url('https://unpkg.com/zkeq-font@1.6.0/HarmonyOS_Sans_Medium.ttf') format('truetype');
+    url('https://s-bj-2220-open-srt.oss.dogecdn.com/HarmonyOS_Sans_Medium.ttf') format('truetype');
     font-display: swap;
     font-weight: bold;
     font-style: normal;
