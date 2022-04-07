@@ -12,7 +12,7 @@ a:active, a:hover { outline: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.dream-plan { padding-left: 30px; padding-right: 30px; }
-.dream-plan .footnote-line, .dream-plan li, .dream-plan p { white-space: pre-wrap; }
+/* .dream-plan .footnote-line, .dream-plan li, .dream-plan p { white-space: pre-wrap; } */
 .dream-plan .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
   body.dream-plan { padding-left: 0px; padding-right: 0px; }
@@ -2520,7 +2520,7 @@ ol ol ol {
 
 ol li,
 ul ol li {
-  font-family: var(--ol-font-cn);
+  /* font-family: var(--ol-font-cn); */
   font-size: var(--ol-size);
 }
 
