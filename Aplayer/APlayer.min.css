@@ -709,3 +709,7 @@
   font-weight: bold;
   font-style: normal;
 }
+.artplayer-app {
+  width: 100%;
+  height: 600px;
+}
