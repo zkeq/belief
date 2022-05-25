@@ -120,6 +120,38 @@ const ap = new APlayer({
   }]
 });
 </script>
+
+<script>
+
+// 防止视频链接失效，24 分钟自动刷新一次
+
+function live(){
+  if (player.playing){
+   current_time = player.currentTime;
+   current_source = player.source;
+   var video=document.getElementById('player');
+   video.src = current_source;
+   player.play();
+   // 如果检测到开始播放了，就设置播放时间
+   console.log("当前进度", current_time);
+   console.log("live");
+  }
+  else{
+  console.log("unlive")
+}
+}
+
+setInterval(live,60*24*1000);
+
+player.on('playing', (event) => {
+  if ("undefined" != typeof current_time){
+  player.currentTime = current_time;
+  delete current_time;
+  }
+});
+
+</script>
+
 <!-- <audio id="bgmMusic" preload="auto" autoplay loop>
   <source src="https://s-bj-2220-zkeq.oss.dogecdn.com/0.ogg" type="audio/ogg" />
   <source src="https://s-bj-2220-zkeq.oss.dogecdn.com/0.mp3" type="audio/mpeg" />
