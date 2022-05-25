@@ -123,31 +123,29 @@ const ap = new APlayer({
 
 <script>
 
-// 防止视频链接失效，24 分钟自动刷新一次
+// 防止视频链接失效，出现报错了自动检测
 
 function live(){
-  if (player.playing){
-   current_time = player.currentTime;
-   current_source = player.source;
-   var video=document.getElementById('player');
-   video.src = current_source;
-   player.play();
-   // 如果检测到开始播放了，就设置播放时间
-   console.log("当前进度", current_time);
-   console.log("live");
-  }
-  else{
-  console.log("unlive")
-}
+    if(player.currentTime > 1){
+        current_time = player.currentTime;
+    }
+    current_source = player.source;
+    var video=document.getElementById('player');
+    video.src = current_source;
+    player.play();
+    // 如果检测到开始播放了，就设置播放时间
+    setTimeout(function(){
+        if(player.currentTime > 0){
+            player.currentTime = current_time;
+        }
+    },3000);
+    console.log("当前进度", current_time);
+    console.log("live");
 }
 
-setInterval(live,60*24*1000);
 
-player.on('playing', (event) => {
-  if ("undefined" != typeof current_time){
-  player.currentTime = current_time;
-  delete current_time;
-  }
+player.on('error', (event) => {
+  live()
 });
 
 </script>
