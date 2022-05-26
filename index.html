@@ -135,9 +135,7 @@ function live(){
     player.play();
     // 如果检测到开始播放了，就设置播放时间
     setTimeout(function(){
-        if(player.currentTime > 0){
-            player.currentTime = current_time;
-        }
+        player.currentTime = current_time;
     },3000);
     console.log("当前进度", current_time);
     console.log("live");
