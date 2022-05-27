@@ -133,7 +133,9 @@ function live(){
     var video = document.getElementById('player');
     video.src = current_source;
     video.currentTime = current_time;
-    video.play();
+    setTimeout(function(){
+      video.play();
+    },3600);
     console.log("当前进度", current_time);
     console.log("live");
 }
