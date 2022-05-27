@@ -130,16 +130,10 @@ function live(){
         current_time = player.currentTime;
     }
     current_source = player.source;
-    var video=document.getElementById('player');
+    var video = document.getElementById('player');
     video.src = current_source;
-    // 如果检测到开始播放了，就设置播放时间
-    setTimeout(function(){
-      player.currentTime = current_time;
-    },2000);
-    
-    setTimeout(function(){
-      player.play();
-    },2500);
+    video.currentTime = current_time;
+    video.play();
     console.log("当前进度", current_time);
     console.log("live");
 }
