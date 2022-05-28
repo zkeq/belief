@@ -7,11 +7,11 @@
 <meta name="referrer" content="no-referrer">
 <link rel="stylesheet" href="/Aplayer/APlayer.min.css">
 <script src="/Aplayer/APlayer.min.js"></script>
-<script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
 <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/Meting.DreamPlan.min.js"></script>
 <script src="/yinghua/Ascii.js"></script>
 <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
 <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+<script src="https://npm.elemecdn.com/current-device/umd/current-device.min.js"></script>
 <!-- <style type="text/css" >body {zoom:0.9 ! important ;}</style> -->
 <!-- <script src="//code.tidio.co/xs8ljofygqyne18yrxkhkpetzjcvl6lk.js" async></script> -->
 <!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="6bc0c390-cb6a-4774-9785-e80dffc0a578";(function(){d=document;s=d.createElement("script");s.src="/crisp/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
@@ -91,18 +91,20 @@ id= "web">
 <center><p>&nbsp;</p></center>
 </div></div>
 <script type="text/javascript">//樱花
-  var system ={}; 
-  var p = navigator.platform; 
-  system.win = p.indexOf("Win") == 0; 
-  system.mac = p.indexOf("Mac") == 0; 
-  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0); 
-  if(system.win||system.mac||system.x11){//如果是电脑
-    console.log("当前使用的设备是电脑,所以这里的樱花按电脑端的配置载入!~")
-    $.getScript("/yinghua/yinghua.js");
-  }else{ //如果是手机
-    console.log("当前使用的设备是手机,所以这里的樱花按手机端的配置载入(比电脑小一号!~")
-    $.getScript("/yinghua/yinghua-phone.js");
-  }
+function addScript(url){
+	var script = document.createElement('script');
+	script.setAttribute('type','text/javascript');
+	script.setAttribute('src',url);
+	document.getElementsByTagName('head')[0].appendChild(script);
+}
+var palt = device.mobile();
+if (palt) {
+  console.log("当前使用的设备是手机,所以这里的樱花按手机端的配置载入(比电脑小一号!~")
+  addScript("/yinghua/yinghua-phone.js")
+} else {
+  console.log("当前使用的设备是电脑,所以这里的樱花按电脑端的配置载入!~")
+  addScript("/yinghua/yinghua.js")
+}
 </script>
 <!-- RainyMood -->
 <script type="text/javascript">
