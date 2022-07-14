@@ -15,7 +15,7 @@ body.dream-plan { padding-left: 30px; padding-right: 30px; }
 /* .dream-plan .footnote-line, .dream-plan li, .dream-plan p { white-space: pre-wrap; } */
 .dream-plan .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
-  body.dream-plan { padding-left: 0px; padding-right: 0px; }
+  body.dream-plan { padding-left: 0px; padding-right: 0px; margin: 0;padding: 0; }
   #write { padding-left: 20px; padding-right: 20px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
