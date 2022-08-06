@@ -3341,3 +3341,16 @@ table tr:hover {
     --font-footnote: 400 10.5pt/21pt var(--font-kai-cn);
   }
 }
+/* 屏幕宽度小于 500 */
+@media screen and (max-width: 700px) {
+ /* tr 中的第三个 td */
+  table tr td:nth-child(3) {
+    display: none;
+  }
+  table tr th:nth-child(3) {
+    display: none;
+  }
+  table td {
+    white-space: normal;
+}
+}
