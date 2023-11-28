@@ -3107,9 +3107,11 @@ em {
   text-decoration: none;
 }
 
+/* 
 a[href^="http://"]:after {
   content: " ("attr(href) ") ";
-}
+} 
+*/
 
 strong {
   background: var(--bg-strong);
